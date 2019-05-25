@@ -1,0 +1,15 @@
+image: node:latest
+
+before_script:
+  - npm i -g yarn
+  - yarn install
+
+pages:
+  stage: deploy
+  script:
+    - yarn gitlab
+  artifacts:
+    paths:
+      - public
+  only:
+    - master

@@ -8,7 +8,8 @@
   "private": false,
   "scripts": {
     "dev": "next",
-    "build": "next build"
+    "build": "next build",
+    "gitlab": "next build && next export && rm -rf public && mv out public"
   },
   "dependencies": {
     "next": "^8.1.0",
