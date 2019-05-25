@@ -1,7 +1,7 @@
 import Page from '../components/Page'
 
 const Contact = () =>
-  <Page>
+  <Page title='Contato'>
     <h2>Vamos tomar um café.</h2>
     <p>Adoraria ouvir o que você tem a dizer. Essas são as formas pelas quais podemos conversar:</p>
     <article>

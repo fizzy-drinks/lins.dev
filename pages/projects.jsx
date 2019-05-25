@@ -1,7 +1,7 @@
 import Page from '../components/Page'
 
 const Projects = () =>
-  <Page>
+  <Page title='Projetos'>
     Projects page
   </Page>
 

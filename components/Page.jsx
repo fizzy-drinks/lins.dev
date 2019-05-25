@@ -4,6 +4,7 @@ import Navigation from './Navigation'
 const Page = props =>
   <div className='page component'>
     <Head>
+      <title>{props.title} | lins.dev</title>
       <link key='font-imports' href='https://fonts.googleapis.com/css?family=Heebo&display=swap' rel='stylesheet' />
     </Head>
     <Navigation />
