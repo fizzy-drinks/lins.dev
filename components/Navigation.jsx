@@ -1,5 +1,6 @@
 import Link from 'next/link'
 
+import Logo from './Logo'
 import NavBarLink from './NavBarLink'
 
 const links = [
@@ -11,7 +12,9 @@ const links = [
 const Navigation = () =>
   <header>
     <Link href='/'>
-      <h1 title='Home'>lins.dev</h1>
+      <h1 title='Home'>
+        <Logo />
+      </h1>
     </Link>
     <nav>
       {links.map(NavBarLink)}
