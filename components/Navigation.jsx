@@ -1,16 +1,43 @@
 import Link from 'next/link'
 
+import NavBarLink from './NavBarLink'
+
+const links = [
+  { route: '/', label: 'Home' },
+  { route: '/contact', label: 'Contato' },
+  { route: '/projects', label: 'Projetos' },
+]
+
 const Navigation = () =>
-  <nav>
+  <header>
     <Link href='/'>
-      <a title='Home page'>Home</a>
+      <h1 title='Home'>lins.dev</h1>
     </Link>
-    <Link href='/contact'>
-      <a title='Contact page'>Contact</a>
-    </Link>
-    <Link href='/projects'>
-      <a title='Projects page'>Projects</a>
-    </Link>
-  </nav>
+    <nav>
+      {links.map(NavBarLink)}
+    </nav>
+    <style jsx>{`
+    header {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 1em;
+      cursor: pointer;
+    }
+
+    nav {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-end;
+      flex-grow: 1;
+    }
+    `}</style>
+  </header>
 
 export default Navigation
