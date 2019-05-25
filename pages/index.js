@@ -1,6 +1,6 @@
-const Index = () =>
+const Home = () =>
   <div>
-    Hello World
+    Home page
   </div>
 
-export default Index
+export default Home
