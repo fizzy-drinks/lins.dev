@@ -1,6 +1,8 @@
+import Page from '../components/Page'
+
 const Projects = () =>
-  <div>
+  <Page>
     Projects page
-  </div>
+  </Page>
 
 export default Projects
