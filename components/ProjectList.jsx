@@ -1,4 +1,13 @@
+import { DiJsBadge, DiPython, DiHtml5 } from 'react-icons/di'
+
 import RepoQuickSummary from './RepoQuickSummary'
+
+const LanguageIcons = {
+  JavaScript: () => <DiJsBadge />,
+  Python: () => <DiPython />,
+  HTML: () => <DiHtml5 />,
+  TypeScript: () => <DiJsBadge />
+}
 
 const ProjectList = ({ repos }) =>
   <ul>
@@ -8,7 +17,10 @@ const ProjectList = ({ repos }) =>
           <RepoQuickSummary repo={repo} />
         </h3>
         <p>
-          {repo.language && `[${repo.language}]`} {repo.description}
+          {repo.language &&
+            (LanguageIcons[repo.language]
+              ? LanguageIcons[repo.language]()
+              : `[${repo.language}]`)} {repo.description}
         </p>
       </li>
     )}
