@@ -2,6 +2,7 @@ import Octokit from '@octokit/rest'
 import Axios from 'axios'
 
 import Page from '../components/Page'
+import ProjectList from '../components/ProjectList'
 
 class Projects extends React.Component {
   static async getInitialProps () {
@@ -46,21 +47,7 @@ class Projects extends React.Component {
     return (
       <Page title='Projetos'>
         <h2>Meus projetos!</h2>
-        <ul>
-          {this.props.repos.map(repo =>
-            <li key={repo.name}>
-              <h3>
-                {repo.origin && `${repo.origin}:`}
-                <a href={repo.homepage || repo.url} title={repo.name}>
-                  {repo.name}
-                </a>
-              </h3>
-              <p>
-                {repo.language && `[${repo.language}]`} {repo.description}
-              </p>
-            </li>
-          )}
-        </ul>
+        <ProjectList repos={this.props.repos} />
       </Page>
     )
   }
