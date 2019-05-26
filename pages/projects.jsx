@@ -6,17 +6,20 @@ class Projects extends React.Component {
   static async getInitialProps () {
     const octo = Octokit({ userAgent: 'lins.dev GitHub client' })
     const { data: repoData } = await octo.repos.listForUser({ username: 'gabrielchiconi' })
-    const gitHubRepos = repoData.map(repo => ({
-      name: repo.name,
-      url: repo.html_url,
-      description: repo.description,
-      updatedAt: new Date(repo.updated_at),
-      stars: repo.stargazers_count,
-      forks: repo.forks,
-      homepage: repo.homepage,
-      language: repo.language,
-      isFork: repo.fork
-    }))
+    const gitHubRepos = repoData
+      .map(repo => ({
+        name: repo.name,
+        url: repo.html_url,
+        description: repo.description,
+        updatedAt: new Date(repo.updated_at),
+        stars: repo.stargazers_count,
+        forks: repo.forks,
+        homepage: repo.homepage,
+        language: repo.language,
+        isFork: repo.fork
+      }))
+      .sort((repoA, repoB) => repoB.updatedAt.getTime() - repoA.updatedAt.getTime())
+
     return { gitHubRepos }
   }
 
