@@ -32,12 +32,12 @@ class Navigation extends React.Component {
           </h1>
         </Link>
         <button className='open nav button' onClick={() => this.setState({ menu: true })}>
-          <MdMenu />
+          <MdMenu size={24} />
         </button>
         <nav className={classnames({ show: this.state.menu })}>
           <div className='close nav wrapper'>
             <button className='close nav button' onClick={() => this.setState({ menu: false })}>
-              <MdClose />
+              <MdClose size={24} />
             </button>
           </div>
           {links.map(NavBarLink)}
