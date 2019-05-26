@@ -11,11 +11,30 @@ const Page = props =>
       <link key='font' href='https://fonts.googleapis.com/css?family=Heebo|Nanum+Gothic+Coding&display=swap' rel='stylesheet' />
     </Head>
     <Navigation />
-    {props.children}
+    <main>
+      {props.children}
+    </main>
     <style global jsx>{`
+    body {
+      margin: 0
+    }
+
     .page.component {
       font-family: Heebo, sans-serif;
       color: ${colors.black}
+    }
+
+    .page.component > * {
+      padding-left: .5em;
+      padding-right: .5em;
+    }
+
+    .page.component:first-child {
+      padding-top: .5em;
+    }
+
+    .page.component:last-child {
+      padding-bottom: .5em;
     }
 
     .page.component a {
