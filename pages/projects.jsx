@@ -29,7 +29,7 @@ class Projects extends React.Component {
         <h2>Meus projetos!</h2>
         <ul>
           {this.props.gitHubRepos.map(repo =>
-            <li>
+            <li key={repo.name}>
               <h3>
                 <a href={repo.homepage || repo.url} title={repo.name}>
                   {repo.name}
