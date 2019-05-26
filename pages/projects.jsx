@@ -20,7 +20,6 @@ class Projects extends React.Component {
         language: repo.language,
         isFork: repo.fork
       }))
-      .sort((repoA, repoB) => repoB.updatedAt.getTime() - repoA.updatedAt.getTime())
 
     const { data: glRepoData } = await Axios.get('https://gitlab.com/api/v4/users/gabrielchiconi/projects')
     const gitLabRepos = glRepoData
@@ -36,9 +35,11 @@ class Projects extends React.Component {
         language: null,
         isFork: false
       }))
-      .sort((repoA, repoB) => repoB.updatedAt.getTime() - repoA.updatedAt.getTime())
 
-    return { repos: [...gitHubRepos, ...gitLabRepos] }
+    return {
+      repos: [...gitHubRepos, ...gitLabRepos]
+        .sort((repoA, repoB) => repoB.updatedAt.getTime() - repoA.updatedAt.getTime())
+    }
   }
 
   render () {
