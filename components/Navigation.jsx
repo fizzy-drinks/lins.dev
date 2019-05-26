@@ -49,6 +49,7 @@ class Navigation extends React.Component {
           justify-content: space-between;
           align-items: center;
           position: relative;
+          padding-top: .5em;
         }
 
         h1 {

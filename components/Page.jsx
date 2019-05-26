@@ -29,10 +29,6 @@ const Page = props =>
       padding-right: .5em;
     }
 
-    .page.component:first-child {
-      padding-top: .5em;
-    }
-
     .page.component:last-child {
       padding-bottom: .5em;
     }
