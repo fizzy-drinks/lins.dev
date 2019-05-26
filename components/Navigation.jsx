@@ -50,6 +50,7 @@ class Navigation extends React.Component {
           align-items: center;
           position: relative;
           padding-top: .5em;
+          padding-bottom: .5em;
         }
 
         h1 {
