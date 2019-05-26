@@ -12,10 +12,14 @@ const Page = props =>
     </Head>
     <Navigation />
     {props.children}
-    <style jsx>{`
+    <style global jsx>{`
     .page.component {
       font-family: Heebo, sans-serif;
       color: ${colors.black}
+    }
+
+    .page.component a {
+      color: ${colors.primary.dark}
     }
     `}</style>
   </div>
