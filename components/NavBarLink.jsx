@@ -15,14 +15,25 @@ const NavBarLink = ({ route, label }) =>
         width: 5em;
         padding: .5em;
 
-        color: ${colors.black};
+        color: ${colors.white};
         text-decoration: none;
         transition: all 300ms ease;
       }
 
+      a:first-of-type {
+        border-bottom-left-radius: 3px;
+        border-top-left-radius: 3px;
+      }
+
+      a:last-of-type {
+        border-bottom-right-radius: 3px;
+        border-top-right-radius: 3px;        
+      }
+
       a:hover,
       a:focus {
-        background-color: ${colors.primary.lightest}40;
+        color: ${colors.black};
+        background-color: ${colors.white};
       }
       `}</style>
     </a>

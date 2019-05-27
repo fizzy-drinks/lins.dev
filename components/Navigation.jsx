@@ -32,12 +32,12 @@ class Navigation extends React.Component {
           </h1>
         </Link>
         <button className='open nav button' onClick={() => this.setState({ menu: true })}>
-          <MdMenu size={24} />
+          <MdMenu size={24} color={colors.white} />
         </button>
         <nav className={classnames({ show: this.state.menu })}>
           <div className='close nav wrapper'>
             <button className='close nav button' onClick={() => this.setState({ menu: false })}>
-              <MdClose size={24} />
+              <MdClose size={24} color={colors.white} />
             </button>
           </div>
           {links.map(NavBarLink)}
@@ -51,6 +51,8 @@ class Navigation extends React.Component {
           position: relative;
           padding-top: .5em;
           padding-bottom: .5em;
+
+          background-color: ${colors.primary.dark};
         }
 
         h1 {
@@ -64,6 +66,7 @@ class Navigation extends React.Component {
           flex-direction: row;
           align-items: center;
           justify-content: flex-end;
+          background-color: ${colors.primary.dark};
         }
 
         .close.nav.wrapper {
@@ -110,8 +113,6 @@ class Navigation extends React.Component {
 
             flex-direction: column;
             justify-content: flex-start;
-
-            background: ${colors.white};
 
             display: none;
           }
