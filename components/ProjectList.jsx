@@ -64,6 +64,7 @@ const ProjectList = ({ repos }) =>
     <style jsx>{`
     h3, h4, p {
       margin: 0 0 .5em;
+      max-width: 300px;
     }
 
     h3 {
@@ -81,13 +82,12 @@ const ProjectList = ({ repos }) =>
       padding: 0;
       display: flex;
       flex-wrap: wrap;
-      align-items: space-around;
+      justify-content: space-around;
     }
 
     li {
       margin: .35em;
       padding: .5em;
-      min-width: 300px;
       min-height: 160px;
       flex: 1 1 auto;
 
@@ -98,13 +98,13 @@ const ProjectList = ({ repos }) =>
 
     .info.groups {
       display: flex;
-      justify-content: space-around;
+      justify-content: space-between;
       flex-wrap: wrap;
     }
 
     .info.group {
       flex: 1 1 auto;
-      width: 30%;
+      min-width: 100px;
     }
 
     h4 {
