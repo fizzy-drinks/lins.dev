@@ -2,9 +2,9 @@ import Link from 'next/link'
 
 import colors from '../config/colors'
 
-const NavBarLink = ({ route, label }) =>
-  <Link key={route} href={route}>
-    <a title={label}>
+const NavBarLink = ({ route, label, onClick }) =>
+  <Link href={route}>
+    <a title={label} onClick={onClick}>
       {label}
       <style jsx>{`
       a {

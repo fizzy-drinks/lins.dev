@@ -40,7 +40,14 @@ class Navigation extends React.Component {
               <MdClose size={24} color={colors.white} />
             </button>
           </div>
-          {links.map(NavBarLink)}
+          {links.map(link =>
+            <NavBarLink
+              key={link.label}
+              route={link.route}
+              label={link.label}
+              onClick={() => this.setState({ menu: false })}
+            />
+          )}
         </nav>
         <style jsx>{`
         header {
