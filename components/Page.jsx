@@ -33,7 +33,7 @@ const Page = props =>
       padding-bottom: .5em;
     }
 
-    .page.component a {
+    a {
       color: ${colors.primary.dark}
     }
     `}</style>
