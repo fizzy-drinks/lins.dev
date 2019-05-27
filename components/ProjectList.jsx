@@ -1,4 +1,4 @@
-import { FaGithub, FaGitlab } from 'react-icons/fa'
+import { FaGithub, FaGitlab, FaExternalLinkAlt } from 'react-icons/fa'
 import { DiJsBadge, DiPython, DiHtml5 } from 'react-icons/di'
 
 import colors from '../config/colors'
@@ -25,7 +25,7 @@ const ProjectList = ({ repos }) =>
             {repo.url &&
               <section className='info group'>
                 <h4>Repositório</h4>
-                {OriginIcons[repo.origin]} <a href={repo.url} title='Repositório'>
+                {OriginIcons[repo.origin]} <a href={repo.url} target='_blank' title='Repositório'>
                   {repo.origin}
                 </a>
               </section>
@@ -33,8 +33,11 @@ const ProjectList = ({ repos }) =>
             {repo.homepage &&
               <section className='info group'>
                 <h4>Homepage</h4>
-                <a href={repo.homepage} title='Site'>
+                <a href={repo.homepage} target='_blank' title='Site'>
                   Ver
+                  <span className='external link'>
+                    <FaExternalLinkAlt size={12} />
+                  </span>
                 </a>
               </section>
             }
@@ -111,6 +114,10 @@ const ProjectList = ({ repos }) =>
 
     .description {
       font-size: .9em;
+    }
+
+    .external.link {
+      margin-left: .25em;
     }
     `}</style>
   </ul>
