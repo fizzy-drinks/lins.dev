@@ -11,7 +11,7 @@ const Logo = () =>
       border: ${colors.primary.main} 1px solid;
       border-radius: 2px;
       background-color: ${colors.white};
-      box-shadow: 0px 0px 5px 1px ${colors.white};
+      box-shadow: 0px 0px 5px ${colors.white};
     }
 
     .lins {
