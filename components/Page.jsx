@@ -8,6 +8,7 @@ const Page = props =>
   <div className='page component'>
     <Head>
       <title key='title'>{props.title} | lins.dev</title>
+      <meta key='theme' name='theme-color' content={colors.primary.dark} />
       <link key='font' href='https://fonts.googleapis.com/css?family=Heebo|Nanum+Gothic+Coding&display=swap' rel='stylesheet' />
     </Head>
     <Navigation />
