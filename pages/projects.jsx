@@ -10,7 +10,7 @@ class Projects extends React.Component {
     const { data: ghRepoData } = await octo.repos.listForUser({ username: 'gabrielchiconi' })
     const gitHubRepos = ghRepoData
       .map(repo => ({
-        origin: 'github',
+        origin: 'GitHub',
         name: repo.name,
         url: repo.html_url,
         description: repo.description,
@@ -25,7 +25,7 @@ class Projects extends React.Component {
     const { data: glRepoData } = await Axios.get('https://gitlab.com/api/v4/users/gabrielchiconi/projects')
     const gitLabRepos = glRepoData
       .map(repo => ({
-        origin: 'gitlab',
+        origin: 'GitLab',
         name: repo.name,
         url: repo.web_url,
         description: repo.description,

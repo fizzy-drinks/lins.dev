@@ -1,6 +1,20 @@
+import { FaGithub, FaGitlab } from 'react-icons/fa'
+
+import colors from '../config/colors'
+
+const OriginIcons = {
+  GitHub: <FaGithub />,
+  GitLab: <FaGitlab />
+}
+
 const RepoQuickSummary = ({ repo }) =>
   <span>
-    {repo.origin && `${repo.origin}:`} {repo.name} (
+    <span className='origin tag'>
+      {OriginIcons[repo.origin] ||
+        `[${repo.origin}]`
+      }
+    </span>
+    {repo.name} (
     {(repo.homepage || repo.url) &&
       <span>
         {repo.homepage &&
@@ -17,6 +31,14 @@ const RepoQuickSummary = ({ repo }) =>
       </span>
     }
     )
+    <style jsx>{`
+    .origin.tag {
+      color: ${colors.gray.dark};
+      font-weight: 400;
+      font-size: .8em;
+      margin: 0 .35em 0 0;
+    }
+    `}</style>
   </span>
 
 export default RepoQuickSummary
