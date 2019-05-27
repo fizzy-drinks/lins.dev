@@ -24,8 +24,16 @@ class Navigation extends React.Component {
   }
 
   render () {
-    return (
-      <header>
+    return [
+      <div key='margin' className='header margin'>
+        <style jsx>{`
+        .header.margin {
+          position: relative;
+          margin-bottom: 4em;
+        }
+        `}</style>
+      </div>,
+      <header key='header'>
         <Link href='/'>
           <h1 title='Home'>
             <Logo />
@@ -55,7 +63,12 @@ class Navigation extends React.Component {
           flex-direction: row;
           justify-content: space-between;
           align-items: center;
-          position: relative;
+
+          position: fixed;
+          top: 0;
+          left: 0;
+          right: 0;
+
           padding-top: .5em;
           padding-bottom: .5em;
 
@@ -130,7 +143,7 @@ class Navigation extends React.Component {
         }
         `}</style>
       </header>
-    )
+    ]
   }
 }
 
