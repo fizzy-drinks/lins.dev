@@ -18,6 +18,7 @@ const NavBarLink = ({ route, label, onClick }) =>
         color: ${colors.white};
         text-decoration: none;
         transition: all 300ms ease;
+        border-width: 0;
       }
 
       a:first-of-type {
@@ -34,6 +35,7 @@ const NavBarLink = ({ route, label, onClick }) =>
       a:focus {
         color: ${colors.black};
         background-color: ${colors.white};
+        border-width: 0;
       }
       `}</style>
     </a>

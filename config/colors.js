@@ -1,9 +1,11 @@
 export default {
   black: '#202020',
-  white: '#F0F0F0',
+  white: '#FAFAFA',
   gray: {
+    light: '#DFDFDF',
     main: '#A0A0A0',
-    dark: '#767676'
+    dark: '#767676',
+    darkest: '#464646'
   },
   primary: {
     main: '#E50000',

@@ -1,10 +1,12 @@
 import Page from '../components/Page'
+import PageHeader from '../components/PageHeader'
 
 const Home = () =>
   <Page title='Home'>
-    <h2>Olá!</h2>
-    <p>Este é meu website pessoal. Não é muito, mas é um trabalho honesto.</p>
-    <p>Sou um desenvolvedor de sistemas de Santos&ndash;SP.</p>
+    <PageHeader>
+      <PageHeader.Title>BoasVindas</PageHeader.Title>
+      <PageHeader.Sub>Me chamo Gabriel e sou um desenvolvedor de sistemas de Santos&ndash;SP.</PageHeader.Sub>
+    </PageHeader>
   </Page>
 
 export default Home
