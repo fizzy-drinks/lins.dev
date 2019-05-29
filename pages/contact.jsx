@@ -1,9 +1,13 @@
 import Page from '../components/Page'
+import PageHeader from '../components/PageHeader'
 
 const Contact = () =>
   <Page title='Contato'>
-    <h2>Vamos tomar um café.</h2>
-    <p>Adoraria ouvir o que você tem a dizer. Essas são as formas pelas quais podemos conversar:</p>
+    <PageHeader>
+      <PageHeader.Title>Contato</PageHeader.Title>
+      <PageHeader.Sub>Vamos tomar um café? Adoraria ouvir o que você tem a dizer.</PageHeader.Sub>
+    </PageHeader>
+    <p>Essas são as formas pelas quais podemos conversar:</p>
     <article>
       <h3>Contate-me por e-mail.</h3>
       <p>

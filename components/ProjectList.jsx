@@ -63,18 +63,14 @@ const ProjectList = ({ repos }) =>
     )}
     <style jsx>{`
     h3, h4, p {
-      margin: 0 0 .5em;
+      margin: 0 0 .25em;
       max-width: 300px;
     }
 
     h3 {
-      color: ${colors.primary.darkest};
+      color: ${colors.primary.dark};
       font-size: 1.2em;
       transition: all 300ms ease;
-    }
-
-    li:hover h3 {
-      font-size: 1.3em;
     }
 
     ul {
@@ -92,7 +88,8 @@ const ProjectList = ({ repos }) =>
       flex: 1 1 auto;
 
       background: ${colors.white};
-      border: ${colors.primary.dark} 2px solid;
+      box-shadow: inset 0px 0px 5px ${colors.black}20;
+      border: none;
       border-radius: 3px;
     }
 
@@ -105,11 +102,14 @@ const ProjectList = ({ repos }) =>
     .info.group {
       flex: 1 1 auto;
       min-width: 100px;
+      padding: .25em 0;
     }
 
     h4 {
+      font-family: Inconsolata, monospace;
       font-variant: small-caps;
       text-transform: lowercase;
+      color: ${colors.gray.dark}
     }
 
     .description {

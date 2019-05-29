@@ -6,13 +6,18 @@ import { MdMenu, MdClose } from 'react-icons/md'
 import Logo from './Logo'
 import NavBarLink from './NavBarLink'
 
-import  colors from '../config/colors'
+import colors from '../config/colors'
 
 const links = [
   { route: '/', label: 'Home' },
   { route: '/contact', label: 'Contato' },
   { route: '/projects', label: 'Projetos' },
 ]
+
+const headerSettings = {
+  size: '4em',
+  pad: '.5em'
+}
 
 class Navigation extends React.Component {
   constructor () {
@@ -29,7 +34,7 @@ class Navigation extends React.Component {
         <style jsx>{`
         .header.margin {
           position: relative;
-          margin-bottom: 4em;
+          margin-bottom: ${headerSettings.size};
         }
         `}</style>
       </div>,
@@ -69,8 +74,8 @@ class Navigation extends React.Component {
           left: 0;
           right: 0;
 
-          padding-top: .5em;
-          padding-bottom: .5em;
+          padding: ${headerSettings.pad};
+          height: ${headerSettings.size};
 
           background-color: ${colors.primary.dark};
         }
@@ -126,8 +131,8 @@ class Navigation extends React.Component {
             top: 0;
             left: 0;
 
-            width: calc(100vw - 1em);
-            height: calc(100vh - 1em);
+            width: 100vw;
+            height: 100vh;
 
             padding: .5em;
 

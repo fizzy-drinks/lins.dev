@@ -2,7 +2,10 @@ import Octokit from '@octokit/rest'
 import Axios from 'axios'
 
 import Page from '../components/Page'
+import PageHeader from '../components/PageHeader'
 import ProjectList from '../components/ProjectList'
+
+import colors from '../config/colors'
 
 class Projects extends React.Component {
   static async getInitialProps () {
@@ -46,7 +49,10 @@ class Projects extends React.Component {
   render () {
     return (
       <Page title='Projetos'>
-        <h2>Meus projetos!</h2>
+        <PageHeader>
+          <PageHeader.Title>Projetos</PageHeader.Title>
+          <PageHeader.Sub>Agregador de repositórios do GitHub e GitLab, com algumas notas pessoais</PageHeader.Sub>
+        </PageHeader>
         <ProjectList repos={this.props.repos} />
       </Page>
     )
