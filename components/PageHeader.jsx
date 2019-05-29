@@ -35,7 +35,13 @@ const Title = ({ children }) =>
       color: ${colors.secondary.lightest}
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 740px) {
+      h2 {
+        font-size: 3.5em;
+      }
+    }
+
+    @media (max-width: 540px) {
       h2 {
         font-size: 2.5em;
       }
