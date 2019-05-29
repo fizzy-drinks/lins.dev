@@ -74,7 +74,7 @@ const Sub = ({ children }) =>
   </p>
 
 const PageHeader = ({ children }) =>
-  <div className='title wrapper'>
+  <section className='title wrapper'>
     {children}
     <style jsx>{`
     .title.wrapper {
@@ -91,7 +91,7 @@ const PageHeader = ({ children }) =>
       justify-content: center;
     }
     `}</style>
-  </div>
+  </section>
 
 PageHeader.Title = Title
 PageHeader.Sub = Sub
