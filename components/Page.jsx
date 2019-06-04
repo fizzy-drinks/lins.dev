@@ -38,17 +38,23 @@ const Page = props =>
       padding-bottom: .5em;
     }
 
-    a {
+    a, .link {
       color: ${colors.primary.dark};
       text-decoration: none;
-      border-bottom: ${colors.gray.main} 1px solid;
-      transition: all 300ms;
+      border: ${colors.gray.main} 0 solid;
+      border-bottom-width: 1px;
+      transition: all 300ms ease;
+      cursor: pointer;
     }
 
     a:active,
     a:hover,
-    a:focus {
-      border-bottom: ${colors.primary.lightest} 4px solid;
+    a:focus,
+    .link:active,
+    .link:hover,
+    .link:focus {
+      border-bottom-width: 4px;
+      border-color: ${colors.primary.lightest};
     }
     `}</style>
   </div>

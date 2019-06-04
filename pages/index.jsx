@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Page from '../components/Page'
 import PageHeader from '../components/PageHeader'
 import ProjectList from '../components/ProjectList'
+import SeparatorLink from '../components/SeparatorLink'
 
 import colors from '../config/colors'
 
@@ -30,6 +31,11 @@ const Home = () =>
     <section>
       <h2>Projetos</h2>
       <ProjectList repos={MainProjects} />
+      <Link href='/projects'>
+        <a title='Projetos'>
+          <SeparatorLink>Mais projetos</SeparatorLink>
+        </a>
+      </Link>
     </section>
     <section>
       <h2>Publicações: em breve!</h2>
