@@ -2,8 +2,24 @@ import Link from 'next/link'
 
 import Page from '../components/Page'
 import PageHeader from '../components/PageHeader'
+import ProjectList from '../components/ProjectList'
 
 import colors from '../config/colors'
+
+const MainProjects = [
+  { name: 'sw',
+    homepage: 'https://pypi.org/project/sw-cli',
+    url: 'https://github.com/gabrielchiconi/sw',
+    origin: 'GitHub',
+    language: 'Python',
+    description: 'Carteira SSH para linha de comando' },
+  { name: 'Reanimar',
+    homepage: 'https://gabrielchiconi.github.io/reanimar/',
+    url: 'https://github.com/gabrielchiconi/reanimar',
+    origin: 'GitHub',
+    language: 'JavaScript',
+    description: 'Projeto de conclusão de curso de jornalismo: Uma reportagem sobre a vida marinha na Baixada Santista' }
+]
 
 const Home = () =>
   <Page title='Home'>
@@ -13,21 +29,7 @@ const Home = () =>
     </PageHeader>
     <section>
       <h2>Projetos</h2>
-      <ul>
-        <li>
-          <a href='https://pypi.org/project/sw-cli' target='_blank'>sw</a>
-        </li>
-        <li>
-          <a href='https://gabrielchiconi.github.io/reanimar/' target='_blank'>Reanimar</a>
-        </li>
-        <li>
-          <Link href='/projects'>
-            <a title='Projetos'>
-              mais projetos
-            </a>
-          </Link>
-        </li>
-      </ul>
+      <ProjectList repos={MainProjects} />
     </section>
     <section>
       <h2>Publicações: em breve!</h2>
