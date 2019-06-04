@@ -22,7 +22,9 @@ const Home = () =>
         </li>
         <li>
           <Link href='/projects'>
-            mais projetos
+            <a title='Projetos'>
+              mais projetos
+            </a>
           </Link>
         </li>
       </ul>
