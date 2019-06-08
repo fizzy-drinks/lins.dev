@@ -3,6 +3,7 @@ import classnames from 'classnames'
 
 import { MdMenu, MdClose } from 'react-icons/md'
 
+import WidthContainer from './WidthContainer'
 import Logo from './Logo'
 import NavBarLink from './NavBarLink'
 
@@ -16,7 +17,7 @@ const links = [
 
 const headerSettings = {
   size: '4em',
-  border: '5px',
+  border: '2px',
   pad: '.5em'
 }
 
@@ -35,51 +36,60 @@ class Navigation extends React.Component {
         <style jsx>{`
         .header.margin {
           position: relative;
-          margin-bottom: ${headerSettings.size};
+          margin-bottom: calc(${headerSettings.size} - ${headerSettings.border});
         }
         `}</style>
       </div>,
       <header key='header'>
-        <Link href='/'>
-          <h1 title='Home'>
-            <Logo />
-          </h1>
-        </Link>
-        <button className='open nav button' onClick={() => this.setState({ menu: true })}>
-          <MdMenu size={24} color={palette.white} />
-        </button>
-        <nav className={classnames({ show: this.state.menu })}>
-          <div className='close nav wrapper'>
-            <button className='close nav button' onClick={() => this.setState({ menu: false })}>
-              <MdClose size={24} color={palette.white} />
+        <WidthContainer>
+          <div className='flex row'>
+            <Link href='/'>
+              <h1 title='Home'>
+                <Logo />
+              </h1>
+            </Link>
+            <button className='open nav button' onClick={() => this.setState({ menu: true })}>
+              <MdMenu size={24} color={palette.white} />
             </button>
+            <nav className={classnames({ show: this.state.menu })}>
+              <div className='close nav wrapper'>
+                <button className='close nav button' onClick={() => this.setState({ menu: false })}>
+                  <MdClose size={24} color={palette.white} />
+                </button>
+              </div>
+              {links.map(link =>
+                <NavBarLink
+                  key={link.label}
+                  route={link.route}
+                  label={link.label}
+                  onClick={() => this.setState({ menu: false })}
+                />
+              )}
+            </nav>
           </div>
-          {links.map(link =>
-            <NavBarLink
-              key={link.label}
-              route={link.route}
-              label={link.label}
-              onClick={() => this.setState({ menu: false })}
-            />
-          )}
-        </nav>
+        </WidthContainer>
         <style jsx>{`
         header {
-          display: flex;
-          flex-direction: row;
-          justify-content: space-between;
-          align-items: center;
-
           position: fixed;
           top: 0;
           left: 0;
           right: 0;
 
-          padding: ${headerSettings.pad};
           border-bottom: ${palette.black} ${headerSettings.border} solid;
-          height: calc(${headerSettings.size} + ${headerSettings.border});
+          height: ${headerSettings.size};
 
           background-color: ${palette.primary};
+        }
+
+        .flex.row {
+          width: 100%;
+          height: ${headerSettings.size};
+          padding: ${headerSettings.pad};
+
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
         }
 
         h1 {

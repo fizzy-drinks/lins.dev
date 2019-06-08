@@ -1,3 +1,5 @@
+import WidthContainer from './WidthContainer'
+
 import palette from '../config/colors'
 
 const Title = ({ children }) =>
@@ -75,7 +77,9 @@ const Sub = ({ children }) =>
 
 const PageHeader = ({ children }) =>
   <section className='title wrapper'>
-    {children}
+    <WidthContainer>
+      {children}
+    </WidthContainer>
     <style jsx>{`
     .title.wrapper {
       background: radial-gradient(circle at top left, ${palette.light}, ${palette.light.lighten(.2)} 100%);

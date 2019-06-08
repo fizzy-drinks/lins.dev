@@ -2,6 +2,7 @@ import Link from 'next/link'
 
 import Page from '../components/Page'
 import PageHeader from '../components/PageHeader'
+import PageContentSection from '../components/PageContentSection'
 import ProjectList from '../components/ProjectList'
 import SeparatorLink from '../components/SeparatorLink'
 
@@ -26,7 +27,7 @@ const Home = () =>
       <PageHeader.Title>BoasVindas</PageHeader.Title>
       <PageHeader.Sub>Me chamo Gabriel e sou um desenvolvedor de sistemas de Santos&ndash;SP.</PageHeader.Sub>
     </PageHeader>
-    <section>
+    <PageContentSection>
       <h2>Projetos</h2>
       <ProjectList repos={MainProjects} />
       <Link href='/projects'>
@@ -34,12 +35,12 @@ const Home = () =>
           <SeparatorLink>Mais projetos</SeparatorLink>
         </a>
       </Link>
-    </section>
-    <section>
+    </PageContentSection>
+    <PageContentSection>
       <h2>Publicações: em breve!</h2>
       <p className='greyed out'>Não há nada para ver aqui</p>
-    </section>
-    <section>
+    </PageContentSection>
+    <PageContentSection>
       <h2>Contribua para o Domínio Público!</h2>
       <p>
         O Domínio Público é a única forma de tornar conhecimento acessível para a maioria das pessoas.
@@ -53,8 +54,8 @@ const Home = () =>
         como as <a href='https://br.creativecommons.org' target='_blank'>Creative Commons</a> ou contribuindo
         para wikis e outros projetos colaborativos.
       </p>
-    </section>
-    <section>
+    </PageContentSection>
+    <PageContentSection>
       <h2>Bio</h2>
       <p>
         Trabalho como desenvolvedor desde 2014 e crio projetos de aplicativos web em JavaScript, Python,
@@ -69,7 +70,7 @@ const Home = () =>
         Desde 2018, também sou jornalista. Ainda tenho que descobrir como vou usar esse diploma, mas ele
         existe.
       </p>
-    </section>
+    </PageContentSection>
   </Page>
 
 export default Home
