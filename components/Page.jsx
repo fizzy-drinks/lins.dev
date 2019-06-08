@@ -2,13 +2,13 @@ import Head from 'next/head'
 
 import Navigation from './Navigation'
 
-import colors from '../config/colors'
+import palette from '../config/colors'
 
 const Page = props =>
   <div className='page component'>
     <Head>
       <title key='title'>{props.title} | lins.dev</title>
-      <meta key='theme' name='theme-color' content={colors.primary.dark} />
+      <meta key='theme' name='theme-color' content={palette.primary} />
       <link key='font' href='https://fonts.googleapis.com/css?family=Heebo|Nanum+Gothic+Coding&display=swap' rel='stylesheet' />
     </Head>
     <Navigation />
@@ -22,7 +22,7 @@ const Page = props =>
 
     body {
       margin: 0;
-      color: ${colors.black}
+      color: ${palette.black}
     }
 
     .page.component {
@@ -39,9 +39,9 @@ const Page = props =>
     }
 
     a, .link {
-      color: ${colors.primary.dark};
+      color: ${palette.primary.darken(.2)};
       text-decoration: none;
-      border: ${colors.gray.main} 0 solid;
+      border: ${palette.black.alpha(.2)} 0 solid;
       border-bottom-width: 1px;
       transition: all 300ms ease;
       cursor: pointer;
@@ -54,7 +54,7 @@ const Page = props =>
     .link:hover,
     .link:focus {
       border-bottom-width: 4px;
-      border-color: ${colors.primary.lightest};
+      border-color: ${palette.warn};
     }
     `}</style>
   </div>

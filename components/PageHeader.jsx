@@ -1,4 +1,4 @@
-import colors from '../config/colors'
+import palette from '../config/colors'
 
 const Title = ({ children }) =>
   <h2>
@@ -8,7 +8,7 @@ const Title = ({ children }) =>
       font-family: Inconsolata, monospace;
       font-size: 5em;
       margin: 0;
-      color: ${colors.white};
+      color: ${palette.primary};
       padding: 0;
       animation: nudge-right 2s ease-out 0s 1 normal forwards;
     }
@@ -26,13 +26,13 @@ const Title = ({ children }) =>
     h2::before {
       content: '<';
       font-size: .8em;
-      color: ${colors.secondary.lightest}
+      color: ${palette.black}
     }
 
     h2::after {
       content: '/>';
       font-size: .8em;
-      color: ${colors.secondary.lightest}
+      color: ${palette.black}
     }
 
     @media (max-width: 740px) {
@@ -56,7 +56,7 @@ const Sub = ({ children }) =>
     p {
       font-size: calc(1.1em + 0.2vw);
       font-weight: 500;
-      color: ${colors.gray.light};
+      color: ${palette.black.lighten(.5)};
       animation: nudge-left 2s ease-out 0s 1 normal forwards;
       width: 80vw;
     }
@@ -78,9 +78,9 @@ const PageHeader = ({ children }) =>
     {children}
     <style jsx>{`
     .title.wrapper {
-      background: radial-gradient(circle at top left, ${colors.secondary.main}, ${colors.secondary.light} 100%);
-      border-top: ${colors.primary.darkest} 1em solid;
-      border-bottom: ${colors.primary.darkest} 1em solid;
+      background: radial-gradient(circle at top left, ${palette.light}, ${palette.light.lighten(.2)} 100%);
+      border-top: ${palette.black} 1em solid;
+      border-bottom: ${palette.black} 1em solid;
 
       padding: 0 .75em;
       height: 70vh;

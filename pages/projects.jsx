@@ -5,8 +5,6 @@ import Page from '../components/Page'
 import PageHeader from '../components/PageHeader'
 import ProjectList from '../components/ProjectList'
 
-import colors from '../config/colors'
-
 class Projects extends React.Component {
   static async getInitialProps () {
     const octo = Octokit({ userAgent: 'lins.dev GitHub client' })

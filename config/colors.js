@@ -1,38 +1,10 @@
+import Color from 'color'
+
 export default {
-  black: '#202020',
-  white: '#FAFAFA',
-  gray: {
-    light: '#DFDFDF',
-    main: '#A0A0A0',
-    dark: '#767676',
-    darkest: '#464646'
-  },
-  primary: {
-    main: '#E50000',
-    light: '#FF3838',
-    lightest: '#FF5858',
-    dark: '#760000',
-    darkest: '#460000'
-  },
-  secondary: {
-    main: '#5A079A',
-    light: '#973BDD',
-    lightest: '#B15DF1',
-    dark: '#2D004F',
-    darkest:'#1A002F'
-  },
-  warn: {
-    main: '#E59F00',
-    light: '#FFC238',
-    lightest: '#FFCC58',
-    dark: '#765200',
-    darkest:'#463000'
-  },
-  success: {
-    main: '#00B700',
-    light: '#33EA33',
-    lightest: '#55F655',
-    dark: '#005E00',
-    darkest:'#003800'
-  }
+  primary: Color('rgba(229, 0, 0, 1)'),
+  complement: Color('rgba(169, 229, 187, 1)'),
+  warn: Color('rgba(247, 179, 43, 1)'),
+  light: Color('rgba(252, 246, 177, 1)'),
+  white: Color('#FAFAFA'),
+  black: Color('rgba(9, 8, 9, 1)'),
 }

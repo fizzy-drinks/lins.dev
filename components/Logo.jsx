@@ -1,4 +1,4 @@
-import colors from '../config/colors'
+import palette from '../config/colors'
 
 const Logo = () =>
   <div>
@@ -8,18 +8,17 @@ const Logo = () =>
     div {
       padding: .3em .5em;
       font-family: Inconsolata, monospace;
-      border: ${colors.primary.main} 1px solid;
+      border: ${palette.primary.darken(.5)} 1px solid;
       border-radius: 2px;
-      background-color: ${colors.white};
-      box-shadow: 0px 0px 5px ${colors.white};
+      background-color: ${palette.white};
     }
 
     .lins {
-      color: ${colors.primary.main};
+      color: ${palette.primary};
     }
 
     .dev {
-      color: ${colors.gray.dark}
+      color: ${palette.black.whiten(20).rgb()}
     }
     `}</style>
   </div>

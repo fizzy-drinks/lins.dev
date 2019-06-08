@@ -6,7 +6,7 @@ import { MdMenu, MdClose } from 'react-icons/md'
 import Logo from './Logo'
 import NavBarLink from './NavBarLink'
 
-import colors from '../config/colors'
+import palette from '../config/colors'
 
 const links = [
   { route: '/', label: 'Home' },
@@ -45,12 +45,12 @@ class Navigation extends React.Component {
           </h1>
         </Link>
         <button className='open nav button' onClick={() => this.setState({ menu: true })}>
-          <MdMenu size={24} color={colors.white} />
+          <MdMenu size={24} color={palette.white} />
         </button>
         <nav className={classnames({ show: this.state.menu })}>
           <div className='close nav wrapper'>
             <button className='close nav button' onClick={() => this.setState({ menu: false })}>
-              <MdClose size={24} color={colors.white} />
+              <MdClose size={24} color={palette.white} />
             </button>
           </div>
           {links.map(link =>
@@ -77,7 +77,7 @@ class Navigation extends React.Component {
           padding: ${headerSettings.pad};
           height: ${headerSettings.size};
 
-          background-color: ${colors.primary.dark};
+          background-color: ${palette.primary};
         }
 
         h1 {
@@ -91,7 +91,7 @@ class Navigation extends React.Component {
           flex-direction: row;
           align-items: center;
           justify-content: flex-end;
-          background-color: ${colors.primary.dark};
+          background-color: ${palette.primary};
         }
 
         .close.nav.wrapper {
@@ -123,7 +123,7 @@ class Navigation extends React.Component {
 
           a:hover,
           a:focus {
-            background-color: ${colors.primary.lightest}40;
+            background-color: ${palette.primary.alpha(.4).lighten(.2)};
           }
 
           nav {

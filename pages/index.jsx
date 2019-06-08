@@ -5,8 +5,6 @@ import PageHeader from '../components/PageHeader'
 import ProjectList from '../components/ProjectList'
 import SeparatorLink from '../components/SeparatorLink'
 
-import colors from '../config/colors'
-
 const MainProjects = [
   { name: 'sw',
     homepage: 'https://pypi.org/project/sw-cli',

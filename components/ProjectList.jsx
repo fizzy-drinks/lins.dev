@@ -1,7 +1,7 @@
 import { FaGithub, FaGitlab, FaExternalLinkAlt } from 'react-icons/fa'
 import { DiJsBadge, DiPython, DiHtml5 } from 'react-icons/di'
 
-import colors from '../config/colors'
+import palette from '../config/colors'
 
 const OriginIcons = {
   GitHub: <FaGithub />,
@@ -35,7 +35,7 @@ const ProjectList = ({ repos }) =>
                 <h4>Homepage</h4>
                 <a href={repo.homepage} target='_blank' title='Site'>
                   Ver
-                  <span className='external link'>
+                  <span className='external icon'>
                     <FaExternalLinkAlt size={12} />
                   </span>
                 </a>
@@ -68,7 +68,7 @@ const ProjectList = ({ repos }) =>
     }
 
     h3 {
-      color: ${colors.primary.dark};
+      color: ${palette.primary.darken(.2)};
       font-size: 1.2em;
       transition: all 300ms ease;
     }
@@ -87,8 +87,8 @@ const ProjectList = ({ repos }) =>
       min-height: 160px;
       flex: 1 1 auto;
 
-      background: ${colors.white};
-      box-shadow: inset 0px 0px 5px ${colors.black}20;
+      background: ${palette.white};
+      box-shadow: inset 0px 0px 5px ${palette.black}20;
       border: none;
       border-radius: 3px;
     }
@@ -109,14 +109,14 @@ const ProjectList = ({ repos }) =>
       font-family: Inconsolata, monospace;
       font-variant: small-caps;
       text-transform: lowercase;
-      color: ${colors.gray.dark}
+      color: ${palette.black.whiten(20).rgb()}
     }
 
     .description {
       font-size: .9em;
     }
 
-    .external.link {
+    .external.icon {
       margin-left: .25em;
     }
     `}</style>

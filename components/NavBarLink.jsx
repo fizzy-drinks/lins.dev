@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-import colors from '../config/colors'
+import palette from '../config/colors'
 
 const NavBarLink = ({ route, label, onClick }) =>
   <Link href={route}>
@@ -15,7 +15,7 @@ const NavBarLink = ({ route, label, onClick }) =>
         width: 5em;
         padding: .5em;
 
-        color: ${colors.white};
+        color: ${palette.white};
         text-decoration: none;
         transition: all 300ms ease;
         border-width: 0;
@@ -33,8 +33,8 @@ const NavBarLink = ({ route, label, onClick }) =>
 
       a:hover,
       a:focus {
-        color: ${colors.black};
-        background-color: ${colors.white};
+        color: ${palette.black};
+        background-color: ${palette.white};
         border-width: 0;
       }
       `}</style>
