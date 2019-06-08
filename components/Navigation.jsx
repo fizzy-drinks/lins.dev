@@ -16,6 +16,7 @@ const links = [
 
 const headerSettings = {
   size: '4em',
+  border: '5px',
   pad: '.5em'
 }
 
@@ -75,7 +76,8 @@ class Navigation extends React.Component {
           right: 0;
 
           padding: ${headerSettings.pad};
-          height: ${headerSettings.size};
+          border-bottom: ${palette.black} ${headerSettings.border} solid;
+          height: calc(${headerSettings.size} + ${headerSettings.border});
 
           background-color: ${palette.primary};
         }
