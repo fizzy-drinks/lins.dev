@@ -41,7 +41,7 @@ const Page = props =>
     a, .link {
       color: ${palette.primary.darken(.2)};
       text-decoration: none;
-      border: ${palette.black.alpha(.2)} 0 solid;
+      border: ${palette.gray.rgb()} 0 solid;
       border-bottom-width: 1px;
       transition: all 300ms ease;
       cursor: pointer;
@@ -55,6 +55,10 @@ const Page = props =>
     .link:focus {
       border-bottom-width: 4px;
       border-color: ${palette.warn};
+    }
+
+    .greyed.out {
+      color: ${palette.gray.rgb()}
     }
     `}</style>
   </div>

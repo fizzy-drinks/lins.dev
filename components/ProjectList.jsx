@@ -109,7 +109,7 @@ const ProjectList = ({ repos }) =>
       font-family: Inconsolata, monospace;
       font-variant: small-caps;
       text-transform: lowercase;
-      color: ${palette.black.whiten(20).rgb()}
+      color: ${palette.gray.rgb()}
     }
 
     .description {

@@ -37,7 +37,7 @@ const Home = () =>
     </section>
     <section>
       <h2>Publicações: em breve!</h2>
-      <p style={{ color: colors.gray.main }}>Não há nada para ver aqui</p>
+      <p className='greyed out'>Não há nada para ver aqui</p>
     </section>
     <section>
       <h2>Contribua para o Domínio Público!</h2>

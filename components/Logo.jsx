@@ -18,7 +18,7 @@ const Logo = () =>
     }
 
     .dev {
-      color: ${palette.black.whiten(20).rgb()}
+      color: ${palette.gray.rgb()}
     }
     `}</style>
   </div>
