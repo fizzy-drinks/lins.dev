@@ -88,7 +88,7 @@ const ProjectList = ({ repos }) =>
       flex: 1 1 auto;
 
       background: ${palette.white};
-      box-shadow: inset 0px 0px 5px ${palette.black}20;
+      box-shadow: inset 0px 0px 2px ${palette.black.alpha(.1)};
       border: none;
       border-radius: 3px;
     }
