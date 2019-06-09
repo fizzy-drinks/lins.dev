@@ -16,7 +16,7 @@ const Contact = () =>
         <h3>Contate-me por e-mail.</h3>
         <p>
           É tradicional e prático.
-          Meu endereço principal é <a href='mailto:gabriel.chiconi@gmail.com'>gabriel.chiconi@gmail.com</a>,
+          Meu endereço principal é <a href='mailto:gabriel@lins.dev'>gabriel@lins.dev</a>,
           e normalmente respondo a todas as mensagens dentro de um dia.
         </p>
       </article>
