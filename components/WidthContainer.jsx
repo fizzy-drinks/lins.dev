@@ -6,6 +6,7 @@ const WidthContainer = ({ children }) =>
       max-width: 1360px;
       width: 100%;
       margin: 0 auto;
+      padding: 0 1em;
     }
     `}</style>
   </div>

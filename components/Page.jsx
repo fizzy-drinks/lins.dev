@@ -57,11 +57,6 @@ const Page = props =>
       font-family: Heebo, sans-serif;
     }
 
-    main > * {
-      padding-left: .5em;
-      padding-right: .5em;
-    }
-
     .page.component:last-child {
       padding-bottom: .5em;
     }
