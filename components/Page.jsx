@@ -4,20 +4,26 @@ import Navigation from './Navigation'
 
 import palette from '../config/colors'
 
-const pBaseFontSizeEm = 1.3
-const headerH1ToTextRatio = 2.5
-const headerStepDownsizingRatio = .85
-const headerSizes = Array(6)
-  .fill(headerH1ToTextRatio * pBaseFontSizeEm)
-  .map((h1Size, ii) => h1Size * (Math.pow(headerStepDownsizingRatio, ii)))
-const headerSizesCssString = headerSizes
-  .map((size, ii) =>
-    `h${ii + 1} {
-      font-size: ${size}em;
-      margin: 1em 0 .5em;
+const breakpoints = [0, 600, 1024]
+const pBaseFontSizeEm = [1, 1.15, 1.3]
+const headerH1ToTextRatio = [1.5, 2, 2.5]
+const headerStepDownsizingRatio = [.95, .95, .85]
+
+const textSizesCssString = breakpoints
+  .map((minWidth, ii) =>
+    `@media (min-width: ${minWidth}px) {
+      ${Array(6)
+        .fill(headerH1ToTextRatio[ii] * pBaseFontSizeEm[ii])
+        .map((h1Size, jj) => h1Size * (Math.pow(headerStepDownsizingRatio[ii], jj)))
+        .map((size, ii) =>
+          `h${ii + 1} {
+            font-size: ${size}em;
+            margin: 1em 0 .5em
+          }`)
+        .join``
+        .concat(`p { font-size: ${pBaseFontSizeEm[ii]}em }`)}
     }`)
   .join``
-const textSizesCssString = headerSizesCssString + `p { font-size: ${pBaseFontSizeEm}em }`
 
 const Page = props =>
   <div className='page component'>
