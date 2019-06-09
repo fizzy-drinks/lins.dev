@@ -107,6 +107,7 @@ const ProjectList = ({ repos }) =>
 
     h4 {
       font-family: Inconsolata, monospace;
+      font-size: 1.2em;
       font-variant: small-caps;
       text-transform: lowercase;
       color: ${palette.gray.rgb()}

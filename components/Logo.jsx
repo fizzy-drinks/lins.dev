@@ -1,11 +1,12 @@
 import palette from '../config/colors'
 
 const Logo = () =>
-  <div>
+  <div className='frame'>
     <span className='lins'>lins</span>
     <span className='dev'>.dev</span>
     <style jsx>{`
-    div {
+    .frame {
+      margin: 0;
       padding: .3em .5em;
       font-family: Inconsolata, monospace;
       border: ${palette.primary.darken(.5)} 1px solid;

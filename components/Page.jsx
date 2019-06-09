@@ -4,6 +4,21 @@ import Navigation from './Navigation'
 
 import palette from '../config/colors'
 
+const pBaseFontSizeEm = 1.3
+const headerH1ToTextRatio = 2.5
+const headerStepDownsizingRatio = .85
+const headerSizes = Array(6)
+  .fill(headerH1ToTextRatio * pBaseFontSizeEm)
+  .map((h1Size, ii) => h1Size * (Math.pow(headerStepDownsizingRatio, ii)))
+const headerSizesCssString = headerSizes
+  .map((size, ii) =>
+    `h${ii + 1} {
+      font-size: ${size}em;
+      margin: 1em 0 .5em;
+    }`)
+  .join``
+const textSizesCssString = headerSizesCssString + `p { font-size: ${pBaseFontSizeEm}em }`
+
 const Page = props =>
   <div className='page component'>
     <Head>
@@ -25,10 +40,11 @@ const Page = props =>
       color: ${palette.black}
     }
 
+    ${textSizesCssString}
+
     p {
-      font-size: 1.3em;
-      line-height: 200%;
       max-width: 840px;
+      line-height: 200%;
     }
 
     .page.component {
