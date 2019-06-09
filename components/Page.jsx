@@ -25,6 +25,12 @@ const Page = props =>
       color: ${palette.black}
     }
 
+    p {
+      font-size: 1.3em;
+      line-height: 200%;
+      max-width: 840px;
+    }
+
     .page.component {
       font-family: Heebo, sans-serif;
     }
