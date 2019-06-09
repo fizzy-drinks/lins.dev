@@ -7,7 +7,7 @@ import palette from '../config/colors'
 const breakpoints = [0, 600, 1024]
 const pBaseFontSizeEm = [1, 1.15, 1.3]
 const headerH1ToTextRatio = [1.5, 2, 2.5]
-const headerStepDownsizingRatio = [.95, .95, .85]
+const headerStepDownsizingRatio = [.95, .9, .85]
 
 const textSizesCssString = breakpoints
   .map((minWidth, ii) =>

@@ -5,6 +5,9 @@ import PageHeader from '../components/PageHeader'
 import PageContentSection from '../components/PageContentSection'
 import ProjectList from '../components/ProjectList'
 import SeparatorLink from '../components/SeparatorLink'
+import MediumFeed from '../components/MediumFeed'
+
+const MediumFeedURL = 'https://linsdev-medium.herokuapp.com'
 
 const MainProjects = [
   { name: 'sw',
@@ -37,8 +40,8 @@ const Home = () =>
       </Link>
     </PageContentSection>
     <PageContentSection>
-      <h2>Publicações: em breve!</h2>
-      <p className='greyed out'>Não há nada para ver aqui</p>
+      <h2>Publicações</h2>
+      <MediumFeed url={MediumFeedURL} />
     </PageContentSection>
     <PageContentSection>
       <h2>Contribua para o Domínio Público!</h2>

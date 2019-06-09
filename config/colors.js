@@ -7,6 +7,7 @@ const base = {
   light: Color('rgba(252, 246, 177, 1)'),
   white: Color('#FAFAFA'),
   black: Color('rgba(9, 8, 9, 1)'),
+  trueBlack: Color('#000')
 }
 
 export default {
