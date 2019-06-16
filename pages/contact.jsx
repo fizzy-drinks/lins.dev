@@ -5,12 +5,11 @@ import WidthContainer from '../components/WidthContainer'
 const Contact = () =>
   <Page title='Contato'>
     <PageHeader>
-      <PageHeader.Title>Contato</PageHeader.Title>
+      <PageHeader.Title>
+        <PageHeader.Title.Highlight>contato</PageHeader.Title.Highlight>
+      </PageHeader.Title>
       <PageHeader.Sub>Vamos tomar um café? Adoraria ouvir o que você tem a dizer.</PageHeader.Sub>
     </PageHeader>
-    <WidthContainer>
-      <p>Essas são as formas pelas quais podemos conversar:</p>
-    </WidthContainer>
     <WidthContainer>
       <article>
         <h3>Contate-me por e-mail.</h3>

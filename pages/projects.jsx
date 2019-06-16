@@ -48,7 +48,9 @@ class Projects extends React.Component {
     return (
       <Page title='Projetos'>
         <PageHeader>
-          <PageHeader.Title>Projetos</PageHeader.Title>
+          <PageHeader.Title>
+            <PageHeader.Title.Highlight>projetos</PageHeader.Title.Highlight>
+          </PageHeader.Title>
           <PageHeader.Sub>Agregador de repositórios do GitHub e GitLab, com algumas notas pessoais</PageHeader.Sub>
         </PageHeader>
         <ProjectList repos={this.props.repos} />

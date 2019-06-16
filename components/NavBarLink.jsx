@@ -21,20 +21,9 @@ const NavBarLink = ({ route, label, onClick }) =>
         border-width: 0;
       }
 
-      a:first-of-type {
-        border-bottom-left-radius: 3px;
-        border-top-left-radius: 3px;
-      }
-
-      a:last-of-type {
-        border-bottom-right-radius: 3px;
-        border-top-right-radius: 3px;        
-      }
-
       a:hover,
       a:focus {
-        color: ${palette.black};
-        background-color: ${palette.white};
+        background-color: ${palette.white.alpha(.4)};
         border-width: 0;
       }
       `}</style>

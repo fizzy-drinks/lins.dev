@@ -7,34 +7,26 @@ const Title = ({ children }) =>
     {children}
     <style jsx>{`
     h2 {
-      font-family: Inconsolata, monospace;
+      font-family: 'Nanum Gothic Coding', sans-serif;
       font-size: 5em;
-      margin: 0;
-      color: ${palette.primary};
+      font-weight: normal;
+      margin-top: 0;
+      color: ${palette.white};
       padding: 0;
-      animation: nudge-right 2s ease-out 0s 1 normal forwards;
     }
 
-    @keyframes nudge-right {
-      0% {
-        padding-left: 0;
-      }
-
-      100% {
-        padding-left: 7.5vw;
-      }
+    h2::before,
+    h2::after {
+      font-size: .8em;
+      color: ${palette.white}
     }
 
     h2::before {
       content: '<';
-      font-size: .8em;
-      color: ${palette.black}
     }
 
     h2::after {
       content: '/>';
-      font-size: .8em;
-      color: ${palette.black}
     }
 
     @media (max-width: 740px) {
@@ -51,6 +43,16 @@ const Title = ({ children }) =>
     `}</style>
   </h2>
 
+Title.Highlight = ({ children }) =>
+  <span className='highlight'>
+    {children}
+    <style jsx>{`
+      .highlight {
+        color: ${palette.complement}
+      }
+    `}</style>
+  </span>
+
 const Sub = ({ children }) =>
   <p>
     {children}
@@ -58,19 +60,7 @@ const Sub = ({ children }) =>
     p {
       font-size: calc(1.1em + 0.2vw);
       font-weight: 500;
-      color: ${palette.black.lighten(.5)};
-      animation: nudge-left 2s ease-out 0s 1 normal forwards;
       width: 80vw;
-    }
-
-    @keyframes nudge-left {
-      0% {
-        padding-left: 10vw;
-      }
-
-      100% {
-        padding-left: 5vw;
-      }
     }
     `}</style>
   </p>
@@ -82,12 +72,8 @@ const PageHeader = ({ children }) =>
     </WidthContainer>
     <style jsx>{`
     .title.wrapper {
-      background: radial-gradient(circle at top left, ${palette.light}, ${palette.light.lighten(.2)} 100%);
-      border-top: ${palette.black} 1em solid;
-      border-bottom: ${palette.black} 1em solid;
-
       padding: 0 .75em;
-      height: 70vh;
+      height: 100vh;
 
       display: flex;
       flex-direction: column;
