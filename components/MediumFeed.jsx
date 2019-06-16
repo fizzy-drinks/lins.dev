@@ -15,7 +15,6 @@ class MediumFeed extends React.Component {
   async componentDidMount () {
     const rss = new RSSParser()
     const data = await rss.parseURL(this.props.url)
-    console.log(data)
     this.setState({
       loading: false,
       posts: data.items.filter(item => item.categories)
@@ -37,8 +36,11 @@ class MediumFeed extends React.Component {
           <article className='medium article' key={post.guid}>
             <a className='medium link' href={post.link} title={post.title} target='_blank'>
               <aside>
-                <p className='medium publication date'>
-                  {new Date(post.pubDate).toLocaleDateString('pt-BR')} &middot; {post.link.replace(/.*medium\.com\/([\w@\-]+)\/.*/, '$1')}
+                <p className='medium metadata publication date'>
+                  {new Date(post.pubDate).toLocaleDateString('pt-BR')}
+                </p>
+                <p className='medium metadata publication author'>
+                  {post.link.replace(/.*medium\.com\/(@[\w\-]+)\/.*/, '$1')}
                 </p>
               </aside>
               <h3 className='medium title'>{post.title}</h3>
@@ -47,19 +49,18 @@ class MediumFeed extends React.Component {
         <style jsx>{`
           .medium.container {
             display: flex;
-            justify-content: stretch;
+            justify-content: center;
             align-items: stretch;
             flex-wrap: wrap;
           }
 
           .medium.article {
             padding: 24px;
-            box-shadow: 0 1px 4px ${palette.trueBlack.alpha(.1)};
-            border: ${palette.trueBlack.alpha(.1)} 1px solid;
-            border-radius: 5px;
+            background: ${palette.trueWhite.alpha(.4)};
             margin: 12px;
             min-width: 300px;
-            flex: 1 1 calc(30% - 24px);
+            max-width: 500px;
+            flex: 1 1 calc(50% - 24px);
           }
 
           .medium.link {
@@ -67,14 +68,19 @@ class MediumFeed extends React.Component {
             border: none;
           }
 
-          .medium.publication.date {
+          .medium.metadata {
             font-size: .9em;
-            color: ${palette.trueBlack.alpha(.6).rgb()}
+            color: ${palette.white.rgb()};
+            margin: 0;
           }
 
           .medium.title {
-            font-size: 1.5em;
-            color: ${palette.trueBlack.alpha(.85).rgb()}
+            font-size: 1.65em;
+            margin: 0;
+            color: ${palette.primaryDark.rgb()};
+            min-height: 120px;
+            display: flex;
+            align-items: center;
           }
         `}</style>
       </div>

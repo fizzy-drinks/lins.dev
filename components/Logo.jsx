@@ -7,19 +7,24 @@ const Logo = () =>
     <style jsx>{`
     .frame {
       margin: 0;
-      padding: .3em .5em;
-      font-family: Inconsolata, monospace;
-      border: ${palette.primary.darken(.5)} 1px solid;
+      padding: .5em;
+      font-family: 'Nanum Gothic Coding', monospace;
+      border: ${palette.primary.darken(.2).alpha(.2)} 1px solid;
       border-radius: 2px;
-      background-color: ${palette.white};
+      background-color: ${palette.primary.lighten(.5).alpha(.9)};
+      color: ${palette.white.alpha(.9)}
+    }
+
+    .frame::before {
+      content: '<'
+    }
+
+    .frame::after {
+      content: '/>'
     }
 
     .lins {
-      color: ${palette.primary};
-    }
-
-    .dev {
-      color: ${palette.gray.rgb()}
+      color: ${palette.complement};
     }
     `}</style>
   </div>

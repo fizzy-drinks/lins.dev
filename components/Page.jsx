@@ -1,6 +1,7 @@
 import Head from 'next/head'
 
 import Navigation from './Navigation'
+import Footer from './Footer'
 
 import palette from '../config/colors'
 
@@ -18,7 +19,10 @@ const textSizesCssString = breakpoints
         .map((size, ii) =>
           `h${ii + 1} {
             font-size: ${size}em;
-            margin: 1em 0 .5em
+            margin: ${size}em 0 .5em;
+            color: ${palette.white.alpha(.9)};
+            text-align: center;
+            font-family: 'TypoPRO Bebas Neue', 'Arial Black', sans-serif;
           }`)
         .join``
         .concat(`p { font-size: ${pBaseFontSizeEm[ii]}em }`)}
@@ -31,11 +35,13 @@ const Page = props =>
       <title key='title'>{props.title} | lins.dev</title>
       <meta key='theme' name='theme-color' content={palette.primary} />
       <link key='font' href='https://fonts.googleapis.com/css?family=Heebo|Nanum+Gothic+Coding&display=swap' rel='stylesheet' />
+      <link key='font-bebas' href='https://cdn.jsdelivr.net/npm/@typopro/web-bebas-neue@3.7.5/TypoPRO-BebasNeue-Regular.css' rel='stylesheet' />
     </Head>
     <Navigation />
     <main>
       {props.children}
     </main>
+    <Footer />
     <style global jsx>{`
     * {
       box-sizing: border-box;
@@ -43,28 +49,30 @@ const Page = props =>
 
     body {
       margin: 0;
-      color: ${palette.black}
     }
 
     ${textSizesCssString}
 
     p {
       max-width: 840px;
+      margin: 0 auto;
+      color: ${palette.white.alpha(.9)};
+      text-align: center;
       line-height: 200%;
     }
 
     .page.component {
       font-family: Heebo, sans-serif;
-    }
-
-    .page.component:last-child {
-      padding-bottom: .5em;
+      color: ${palette.white.alpha(.9)};
+      background: ${palette.primary} url(/static/14624.png) fixed;
+      background-position: center center;
+      background-size: cover;
     }
 
     a, .link {
-      color: ${palette.primary.darken(.2)};
+      color: ${palette.light};
       text-decoration: none;
-      border: ${palette.gray.rgb()} 0 solid;
+      border: ${palette.light} 0 solid;
       border-bottom-width: 1px;
       transition: all 300ms ease;
       cursor: pointer;
