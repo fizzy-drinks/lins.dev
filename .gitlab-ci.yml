@@ -8,6 +8,7 @@ pages:
   stage: deploy
   script:
     - yarn gitlab
+    - cp favicon.ico public/favicon.ico
   artifacts:
     paths:
       - public
