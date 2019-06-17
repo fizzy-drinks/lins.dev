@@ -69,8 +69,8 @@ const Home = () =>
       </p>
       <p>
         Às vezes, publico artigos sobre programação, sobrevivência no mundo das startups de tecnologia e
-        estudo de idiomas. Recentemente expurguei minha coleção de posts em uma tentativa de controle de
-        qualidade, mas em breve haverá notícias a respeito desse tipo de conteúdo.
+        estudo de idiomas. Estou reconstruindo meu histórico de posts para atualizá-los para o momento
+        atual e por isso sua quantidade e frequência não estão tão grandes assim.
       </p>
       <p>
         Desde 2018, também sou jornalista. Ainda tenho que descobrir como vou usar esse diploma, mas ele
