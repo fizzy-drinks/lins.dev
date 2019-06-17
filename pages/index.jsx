@@ -25,7 +25,7 @@ const MainProjects = [
 ]
 
 const Home = () =>
-  <Page title='Home'>
+  <Page title='Home' seo='home'>
     <PageHeader>
       <PageHeader.Title>
         <PageHeader.Title.Highlight>lins</PageHeader.Title.Highlight>

@@ -16,10 +16,13 @@
     "axios": "^0.18.0",
     "classnames": "^2.2.6",
     "color": "^3.1.2",
+    "json-loader": "^0.5.7",
     "next": "^8.1.0",
+    "next-seo": "^1.11.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-icons": "^3.7.0",
-    "rss-parser": "^3.7.1"
+    "rss-parser": "^3.7.1",
+    "yaml-loader": "^0.5.0"
   }
 }

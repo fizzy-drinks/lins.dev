@@ -3,7 +3,7 @@ import PageHeader from '../components/PageHeader'
 import WidthContainer from '../components/WidthContainer'
 
 const Contact = () =>
-  <Page title='Contato'>
+  <Page title='Contato' seo='contact'>
     <PageHeader>
       <PageHeader.Title>
         <PageHeader.Title.Highlight>contato</PageHeader.Title.Highlight>

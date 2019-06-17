@@ -46,7 +46,7 @@ class Projects extends React.Component {
 
   render () {
     return (
-      <Page title='Projetos'>
+      <Page title='Projetos' seo='projects'>
         <PageHeader>
           <PageHeader.Title>
             <PageHeader.Title.Highlight>projetos</PageHeader.Title.Highlight>

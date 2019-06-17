@@ -1,8 +1,10 @@
 import Head from 'next/head'
+import SEO from 'next-seo'
 
 import Navigation from './Navigation'
 import Footer from './Footer'
 
+import seoConfig from '../config/seo'
 import palette from '../config/colors'
 
 const breakpoints = [0, 600, 1024]
@@ -38,6 +40,7 @@ const Page = props =>
       <link key='font' href='https://fonts.googleapis.com/css?family=Heebo|Nanum+Gothic+Coding&display=swap' rel='stylesheet' />
       <link key='font-bebas' href='https://cdn.jsdelivr.net/npm/@typopro/web-bebas-neue@3.7.5/TypoPRO-BebasNeue-Regular.css' rel='stylesheet' />
     </Head>
+    <SEO config={seoConfig[props.seo]} />
     <Navigation />
     <div className='page main area'>
       <div className='background' />
