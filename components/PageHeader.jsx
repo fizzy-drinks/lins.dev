@@ -66,22 +66,23 @@ const Sub = ({ children }) =>
   </p>
 
 const PageHeader = ({ children }) =>
-  <section className='title wrapper'>
-    <WidthContainer>
+  <WidthContainer>
+    <section className='title wrapper'>
       {children}
-    </WidthContainer>
-    <style jsx>{`
-    .title.wrapper {
-      padding: 0 .75em;
-      height: 100vh;
+      <style jsx>{`
+      .title.wrapper {
+        padding: 0 .75em;
+        width: 100%;
+        height: 100vh;
 
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      justify-content: center;
-    }
-    `}</style>
-  </section>
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      `}</style>
+    </section>
+  </WidthContainer>
 
 PageHeader.Title = Title
 PageHeader.Sub = Sub

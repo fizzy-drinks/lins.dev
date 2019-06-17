@@ -7,6 +7,8 @@ import ProjectList from '../components/ProjectList'
 import SeparatorLink from '../components/SeparatorLink'
 import MediumFeed from '../components/MediumFeed'
 
+import palette from '../config/colors'
+
 const MediumFeedURL = 'https://linsdev-medium.herokuapp.com'
 
 const MainProjects = [
@@ -27,6 +29,20 @@ const MainProjects = [
 const Home = () =>
   <Page title='Home' seo='home'>
     <PageHeader>
+      <img className='avatar' src='/static/me.png' alt='Gabriel Chiconi em pixel art' />
+      <style jsx>{`
+      .avatar {
+        margin: 0 auto;
+        height: 180px;
+        margin-bottom: 2em;
+
+        border-radius: 50%;
+        border: ${palette.black} 5px solid;
+        box-shadow: inset 0 0 10px ${palette.black};
+
+        background: ${palette.white}
+      }
+      `}</style>
       <PageHeader.Title>
         <PageHeader.Title.Highlight>lins</PageHeader.Title.Highlight>
         .dev
