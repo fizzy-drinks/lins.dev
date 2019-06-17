@@ -65,6 +65,7 @@ class Navigation extends React.Component {
         top: 0;
         left: 0;
         right: 0;
+        z-index: 3;
 
         border-bottom: ${palette.black} ${headerSettings.border} solid;
         height: ${headerSettings.size};

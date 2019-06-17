@@ -39,10 +39,13 @@ const Page = props =>
       <link key='font-bebas' href='https://cdn.jsdelivr.net/npm/@typopro/web-bebas-neue@3.7.5/TypoPRO-BebasNeue-Regular.css' rel='stylesheet' />
     </Head>
     <Navigation />
-    <main>
-      {props.children}
-    </main>
-    <Footer />
+    <div className='page main area'>
+      <div className='background' />
+      <main>
+        {props.children}
+      </main>
+      <Footer />
+    </div>
     <style global jsx>{`
     * {
       box-sizing: border-box;
@@ -65,9 +68,43 @@ const Page = props =>
     .page.component {
       font-family: Heebo, sans-serif;
       color: ${palette.white.alpha(.9)};
-      background: ${palette.primary} url(/static/14624.png) fixed;
+    }
+
+    .page.main.area > * {
+      position: relative;
+      z-index: 2;
+    }
+
+    .page.main.area > .background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vh;
+      height: 100vh;
+      z-index: 1;
+
+      background: ${palette.primary} url(/static/bg_800.png) fixed;
       background-position: center center;
       background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    @media (min-width: 800px) {
+      .page.main.area > .background {
+        background-image: url(/static/bg_1080.png)
+      }
+    }
+
+    @media (min-width: 1080px) {
+      .page.main.area > .background {
+        background-image: url(/static/bg_1920.png)
+      }
+    }
+
+    @media (min-width: 1920px) {
+      .page.main.area > .background {
+        background-image: url(/static/bg_5000.png)
+      }
     }
 
     a, .link {
