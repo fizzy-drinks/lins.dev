@@ -2,7 +2,7 @@ home:
   description: |
     Desenvolvedor web de Santos-SP. Escrevo artigos, colaboro em projetos de código aberto e
     gosto de conversar.
-  canonical: 'lins.dev'
+  canonical: 'https://lins.dev'
   openGraph:
     title: 'lins.dev | Gabriel Chiconi Lins'
     url: 'https://lins.dev'
@@ -20,7 +20,7 @@ contact:
   description: |
     Desenvolvedor web de Santos-SP. Escrevo artigos, colaboro em projetos de código aberto e
     gosto de conversar. Veja como entrar em contato.
-  canonical: 'lins.dev/contact'
+  canonical: 'https://lins.dev/contact'
   openGraph:
     title: 'lins.dev | Gabriel Chiconi Lins'
     url: 'https://lins.dev/contact'
@@ -37,7 +37,7 @@ contact:
 projects:
   description: |
     Projetos com que colaboro. 🚀
-  canonical: 'lins.dev/projects'
+  canonical: 'https://lins.dev/projects'
   openGraph:
     title: 'lins.dev | Projetos'
     url: 'https://lins.dev/projects'
