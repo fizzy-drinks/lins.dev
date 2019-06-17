@@ -7,7 +7,10 @@ home:
     title: 'lins.dev | Gabriel Chiconi Lins'
     url: 'lins.dev'
     images:
-      - /static/me.png
+      - url: https://lins.dev/static/me.png
+        width: 500
+        height: 500
+        alt: Gabriel Chiconi Lins
     site_name: lins.dev
     profile:
       firstName: Gabriel
@@ -22,7 +25,10 @@ contact:
     title: 'lins.dev | Gabriel Chiconi Lins'
     url: 'lins.dev/contact'
     images:
-      - /static/me.png
+      - url: https://lins.dev/static/me.png
+        width: 500
+        height: 500
+        alt: Gabriel Chiconi Lins
     site_name: lins.dev
     profile:
       firstName: Gabriel
@@ -36,7 +42,10 @@ projects:
     title: 'lins.dev | Projetos'
     url: 'lins.dev/projects'
     images:
-      - /static/me.png
+      - url: https://lins.dev/static/me.png
+        width: 500
+        height: 500
+        alt: Gabriel Chiconi Lins
     site_name: lins.dev
     profile:
       firstName: Gabriel
