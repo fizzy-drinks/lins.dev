@@ -2,6 +2,8 @@ import RSSParser from 'rss-parser'
 
 import palette from '../config/colors'
 
+const mediumURLToUsername = mediumURL => mediumURL.replace(/.*medium\.com\/([\@\w\-]+)\/.*/, '$1')
+
 class MediumFeed extends React.Component {
   constructor ({ url }) {
     super()
@@ -34,17 +36,26 @@ class MediumFeed extends React.Component {
       <div className='medium container'>
         {this.state.posts.map(post =>
           <article className='medium article' key={post.guid}>
-            <a className='medium link' href={post.link} title={post.title} target='_blank'>
-              <aside>
-                <p className='medium metadata publication date'>
-                  {new Date(post.pubDate).toLocaleDateString('pt-BR')}
-                </p>
-                <p className='medium metadata publication author'>
-                  {post.link.replace(/.*medium\.com\/(@[\w\-]+)\/.*/, '$1')}
-                </p>
-              </aside>
-              <h3 className='medium title'>{post.title}</h3>
-            </a>
+            <aside>
+              <p className='medium metadata publication date'>
+                {new Date(post.pubDate).toLocaleDateString('pt-BR')}
+              </p>
+              <p className='medium metadata publication author'>
+                <a
+                  className='medium link'
+                  href={`https://medium.com/${mediumURLToUsername(post.link)}`}
+                  title={post.title}
+                  target='_blank'
+                >
+                  {mediumURLToUsername(post.link)}
+                </a>
+              </p>
+            </aside>
+            <h3 className='medium title'>
+              <a className='medium link' href={post.link} title={post.title} target='_blank'>
+                {post.title}
+              </a>
+            </h3>
           </article>)}
         <style jsx>{`
           .medium.container {
