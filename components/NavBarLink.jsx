@@ -1,10 +1,14 @@
+import Router from 'next/router'
 import Link from 'next/link'
 
 import palette from '../config/colors'
 
+const isRouteActive = route =>
+  typeof window !== 'undefined' && route === Router.route
+
 const NavBarLink = ({ route, label, onClick }) =>
   <Link href={route}>
-    <a title={label} onClick={onClick}>
+    <a title={label} onClick={onClick} className={`${isRouteActive(route) ? 'active' : ''}`}>
       {label}
       <style jsx>{`
       a {
@@ -15,7 +19,7 @@ const NavBarLink = ({ route, label, onClick }) =>
         width: 5em;
         padding: .5em;
 
-        color: ${palette.white};
+        color: inherit;
         text-decoration: none;
         transition: all 300ms ease;
         border-width: 0;
@@ -25,6 +29,18 @@ const NavBarLink = ({ route, label, onClick }) =>
       a:focus {
         background-color: ${palette.white.alpha(.4)};
         border-width: 0;
+      }
+
+      a.active {
+        background-color: ${palette.white.alpha(.15)};
+        pointer-events: none;
+      }
+
+      @media (max-width: 540px) {
+        a {
+          flex: 1 1 auto;
+          width: 100%;
+        }
       }
       `}</style>
     </a>

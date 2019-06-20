@@ -18,7 +18,10 @@ const links = [
 const headerSettings = {
   size: '4em',
   border: '2px',
-  pad: '.5em'
+  pad: '.5em',
+  textColor: palette.white,
+  overlayTextColor: palette.primaryDark,
+  overlayBackgroundColor: palette.white.alpha(.95)
 }
 
 class Navigation extends React.Component {
@@ -40,22 +43,25 @@ class Navigation extends React.Component {
             </h1>
           </Link>
           <button className='open nav button' onClick={() => this.setState({ menu: true })}>
-            <MdMenu size={24} color={palette.white} />
+            <MdMenu size={24} color={headerSettings.overlayTextColor} />
           </button>
           <nav className={classnames({ show: this.state.menu })}>
             <div className='close nav wrapper'>
               <button className='close nav button' onClick={() => this.setState({ menu: false })}>
-                <MdClose size={24} color={palette.white} />
+                <MdClose size={24} color={headerSettings.overlayTextColor} />
               </button>
             </div>
-            {links.map(link =>
-              <NavBarLink
-                key={link.label}
-                route={link.route}
-                label={link.label}
-                onClick={() => this.setState({ menu: false })}
-              />
-            )}
+            <div className='nav links wrapper'>
+              {links.map(link =>
+                <NavBarLink
+                  key={link.label}
+                  route={link.route}
+                  label={link.label}
+                  onClick={() => this.setState({ menu: false })}
+                />
+              )}
+            </div>
+            <div className='gutter'>&nbsp;</div>
           </nav>
         </div>
       </WidthContainer>
@@ -67,10 +73,9 @@ class Navigation extends React.Component {
         right: 0;
         z-index: 3;
 
-        border-bottom: ${palette.black} ${headerSettings.border} solid;
         height: ${headerSettings.size};
 
-        background-color: ${palette.primary};
+        color: ${headerSettings.textColor}
       }
 
       .flex.row {
@@ -90,12 +95,15 @@ class Navigation extends React.Component {
         cursor: pointer;
       }
 
-      nav {
+      nav, .nav.links.wrapper {
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: flex-end;
-        background-color: ${palette.primary};
+      }
+
+      .gutter {
+        display: none;
       }
 
       .close.nav.wrapper {
@@ -144,6 +152,21 @@ class Navigation extends React.Component {
           justify-content: flex-start;
 
           display: none;
+
+          background-color: ${headerSettings.overlayBackgroundColor};
+          color: ${headerSettings.overlayTextColor};
+        }
+
+        .nav.links.wrapper {
+          flex-direction: column;
+          flex-grow: 1;
+          justify-content: space-around;
+          width: 100%;
+        }
+
+        .gutter {
+          height: 48px;
+          display: block;
         }
 
         nav.show {
