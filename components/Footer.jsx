@@ -9,13 +9,19 @@ const Footer = () =>
       &copy; 2019 Gabriel Chiconi.
     </p>
     <p>
-      <a href='https://gitlab.com/gabrielchiconi/lins.dev'>Código fonte no GitLab</a>
+      <a target='_blank' href='https://gitlab.com/gabrielchiconi/lins.dev'>
+        Código fonte no GitLab
+      </a>
     </p>
     <p>
-      <a href='https://gitlab.com/gabrielchiconi/lins.dev/raw/master/LICENSE'>Ver licença</a>
+      <a target='_blank' href='https://gitlab.com/gabrielchiconi/lins.dev/raw/master/LICENSE'>
+        Ver licença
+      </a>
     </p>
     <p className='smaller'>
-      <a href="https://www.freepik.com/free-photos-vectors/background">Background vector created by starline - www.freepik.com</a>
+      <a target='_blank' href="https://www.freepik.com/free-photos-vectors/background">
+        Background vector created by starline - www.freepik.com
+      </a>
     </p>
     <style jsx>{`
     footer {
