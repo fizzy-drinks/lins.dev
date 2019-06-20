@@ -12,6 +12,15 @@ const pBaseFontSizeEm = [1, 1.15, 1.3]
 const headerH1ToTextRatio = [1.5, 2, 2.5]
 const headerStepDownsizingRatio = [.95, .9, .85]
 
+const buildSeoConfig = pageName => ({
+  ...seoConfig.__default,
+  ...seoConfig[pageName],
+  openGraph: {
+    ...seoConfig.__default.openGraph,
+    ...(seoConfig[pageName] || {}).openGraph
+  }
+})
+
 const textSizesCssString = breakpoints
   .map((minWidth, ii) =>
     `@media (min-width: ${minWidth}px) {
@@ -40,7 +49,7 @@ const Page = props =>
       <link key='font' href='https://fonts.googleapis.com/css?family=Heebo|Nanum+Gothic+Coding&display=swap' rel='stylesheet' />
       <link key='font-bebas' href='https://cdn.jsdelivr.net/npm/@typopro/web-bebas-neue@3.7.5/TypoPRO-BebasNeue-Regular.css' rel='stylesheet' />
     </Head>
-    <SEO config={seoConfig[props.seo]} />
+    <SEO config={buildSeoConfig(props.seo)} />
     <Navigation />
     <div className='page main area'>
       <div className='background' />

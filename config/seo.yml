@@ -1,12 +1,18 @@
-home:
+__default:
   description: |
-    Desenvolvedor web de Santos-SP. Escrevo artigos, colaboro em projetos de código aberto e
-    gosto de conversar.
-  canonical: 'https://lins.dev'
+    Página pessoal do Gabriel Chiconi Lins. Desenvolvedor web full stack de Santos-SP. 
+    Escrevo artigos, colaboro em projetos open source e gosto de conversar.
+    Sistemas para empresas, criação de websites, consultoria de informática, open source,
+    startups e tutoriais de programação.
+  canonical: https://lins.dev
   openGraph:
-    title: 'lins.dev | Gabriel Chiconi Lins'
-    url: 'https://lins.dev'
+    title: lins.dev | Gabriel Chiconi Lins
+    url: https://lins.dev
     images:
+      - url: https://lins.dev/static/me_256.png
+        width: 256
+        height: 256
+        alt: Gabriel Chiconi Lins
       - url: https://lins.dev/static/me.png
         width: 500
         height: 500
@@ -16,37 +22,19 @@ home:
       firstName: Gabriel
       lastName: Chiconi
 
+home:
+
 contact:
-  description: |
-    Desenvolvedor web de Santos-SP. Escrevo artigos, colaboro em projetos de código aberto e
-    gosto de conversar. Veja como entrar em contato.
-  canonical: 'https://lins.dev/contact'
+  canonical: https://lins.dev/contact
   openGraph:
-    title: 'lins.dev | Gabriel Chiconi Lins'
-    url: 'https://lins.dev/contact'
-    images:
-      - url: https://lins.dev/static/me.png
-        width: 500
-        height: 500
-        alt: Gabriel Chiconi Lins
-    site_name: lins.dev
-    profile:
-      firstName: Gabriel
-      lastName: Chiconi
+    url: https://lins.dev/contact
 
 projects:
   description: |
-    Projetos com que colaboro. 🚀
-  canonical: 'https://lins.dev/projects'
+    Projetos do Gabriel Chiconi Lins. 🚀 Desenvolvedor web full stack de Santos-SP. 
+    Escrevo artigos, colaboro em projetos open source e gosto de conversar.
+    Sistemas para empresas, criação de websites, consultoria de informática, open source,
+    startups e tutoriais de programação.
+  canonical: https://lins.dev/projects
   openGraph:
-    title: 'lins.dev | Projetos'
-    url: 'https://lins.dev/projects'
-    images:
-      - url: https://lins.dev/static/me.png
-        width: 500
-        height: 500
-        alt: Gabriel Chiconi Lins
-    site_name: lins.dev
-    profile:
-      firstName: Gabriel
-      lastName: Chiconi
+    url: https://lins.dev/projects
