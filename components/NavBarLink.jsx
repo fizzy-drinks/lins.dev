@@ -16,6 +16,7 @@ const NavBarLink = ({ route, label, onClick }) =>
         align-items: center;
         justify-content: center;
 
+        height: 48px;
         width: 5em;
         padding: .5em;
 
@@ -23,6 +24,8 @@ const NavBarLink = ({ route, label, onClick }) =>
         text-decoration: none;
         transition: all 300ms ease;
         border-width: 0;
+        font-size: 1.2em;
+        font-family: 'TypoPRO Bebas Neue', sans-serif;
       }
 
       a:hover,
@@ -32,7 +35,7 @@ const NavBarLink = ({ route, label, onClick }) =>
       }
 
       a.active {
-        background-color: ${palette.white.alpha(.15)};
+        background-image: linear-gradient(to bottom, ${palette.white.alpha(.15)} 0%, transparent 80%);
         pointer-events: none;
       }
 

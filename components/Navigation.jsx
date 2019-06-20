@@ -155,6 +155,7 @@ class Navigation extends React.Component {
 
           background-color: ${headerSettings.overlayBackgroundColor};
           color: ${headerSettings.overlayTextColor};
+          font-size: 1.15em;
         }
 
         .nav.links.wrapper {
