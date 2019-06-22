@@ -9,7 +9,9 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "gitlab": "next build && next export && rm -rf public && mv out public"
+    "build-static": "next build && next export",
+    "sitemap": "static-sitemap ./pages https://lins.dev/ jsx -r > sitemap.xml",
+    "gitlab": "yarn build-static && yarn sitemap && rm -rf public && mv out public"
   },
   "dependencies": {
     "@octokit/rest": "^16.27.0",
@@ -24,5 +26,8 @@
     "react-icons": "^3.7.0",
     "rss-parser": "^3.7.1",
     "yaml-loader": "^0.5.0"
+  },
+  "devDependencies": {
+    "static-sitemap": "^0.2.1"
   }
 }
