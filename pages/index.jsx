@@ -52,11 +52,9 @@ const Home = () =>
     <PageContentSection>
       <h2>Projetos</h2>
       <ProjectList repos={MainProjects} />
-      <Link href='/projects'>
-        <a title='Projetos'>
-          <SeparatorLink>Mais projetos</SeparatorLink>
-        </a>
-      </Link>
+      <SeparatorLink href='/projects' title='Projetos'>
+        Mais projetos
+      </SeparatorLink>
     </PageContentSection>
     <PageContentSection>
       <h2>Publicações</h2>
@@ -66,7 +64,7 @@ const Home = () =>
       <h2>Contribua para o Domínio Público!</h2>
       <p>
         O Domínio Público é a única forma de tornar conhecimento acessível para a maioria das pessoas.
-        Atualmente, pessoas várias regiões do mundo &ndash; inclusive de países desenvolvidos &ndash;
+        Atualmente, pessoas de várias regiões do mundo &ndash; inclusive de países desenvolvidos &ndash;
         têm dificuldade para acessar conteúdo protegido. A única forma de contribuirmos para um futuro
         justo em que todos tenham acesso àquilo que mais querem aprender é devolvendo uma parcela daquilo
         que nós aprendemos para o restante das pessoas. 
