@@ -14,13 +14,13 @@ const MediumFeedURL = 'https://linsdev-medium.herokuapp.com'
 const MainProjects = [
   { name: 'sw',
     homepage: 'https://pypi.org/project/sw-cli',
-    url: 'https://github.com/gabrielchiconi/sw',
+    url: 'https://github.com/fizzy-drinks/sw',
     origin: 'GitHub',
     language: 'Python',
     description: 'Carteira SSH para linha de comando' },
   { name: 'Reanimar',
-    homepage: 'https://gabrielchiconi.github.io/reanimar/',
-    url: 'https://github.com/gabrielchiconi/reanimar',
+    homepage: 'https://fizzy-drinks.github.io/reanimar/',
+    url: 'https://github.com/fizzy-drinks/reanimar',
     origin: 'GitHub',
     language: 'JavaScript',
     description: 'Projeto de conclusão de curso de jornalismo: Uma reportagem sobre a vida marinha na Baixada Santista' }

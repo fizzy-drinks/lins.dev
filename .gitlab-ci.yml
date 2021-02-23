@@ -1,13 +1,12 @@
 image: node:latest
 
 before_script:
-  - npm i -g yarn
-  - yarn install
+  - npm i
 
 pages:
   stage: deploy
   script:
-    - yarn gitlab
+    - npm run gitlab
     - cp favicon.ico public/favicon.ico
     - cp sitemap.xml public/sitemap.xml
   artifacts:
