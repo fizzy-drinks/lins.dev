@@ -1,17 +1,16 @@
+import LocaleButton from 'components/LocaleButton';
+import InteractiveText from 'components/ui/InteractiveText';
+import TextBlock from 'components/ui/TextBlock';
 import { useTranslation } from 'next-i18next';
 import { NextSeo } from 'next-seo';
 import Link from 'next/link';
-import { useCookies } from 'react-cookie';
+import { FC } from 'react';
 
-const HomePage = () => {
+const HomePage: FC = () => {
   const { t } = useTranslation();
-  const [, setCookie] = useCookies();
 
   const title = t('seo.title');
   const description = t('seo.description');
-
-  const setPreferredLocale = (locale: string) =>
-    setCookie('NEXT_LOCALE', locale, { path: '/' });
 
   return (
     <>
@@ -29,50 +28,68 @@ const HomePage = () => {
         <h1>lins.dev</h1>
         <nav>
           <ul>
-            <li>
-              <a href='https://github.com/fizzy-drinks'>GitHub</a>
+            <li className='list-item m-2'>
+              <InteractiveText>
+                <a
+                  href='https://github.com/fizzy-drinks'
+                  target='_blank'
+                  className='ds-text-link'
+                  rel='noreferrer'
+                >
+                  GitHub
+                </a>
+              </InteractiveText>
             </li>
-            <li>
-              <a href='https://gitlab.com/fizzydrinks'>GitLab</a>
+            <li className='list-item m-2'>
+              <InteractiveText>
+                <a
+                  href='https://gitlab.com/fizzydrinks'
+                  target='_blank'
+                  className='ds-text-link'
+                  rel='noreferrer'
+                >
+                  GitLab
+                </a>
+              </InteractiveText>
             </li>
           </ul>
         </nav>
         <ul>
           <li>
-            <Link
-              legacyBehavior={false}
-              href='#'
-              locale='en'
-              onClick={() => setPreferredLocale('en')}
-            >
-              English
-            </Link>
+            <LocaleButton locale='en' />
           </li>
           <li>
-            <Link
-              legacyBehavior={false}
-              href='#'
-              locale='pt'
-              onClick={() => setPreferredLocale('pt')}
-            >
-              Português
-            </Link>
+            <LocaleButton locale='pt' />
           </li>
         </ul>
       </header>
       <main>
         <section>
-          <h1>{t('greeting')}</h1>
-          <p>{t('maintenance.summary')}</p>
-          <p>{t('maintenance.explanation')}</p>
+          <TextBlock variant='h1'>
+            <h1>{t('greeting')}</h1>
+          </TextBlock>
+          <TextBlock variant='synopsis'>
+            <p>{t('maintenance.summary')}</p>
+          </TextBlock>
+          <TextBlock variant='paragraph'>
+            <p>{t('maintenance.explanation')}</p>
+          </TextBlock>
         </section>
         <nav>
           <ul>
-            <li>
-              <Link href='/old/contact'>{t('navigation.contactInfo')}</Link>
+            <li className='list-item m-2'>
+              <InteractiveText>
+                <Link legacyBehavior={false} href='/old/contact'>
+                  {t('navigation.contactInfo')}
+                </Link>
+              </InteractiveText>
             </li>
-            <li>
-              <Link href='/old/projects'>{t('navigation.projects')}</Link>
+            <li className='list-item m-2'>
+              <InteractiveText>
+                <Link legacyBehavior={false} href='/old/projects'>
+                  {t('navigation.projects')}
+                </Link>
+              </InteractiveText>
             </li>
           </ul>
         </nav>

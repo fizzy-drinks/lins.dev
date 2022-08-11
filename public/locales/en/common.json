@@ -1,4 +1,8 @@
 {
+  "locales": {
+    "en": "English",
+    "pt": "Português"
+  },
   "seo": {
     "title": "Gabriel Lins | lins.dev",
     "description": "lins.dev is Gabriel Lins's little corner of the web."
