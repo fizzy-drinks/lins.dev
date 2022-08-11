@@ -10,8 +10,7 @@
     "start": "next",
     "build": "next build",
     "build-static": "next build && next export",
-    "sitemap": "static-sitemap ./pages https://lins.dev/ jsx -r > sitemap.xml",
-    "gitlab": "yarn build-static && yarn sitemap && rm -rf public && mv out public"
+    "gitlab": "npm run build-static && mv public public_old && mv out public"
   },
   "dependencies": {
     "@octokit/rest": "^16.27.0",
@@ -30,7 +29,6 @@
   "devDependencies": {
     "@types/node": "^18.7.1",
     "@types/react": "^18.0.17",
-    "static-sitemap": "^0.2.1",
     "typescript": "^4.7.4"
   }
 }

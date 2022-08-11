@@ -8,7 +8,6 @@ pages:
   script:
     - npm run gitlab
     - cp favicon.ico public/favicon.ico
-    - cp sitemap.xml public/sitemap.xml
   artifacts:
     paths:
       - public
