@@ -7,7 +7,7 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "dev": "next",
+    "start": "next",
     "build": "next build",
     "build-static": "next build && next export",
     "sitemap": "static-sitemap ./pages https://lins.dev/ jsx -r > sitemap.xml",
@@ -28,6 +28,9 @@
     "yaml-loader": "^0.5.0"
   },
   "devDependencies": {
-    "static-sitemap": "^0.2.1"
+    "@types/node": "^18.7.1",
+    "@types/react": "^18.0.17",
+    "static-sitemap": "^0.2.1",
+    "typescript": "^4.7.4"
   }
 }
