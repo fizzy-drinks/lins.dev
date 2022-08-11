@@ -1,0 +1,43 @@
+{
+  "__default": {
+    "description": "Página pessoal do Gabriel Chiconi Lins. Desenvolvedor web full stack de Santos-SP. \nEscrevo artigos, colaboro em projetos open source e gosto de conversar.\nSistemas para empresas, criação de websites, consultoria de informática, open source,\nstartups e tutoriais de programação.\n",
+    "canonical": "https://lins.dev",
+    "openGraph": {
+      "title": "lins.dev | Gabriel Chiconi Lins",
+      "url": "https://lins.dev",
+      "images": [
+        {
+          "url": "https://lins.dev/static/me_256.png",
+          "width": 256,
+          "height": 256,
+          "alt": "Gabriel Chiconi Lins"
+        },
+        {
+          "url": "https://lins.dev/static/me.png",
+          "width": 500,
+          "height": 500,
+          "alt": "Gabriel Chiconi Lins"
+        }
+      ],
+      "site_name": "lins.dev",
+      "profile": {
+        "firstName": "Gabriel",
+        "lastName": "Chiconi"
+      }
+    }
+  },
+  "home": null,
+  "contact": {
+    "canonical": "https://lins.dev/contact",
+    "openGraph": {
+      "url": "https://lins.dev/contact"
+    }
+  },
+  "projects": {
+    "description": "Projetos do Gabriel Chiconi Lins. 🚀 Desenvolvedor web full stack de Santos-SP. \nEscrevo artigos, colaboro em projetos open source e gosto de conversar.\nSistemas para empresas, criação de websites, consultoria de informática, open source,\nstartups e tutoriais de programação.\n",
+    "canonical": "https://lins.dev/projects",
+    "openGraph": {
+      "url": "https://lins.dev/projects"
+    }
+  }
+}

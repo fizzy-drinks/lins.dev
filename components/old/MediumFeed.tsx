@@ -1,41 +1,52 @@
-import { Component } from 'react'
-import RSSParser from 'rss-parser'
+import { Component } from 'react';
+import RSSParser from 'rss-parser';
 
-import palette from '../../config/colors'
+import palette from '../../config/colors';
 
-const mediumURLToUsername = mediumURL => mediumURL.replace(/.*medium\.com\/([\@\w\-]+)\/.*/, '$1')
+const mediumURLToUsername = (mediumURL) =>
+  mediumURL.replace(/.*medium\.com\/([@\w-]+)\/.*/, '$1');
 
-class MediumFeed extends Component {
-  constructor ({ url }) {
-    super()
+class MediumFeed extends Component<{ url: string }> {
+  state: {
+    loading: boolean;
+    posts: {
+      guid: string;
+      link: string;
+      title: string;
+      pubDate: string;
+    }[];
+  };
+
+  constructor(props) {
+    super(props);
 
     this.state = {
       loading: true,
-      posts: []
-    }
+      posts: [],
+    };
   }
 
-  async componentDidMount () {
-    const rss = new RSSParser()
-    const data = await rss.parseURL(this.props.url)
+  async componentDidMount() {
+    const rss = new RSSParser();
+    const data = await rss.parseURL(this.props.url);
     this.setState({
       loading: false,
-      posts: data.items.filter(item => item.categories)
-    })
+      posts: data.items.filter((item) => item.categories),
+    });
   }
 
-  render () {
+  render() {
     if (this.state.loading) {
-      return <p>Carregando...</p>
+      return <p>Carregando...</p>;
     }
 
     if (!this.state.posts.length) {
-      return <p className='greyed out'>Não há nada para ver aqui</p>
+      return <p className='greyed out'>Não há nada para ver aqui</p>;
     }
 
     return (
       <div className='medium container'>
-        {this.state.posts.map(post =>
+        {this.state.posts.map((post) => (
           <article className='medium article' key={post.guid}>
             <aside>
               <p className='medium metadata publication date'>
@@ -47,17 +58,25 @@ class MediumFeed extends Component {
                   href={`https://medium.com/${mediumURLToUsername(post.link)}`}
                   title={post.title}
                   target='_blank'
+                  rel='noreferrer'
                 >
                   {mediumURLToUsername(post.link)}
                 </a>
               </p>
             </aside>
             <h3 className='medium title'>
-              <a className='medium link' href={post.link} title={post.title} target='_blank'>
+              <a
+                className='medium link'
+                href={post.link}
+                title={post.title}
+                target='_blank'
+                rel='noreferrer'
+              >
                 {post.title}
               </a>
             </h3>
-          </article>)}
+          </article>
+        ))}
         <style jsx>{`
           .medium.container {
             display: flex;
@@ -68,7 +87,7 @@ class MediumFeed extends Component {
 
           .medium.article {
             padding: 24px;
-            background: ${palette.trueWhite.alpha(.4)};
+            background: ${palette.trueWhite.alpha(0.4)};
             margin: 12px;
             min-width: 300px;
             max-width: 500px;
@@ -81,7 +100,7 @@ class MediumFeed extends Component {
           }
 
           .medium.metadata {
-            font-size: .9em;
+            font-size: 0.9em;
             color: ${palette.white.rgb()};
             margin: 0;
           }
@@ -96,8 +115,8 @@ class MediumFeed extends Component {
           }
         `}</style>
       </div>
-    )
+    );
   }
 }
 
-export default MediumFeed
+export default MediumFeed;
