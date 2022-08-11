@@ -1,5 +1,4 @@
 import { NextSeo } from 'next-seo';
-import Image from 'next/image';
 import Link from 'next/link';
 
 const HomePage = () => {
@@ -17,7 +16,7 @@ const HomePage = () => {
         additionalLinkTags={[{ rel: 'icon', href: '/favicon.ico' }]}
       />
       <header>
-        <Image src='/ld.png' alt='lins.dev logo' width={128} height={66} />
+        <img src='/ld.png' alt='lins.dev logo' />
         <h1>lins.dev</h1>
         <ul>
           <li>
