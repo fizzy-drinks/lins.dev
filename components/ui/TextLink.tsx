@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import { FC, PropsWithChildren } from 'react';
 
-const InteractiveText: FC<
+const TextLink: FC<
   PropsWithChildren<{
     className?: string;
   }>
@@ -16,4 +16,4 @@ const InteractiveText: FC<
   </span>
 );
 
-export default InteractiveText;
+export default TextLink;

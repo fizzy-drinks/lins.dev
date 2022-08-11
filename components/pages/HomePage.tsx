@@ -1,5 +1,5 @@
 import LocaleButton from 'components/LocaleButton';
-import InteractiveText from 'components/ui/InteractiveText';
+import TextLink from 'components/ui/TextLink';
 import TextBlock from 'components/ui/TextBlock';
 import { useTranslation } from 'next-i18next';
 import { NextSeo } from 'next-seo';
@@ -29,28 +29,26 @@ const HomePage: FC = () => {
         <nav>
           <ul>
             <li className='list-item m-2'>
-              <InteractiveText>
+              <TextLink>
                 <a
                   href='https://github.com/fizzy-drinks'
                   target='_blank'
-                  className='ds-text-link'
                   rel='noreferrer'
                 >
                   GitHub
                 </a>
-              </InteractiveText>
+              </TextLink>
             </li>
             <li className='list-item m-2'>
-              <InteractiveText>
+              <TextLink>
                 <a
                   href='https://gitlab.com/fizzydrinks'
                   target='_blank'
-                  className='ds-text-link'
                   rel='noreferrer'
                 >
                   GitLab
                 </a>
-              </InteractiveText>
+              </TextLink>
             </li>
           </ul>
         </nav>
@@ -78,18 +76,18 @@ const HomePage: FC = () => {
         <nav>
           <ul>
             <li className='list-item m-2'>
-              <InteractiveText>
+              <TextLink>
                 <Link legacyBehavior={false} href='/old/contact'>
                   {t('navigation.contactInfo')}
                 </Link>
-              </InteractiveText>
+              </TextLink>
             </li>
             <li className='list-item m-2'>
-              <InteractiveText>
+              <TextLink>
                 <Link legacyBehavior={false} href='/old/projects'>
                   {t('navigation.projects')}
                 </Link>
-              </InteractiveText>
+              </TextLink>
             </li>
           </ul>
         </nav>
