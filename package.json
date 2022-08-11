@@ -10,7 +10,7 @@
     "start": "next",
     "build": "next build",
     "build-static": "next build && next export",
-    "gitlab": "npm run build-static && mv public public_old && mv out public"
+    "gitlab": "npm run build-static && rm -rf public && mv out public"
   },
   "dependencies": {
     "@octokit/rest": "^16.27.0",
