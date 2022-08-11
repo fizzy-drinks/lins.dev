@@ -1,0 +1,11 @@
+{
+  "greeting": "Oi!",
+  "maintenance": {
+    "summary": "Este site está passando por uma manuntenção completa.",
+    "explanation": "Se você está procurando por informações de contato ou pelos meus projetos, usa os links abaixo, mas não repara na bagunça!"
+  },
+  "navigation": {
+    "contactInfo": "Contato",
+    "projects": "Projetos"
+  }
+}
