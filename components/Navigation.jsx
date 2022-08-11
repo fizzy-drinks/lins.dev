@@ -1,3 +1,4 @@
+import { Component } from 'react'
 import Link from 'next/link'
 import classnames from 'classnames'
 
@@ -24,7 +25,7 @@ const headerSettings = {
   overlayBackgroundColor: palette.white.alpha(.95)
 }
 
-class Navigation extends React.Component {
+class Navigation extends Component {
   constructor () {
     super()
 

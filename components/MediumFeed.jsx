@@ -1,10 +1,11 @@
+import { Component } from 'react'
 import RSSParser from 'rss-parser'
 
 import palette from '../config/colors'
 
 const mediumURLToUsername = mediumURL => mediumURL.replace(/.*medium\.com\/([\@\w\-]+)\/.*/, '$1')
 
-class MediumFeed extends React.Component {
+class MediumFeed extends Component {
   constructor ({ url }) {
     super()
 

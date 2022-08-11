@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import SEO from 'next-seo'
+import { NextSeo } from 'next-seo'
 
 import Navigation from './Navigation'
 import Footer from './Footer'
@@ -43,13 +43,13 @@ const textSizesCssString = breakpoints
 const Page = props =>
   <div className='page component'>
     <Head>
-      <title key='title'>{props.title} | lins.dev</title>
+      <title key='title'>{`${props.title} | lins.dev`}</title>
       <link key='favicon' rel='icon' href='/favicon.ico' /> 
       <meta key='theme' name='theme-color' content={palette.primary} />
       <link key='font' href='https://fonts.googleapis.com/css?family=Heebo|Nanum+Gothic+Coding&display=swap' rel='stylesheet' />
       <link key='font-bebas' href='https://cdn.jsdelivr.net/npm/@typopro/web-bebas-neue@3.7.5/TypoPRO-BebasNeue-Regular.css' rel='stylesheet' />
     </Head>
-    <SEO config={buildSeoConfig(props.seo)} />
+    <NextSeo {...buildSeoConfig(props.seo)} />
     <Navigation />
     <div className='page main area'>
       <div className='background' />
