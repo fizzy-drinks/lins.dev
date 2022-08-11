@@ -1,12 +1,17 @@
 import { useTranslation } from 'next-i18next';
 import { NextSeo } from 'next-seo';
 import Link from 'next/link';
+import { useCookies } from 'react-cookie';
 
 const HomePage = () => {
-  const title = 'lins.dev';
-  const description = "lins.dev's official page.";
-
   const { t } = useTranslation();
+  const [, setCookie] = useCookies();
+
+  const title = t('seo.title');
+  const description = t('seo.description');
+
+  const setPreferredLocale = (locale: string) =>
+    setCookie('NEXT_LOCALE', locale, { path: '/' });
 
   return (
     <>
@@ -34,12 +39,22 @@ const HomePage = () => {
         </nav>
         <ul>
           <li>
-            <Link href='#' locale='en'>
+            <Link
+              legacyBehavior={false}
+              href='#'
+              locale='en'
+              onClick={() => setPreferredLocale('en')}
+            >
               English
             </Link>
           </li>
           <li>
-            <Link href='#' locale='pt'>
+            <Link
+              legacyBehavior={false}
+              href='#'
+              locale='pt'
+              onClick={() => setPreferredLocale('pt')}
+            >
               Português
             </Link>
           </li>
