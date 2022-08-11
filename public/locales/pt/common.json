@@ -1,4 +1,8 @@
 {
+  "seo": {
+    "title": "lins.dev",
+    "description": "lins.dev é o cantinho do Gabriel Lins na internet."
+  },
   "greeting": "Oi!",
   "maintenance": {
     "summary": "Este site está passando por uma manuntenção completa.",
