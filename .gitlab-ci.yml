@@ -7,7 +7,6 @@ pages:
   stage: deploy
   script:
     - npm run gitlab
-    - cp favicon.ico public/favicon.ico
   artifacts:
     paths:
       - public
