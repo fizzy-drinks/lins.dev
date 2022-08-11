@@ -2,6 +2,7 @@ node_modules/
 .next/
 out/
 
-sitemap.xml
+sitemap*.xml
+robots.txt
 
 *.log

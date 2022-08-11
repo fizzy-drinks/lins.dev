@@ -1,14 +1,15 @@
 {
   "name": "lins.dev",
   "version": "1.0.0",
-  "description": "Gabriel Chiconi's personal website",
-  "repository": "https://gitlab.com/gabrielchiconi/lins.dev",
+  "description": "lins.dev website",
+  "repository": "https://gitlab.com/fizzy-drinks/lins.dev",
   "author": "Gabriel Chiconi <gabriel.chiconi@gmail.com>",
   "license": "MIT",
   "private": false,
   "scripts": {
     "start": "next",
-    "build": "next build"
+    "build": "next build",
+    "postbuild": "next-sitemap"
   },
   "dependencies": {
     "@octokit/rest": "^16.27.0",
@@ -18,6 +19,7 @@
     "next": "^12.2.4",
     "next-i18next": "^11.3.0",
     "next-seo": "^5.5.0",
+    "next-sitemap": "^3.1.17",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^3.7.0",
