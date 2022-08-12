@@ -12,39 +12,45 @@ const LocaleSwitcher: FC = () => {
   const [, setCookie] = useCookies();
 
   const [localeSwitcher, setLocaleSwitcher] = useState(false);
-  const toggleLocaleSwitcher = () => {
-    setLocaleSwitcher((p) => !p);
-  };
 
   const setPreferredLocale = (locale: string) =>
     setCookie('NEXT_LOCALE', locale, { path: '/' });
 
   return (
-    <ul className='border rounded text-center inline-flex items-center justify-center'>
+    <motion.ul className='border rounded-sm border-green-200 text-center flex items-center justify-center'>
       {['en', 'pt'].map((locale) => (
         <motion.li
           key={locale}
-          animate={{
-            width: locale === router.locale || localeSwitcher ? 60 : 0,
+          initial={{
+            width: 40,
           }}
+          animate={{
+            width: locale === router.locale || localeSwitcher ? 40 : 0,
+          }}
+          transition={{ type: 'tween' }}
           className={classNames(
-            'transition-colors overflow-hidden inline-block',
-            locale === router.locale ? 'bg-green-200' : 'bg-white'
+            'transition-colors overflow-hidden inline-block w-10',
+            locale === router.locale && localeSwitcher
+              ? 'bg-green-200'
+              : 'bg-white'
           )}
-          onClick={toggleLocaleSwitcher}
         >
           <Link
             legacyBehavior={false}
             href={router.pathname}
             locale={locale}
-            onClick={() => setPreferredLocale(locale)}
+            onClick={() =>
+              locale === router.locale || localeSwitcher
+                ? setLocaleSwitcher(true)
+                : setPreferredLocale(locale)
+            }
             className='whitespace-nowrap overflow-hidden'
           >
             {t(`locales.${locale}`)}
           </Link>
         </motion.li>
       ))}
-    </ul>
+    </motion.ul>
   );
 };
 
