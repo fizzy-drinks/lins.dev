@@ -8,7 +8,7 @@ const TextLink: FC<
 > = ({ className, children }) => (
   <span
     className={classNames(
-      'text-dartmouth-green border-b border-b-transparent transition-all hover:border-b-dartmouth-green',
+      'text-green-700 border-b border-b-green-700/0 transition-all hover:border-b-green-700',
       className
     )}
   >

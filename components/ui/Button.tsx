@@ -9,8 +9,8 @@ const Button: FC<
   <span
     className={classNames(
       'rounded border p-1 inline-block cursor-pointer',
-      'border-dartmouth-green text-dartmouth-green',
-      'hover:text-pastel-green hover:border-pastel-green transition-all',
+      'border-green-700 text-green-700',
+      'hover:text-green-500 hover:border-green-500 transition-all',
       className
     )}
   >
