@@ -1,14 +1,14 @@
 import classNames from 'classnames';
 import { FC, PropsWithChildren } from 'react';
 
-const InteractiveText: FC<
+const TextLink: FC<
   PropsWithChildren<{
     className?: string;
   }>
 > = ({ className, children }) => (
   <span
     className={classNames(
-      'text-dartmouth-green border-b border-b-transparent transition-all hover:border-b-dartmouth-green',
+      'text-green-700 border-b border-b-green-700/0 transition-all hover:border-b-green-700',
       className
     )}
   >
@@ -16,4 +16,4 @@ const InteractiveText: FC<
   </span>
 );
 
-export default InteractiveText;
+export default TextLink;

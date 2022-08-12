@@ -9,6 +9,7 @@ const TextBlock: FC<
 > = ({ variant, className, children }) => (
   <span
     className={classNames(
+      'block max-w-4xl',
       {
         'text-3xl font-bold mb-2': variant === 'h1',
         'text-xl mb-1': variant === 'synopsis',

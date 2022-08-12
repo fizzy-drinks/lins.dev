@@ -1,10 +1,10 @@
-import LocaleButton from 'components/LocaleButton';
-import InteractiveText from 'components/ui/InteractiveText';
-import TextBlock from 'components/ui/TextBlock';
 import { useTranslation } from 'next-i18next';
 import { NextSeo } from 'next-seo';
 import Link from 'next/link';
 import { FC } from 'react';
+import TextBlock from 'components/ui/TextBlock';
+import TextLink from 'components/ui/TextLink';
+import LocaleSwitcher from 'components/LocaleSwitcher';
 
 const HomePage: FC = () => {
   const { t } = useTranslation();
@@ -13,7 +13,7 @@ const HomePage: FC = () => {
   const description = t('seo.description');
 
   return (
-    <>
+    <div className='container mx-auto p-1'>
       <NextSeo
         title={title}
         description={description}
@@ -23,45 +23,37 @@ const HomePage: FC = () => {
         }}
         additionalLinkTags={[{ rel: 'icon', href: '/favicon.ico' }]}
       />
-      <header>
-        <img src='/ld.png' alt='lins.dev logo' />
-        <h1>lins.dev</h1>
+      <header className='flex justify-between items-center my-2'>
+        <img src='/ld.png' alt='lins.dev logo' className='h-10' />
         <nav>
-          <ul>
-            <li className='list-item m-2'>
-              <InteractiveText>
+          <ul className='flex items-center gap-1'>
+            <li>
+              <TextLink>
                 <a
                   href='https://github.com/fizzy-drinks'
                   target='_blank'
-                  className='ds-text-link'
                   rel='noreferrer'
                 >
                   GitHub
                 </a>
-              </InteractiveText>
+              </TextLink>
             </li>
-            <li className='list-item m-2'>
-              <InteractiveText>
+            <li>
+              <TextLink>
                 <a
                   href='https://gitlab.com/fizzydrinks'
                   target='_blank'
-                  className='ds-text-link'
                   rel='noreferrer'
                 >
                   GitLab
                 </a>
-              </InteractiveText>
+              </TextLink>
+            </li>
+            <li>
+              <LocaleSwitcher />
             </li>
           </ul>
         </nav>
-        <ul>
-          <li>
-            <LocaleButton locale='en' />
-          </li>
-          <li>
-            <LocaleButton locale='pt' />
-          </li>
-        </ul>
       </header>
       <main>
         <section>
@@ -78,23 +70,23 @@ const HomePage: FC = () => {
         <nav>
           <ul>
             <li className='list-item m-2'>
-              <InteractiveText>
+              <TextLink>
                 <Link legacyBehavior={false} href='/old/contact'>
                   {t('navigation.contactInfo')}
                 </Link>
-              </InteractiveText>
+              </TextLink>
             </li>
             <li className='list-item m-2'>
-              <InteractiveText>
+              <TextLink>
                 <Link legacyBehavior={false} href='/old/projects'>
                   {t('navigation.projects')}
                 </Link>
-              </InteractiveText>
+              </TextLink>
             </li>
           </ul>
         </nav>
       </main>
-    </>
+    </div>
   );
 };
 

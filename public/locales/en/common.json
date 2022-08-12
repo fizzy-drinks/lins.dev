@@ -1,7 +1,7 @@
 {
   "locales": {
-    "en": "English",
-    "pt": "Português"
+    "en": "🇬🇧",
+    "pt": "🇧🇷"
   },
   "seo": {
     "title": "Gabriel Lins | lins.dev",
@@ -10,7 +10,7 @@
   "greeting": "Hi!",
   "maintenance": {
     "summary": "This site is undergoing a major overhaul.",
-    "explanation": "If you want to check out my contact information or some links to projects, feel free to do so with the links below, but please don&apos;t mind the page design! Also, the page is in Portuguese, but it shouldn&apos;t be too hard to navigate."
+    "explanation": "If you want to check out my contact information or some links to projects, feel free to do so with the links below, but please don't mind the page design! Also, the page is in Portuguese, but it shouldn't be too hard to navigate."
   },
   "navigation": {
     "contactInfo": "Contact information",
