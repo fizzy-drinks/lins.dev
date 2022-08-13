@@ -137,7 +137,7 @@ const HomePage: FC = () => {
                 <aside>
                   <TextLink>
                     <a
-                      href={getProjectUrl('gl', 'lins.dev')}
+                      href={getProjectUrl('gh', 'lins.dev')}
                       target='_blank'
                       rel='noreferrer'
                     >
