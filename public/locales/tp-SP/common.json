@@ -1,0 +1,32 @@
+{
+  "seo": {
+    "description": "lipu lins.dev li lipu len jan Gabriel. lipu ni li kepeken sitelen pona."
+  },
+  "greeting": "󱥬",
+  "maintenance": {
+    "summary": "󱤴󱥝󱤉󱤪󱥁󱦜",
+    "explanation": "󱥞󱥷󱥺󱤉󱥡󱥬󱤴󱤡󱥄󱤙󱤿󱤅󱦜 󱤪󱤅󱤧󱥬󱦐󱥔󱥺󱥬󱥰󱤙󱤉󱦑󱦜 󱥨󱥆󱤧󱤍󱤂󱥺󱦜"
+  },
+  "navigation": {
+    "contactInfo": "󱥡󱥬",
+    "projects": "󱥉",
+    "viewSource": "󱥄󱥺󱤉󱥧",
+    "viewLive": "󱥄󱥺󱤉󱤬"
+  },
+  "projects": {
+    "pastle": {
+      "title": "󱤻󱦐Pastle󱦑",
+      "description": "󱤻󱥍󱤃󱤶󱦜 󱥎󱥁󱤧󱥧󱤻󱦐Wordle󱦑󱦜"
+    },
+    "lins.dev": {
+      "title": "󱤪󱥁",
+      "description": "󱤪󱥁󱤧󱥩󱥝󱦜 󱥨󱥆󱤧󱥣󱦜 󱤴󱥉󱤉󱥆󱥫󱤼󱦜"
+    }
+  },
+  "sections": {
+    "highlightedProjects": {
+      "title": "󱥉󱤽󱥳",
+      "subtitle": "󱤴󱥉󱤉󱤎󱥁󱤄󱦜 󱥞󱥺󱤡󱥄󱥔󱥩󱤴󱦜 󱥉󱥁󱤧󱤘󱥐󱤂󱦜"
+    }
+  }
+}

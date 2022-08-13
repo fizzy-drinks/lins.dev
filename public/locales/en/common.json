@@ -1,11 +1,13 @@
 {
   "locales": {
     "en": "🇬🇧",
-    "pt": "🇧🇷"
+    "pt-BR": "🇧🇷",
+    "tp": "󱥬󱥔",
+    "tp-SP": "󱥠󱥔"
   },
   "seo": {
-    "title": "Gabriel Lins | lins.dev",
-    "description": "lins.dev is Gabriel Lins's little corner of the web."
+    "title": "Gabriel Chiconi Lins | lins.dev",
+    "description": "lins.dev is Gabriel Chiconi Lins's little corner of the web."
   },
   "greeting": "Hi!",
   "maintenance": {
@@ -14,6 +16,24 @@
   },
   "navigation": {
     "contactInfo": "Contact information",
-    "projects": "Projects"
+    "projects": "Projects",
+    "viewSource": "view source",
+    "viewLive": "view live"
+  },
+  "projects": {
+    "pastle": {
+      "title": "Pastle",
+      "description": "A food guessing game inspired by Wordle"
+    },
+    "lins.dev": {
+      "title": "This site",
+      "description": "It's currently in maintenance, but it's a long-standing project nonetheless. I've updated it from Next 8, no locales, no TypeScript, to a fully modern site, and I try to make it showcase a good website."
+    }
+  },
+  "sections": {
+    "highlightedProjects": {
+      "title": "See some of my favourite projects",
+      "subtitle": "These are things I have worked on that I would like people to check out! They may be incomplete, though."
+    }
   }
 }

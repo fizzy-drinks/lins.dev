@@ -3,7 +3,7 @@ import { FC, PropsWithChildren } from 'react';
 
 const TextBlock: FC<
   PropsWithChildren<{
-    variant: 'h1' | 'synopsis' | 'paragraph';
+    variant: 'h1' | 'h2' | 'synopsis' | 'paragraph';
     className?: string;
   }>
 > = ({ variant, className, children }) => (
@@ -11,7 +11,8 @@ const TextBlock: FC<
     className={classNames(
       'block max-w-4xl',
       {
-        'text-3xl font-bold mb-2': variant === 'h1',
+        'text-3xl font-semibold mb-2': variant === 'h1',
+        'text-2xl font-semibold mb-2': variant === 'h2',
         'text-xl mb-1': variant === 'synopsis',
         'mb-1': variant === 'paragraph',
       },
