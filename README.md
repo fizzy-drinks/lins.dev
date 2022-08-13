@@ -14,8 +14,9 @@ been translated to English, Portuguese and toki pona (if you don't know what tha
 
 ## Recruiters and clients
 
-If you're here, there's a good chance you're hiring. If you need to contact me, email g@lins.dev
-and I will get back to you shortly.
+If you're here, there's a good chance you're hiring. If you need to contact me,
+[message me on LinkedIn](https://linkedin.com/in/gabrielchiconi) and I will get back to you
+shortly. Alternatively, get my resume [here](https://rxresu.me/fizzydrinks/full-stack-web).
 
 ## Help translating
 
