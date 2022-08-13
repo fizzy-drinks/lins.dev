@@ -9,6 +9,24 @@
   },
   "navigation": {
     "contactInfo": "Contato",
-    "projects": "Projetos"
+    "projects": "Projetos",
+    "viewSource": "ver fonte",
+    "viewLive": "ver ao vivo"
+  },
+  "projects": {
+    "pastle": {
+      "title": "Pastle",
+      "description": "Um jogo de adivinhar a comida inspirado no Wordle"
+    },
+    "lins.dev": {
+      "title": "Este site",
+      "description": "Atualmente ele está em manutenção, mas é um projeto extenso de qualquer forma. Eu tenho atualizado ele desde o Next 8, sem localização nem TypeScript, até virar um site moderno, e eu tento fazer com que ele seja um exemplo de um bom site."
+    }
+  },
+  "sections": {
+    "highlightedProjects": {
+      "title": "Alguns dos meus projetos favoritos",
+      "subtitle": "Aqui estão algumas coisas em que eu trabalhei que eu gostaria que as pessoas vissem. Já aviso: elas podem estar incompletas!"
+    }
   }
 }

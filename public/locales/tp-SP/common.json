@@ -9,6 +9,24 @@
   },
   "navigation": {
     "contactInfo": "󱥡󱥬",
-    "projects": "󱥉"
+    "projects": "󱥉",
+    "viewSource": "󱥄󱥺󱤉󱥧",
+    "viewLive": "󱥄󱥺󱤉󱤬"
+  },
+  "projects": {
+    "pastle": {
+      "title": "󱤻󱦐Pastle󱦑",
+      "description": "󱤻󱥍󱤃󱤶󱦜 󱥎󱥁󱤧󱥧󱤻󱦐Wordle󱦑󱦜"
+    },
+    "lins.dev": {
+      "title": "󱤪󱥁",
+      "description": "󱤪󱥁󱤧󱥩󱥝󱦜 󱥨󱥆󱤧󱥣󱦜 󱤴󱥉󱤉󱥆󱥫󱤼󱦜"
+    }
+  },
+  "sections": {
+    "highlightedProjects": {
+      "title": "󱥉󱤽󱥳",
+      "subtitle": "󱤴󱥉󱤉󱤎󱥁󱤄󱦜 󱥞󱥺󱤡󱥄󱥔󱥩󱤴󱦜 󱥉󱥁󱤧󱤘󱥐󱤂󱦜"
+    }
   }
 }

@@ -5,6 +5,8 @@ import { FC } from 'react';
 import TextBlock from 'components/ui/TextBlock';
 import TextLink from 'components/ui/TextLink';
 import LocaleSwitcher from 'components/LocaleSwitcher';
+import getProjectUrl from 'helpers/getProjectUrl';
+import SiteSection from 'components/ui/SiteSection';
 
 const HomePage: FC = () => {
   const { t } = useTranslation();
@@ -85,6 +87,68 @@ const HomePage: FC = () => {
             </li>
           </ul>
         </nav>
+        <SiteSection>
+          <section id='projects-highlighted'>
+            <TextBlock variant='h1'>
+              <h1>{t('sections.highlightedProjects.title')}</h1>
+            </TextBlock>
+            <TextBlock variant='synopsis'>
+              <p>{t('sections.highlightedProjects.subtitle')}</p>
+            </TextBlock>
+            <SiteSection>
+              <article>
+                <TextBlock variant='h2'>
+                  <h1>{t('projects.pastle.title')}</h1>
+                </TextBlock>
+                <TextBlock variant='paragraph'>
+                  <p>{t('projects.pastle.description')}</p>
+                </TextBlock>
+                <aside>
+                  <TextLink>
+                    <a
+                      href='https://pastle.lins.dev'
+                      target='_blank'
+                      rel='noreferrer'
+                    >
+                      {t('navigation.viewLive')}
+                    </a>
+                  </TextLink>{' '}
+                  |{' '}
+                  <TextLink>
+                    <a
+                      href={getProjectUrl('gh', 'pastle')}
+                      target='_blank'
+                      rel='noreferrer'
+                    >
+                      {t('navigation.viewSource')}
+                    </a>
+                  </TextLink>
+                </aside>
+              </article>
+            </SiteSection>
+            <SiteSection>
+              <article>
+                <TextBlock variant='h2'>
+                  <h1>{t('projects.lins.dev.title')}</h1>
+                </TextBlock>
+                <TextBlock variant='paragraph'>
+                  <p>{t('projects.lins.dev.description')}</p>
+                </TextBlock>
+                <aside>
+                  <TextLink>
+                    <a
+                      href={getProjectUrl('gl', 'lins.dev')}
+                      target='_blank'
+                      rel='noreferrer'
+                    >
+                      {t('navigation.viewSource')}
+                    </a>
+                  </TextLink>
+                </aside>
+              </article>
+            </SiteSection>
+          </section>
+        </SiteSection>
       </main>
     </div>
   );

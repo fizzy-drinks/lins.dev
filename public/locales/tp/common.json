@@ -9,6 +9,24 @@
   },
   "navigation": {
     "contactInfo": "sona toki",
-    "projects": "pali"
+    "projects": "pali",
+    "viewSource": "o oko e tan",
+    "viewLive": "o oko e lon"
+  },
+  "projects": {
+    "pastle": {
+      "title": "musi Pastle",
+      "description": "musi pi alasa moku. pilin ni li tan musi Wordle."
+    },
+    "lins.dev": {
+      "title": "lipu ni",
+      "description": "lipu ni li tawa sin. taso, pali suli. mi pali e ni tenpo mute."
+    }
+  },
+  "sections": {
+    "highlightedProjects": {
+      "title": "pali nanpa wan",
+      "subtitle": "mi pali e ilo ni ale. sina oko la, o pona tawa mi! pali ni li ken pini ala."
+    }
   }
 }
