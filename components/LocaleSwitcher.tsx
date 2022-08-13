@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { FC, useState } from 'react';
 import { useCookies } from 'react-cookie';
+import i18nextConfig from 'next-i18next.config';
 
 const LocaleSwitcher: FC = () => {
   const router = useRouter();
@@ -17,13 +18,10 @@ const LocaleSwitcher: FC = () => {
     setCookie('NEXT_LOCALE', locale, { path: '/' });
 
   return (
-    <motion.ul className='border rounded-sm border-green-200 text-center flex items-center justify-center'>
-      {['en', 'pt'].map((locale) => (
+    <motion.ul className='border rounded-sm border-green-200 text-center flex items-stretch justify-center'>
+      {i18nextConfig.i18n.locales.map((locale) => (
         <motion.li
           key={locale}
-          initial={{
-            width: 40,
-          }}
           animate={{
             width: locale === router.locale || localeSwitcher ? 40 : 0,
           }}
@@ -40,8 +38,8 @@ const LocaleSwitcher: FC = () => {
             href={router.pathname}
             locale={locale}
             onClick={() =>
-              locale === router.locale || localeSwitcher
-                ? setLocaleSwitcher(true)
+              locale === router.locale
+                ? setLocaleSwitcher((p) => !p)
                 : setPreferredLocale(locale)
             }
             className='whitespace-nowrap overflow-hidden'

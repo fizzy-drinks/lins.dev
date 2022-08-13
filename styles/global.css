@@ -7,3 +7,7 @@
   max-width: auto;
   display: inline-block;
 }
+
+* {
+  font-family: ui-sans-serif, system-ui, apple-system, "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", "nasin-nanpa";
+}

@@ -1,11 +1,13 @@
 {
   "locales": {
     "en": "🇬🇧",
-    "pt": "🇧🇷"
+    "pt-BR": "🇧🇷",
+    "tp": "󱥬󱥔",
+    "tp-SP": "󱥠󱥔"
   },
   "seo": {
-    "title": "Gabriel Lins | lins.dev",
-    "description": "lins.dev is Gabriel Lins's little corner of the web."
+    "title": "Gabriel Chiconi Lins | lins.dev",
+    "description": "lins.dev is Gabriel Chiconi Lins's little corner of the web."
   },
   "greeting": "Hi!",
   "maintenance": {
