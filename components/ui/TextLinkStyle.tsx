@@ -6,7 +6,7 @@ const TextLinkStyle: FC<PropsWithChildren> = ({ children }) => {
     <span
       className={clsx(
         'transition-all ease-in-out duration-300',
-        'text-neutral-500 hover:text-red-500',
+        'text-neutral-500 hover:text-yellow-600',
         'border-b border-b-neutral-500 hover:border-b-transparent'
       )}
     >
