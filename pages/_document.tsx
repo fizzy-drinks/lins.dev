@@ -6,7 +6,7 @@ const Document: FC = () => {
     <Html>
       <Head>
         <link
-          href='http://fonts.cdnfonts.com/css/merriweather-sans'
+          href='https://fonts.cdnfonts.com/css/merriweather-sans'
           rel='stylesheet'
         />
       </Head>
