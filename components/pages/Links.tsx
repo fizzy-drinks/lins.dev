@@ -3,9 +3,15 @@ import { NextSeo } from 'next-seo';
 import { FC } from 'react';
 import TextLinkStyle from 'components/ui/TextLinkStyle';
 import MainContent from 'components/ui/MainContent';
+import useSeo from 'hooks/useSeo';
 
 const RangoPage: FC = () => {
   const { t } = useTranslation();
+  const seo = useSeo({
+    uri: '/links',
+    description: t('pages.links.description'),
+    title: t('pages.links.title')
+  });
 
   const links = [
     { href: 'https://github.com/fizzy-drinks', content: 'Github' },
@@ -14,15 +20,7 @@ const RangoPage: FC = () => {
 
   return (
     <MainContent>
-      <NextSeo
-        title={`${t('pages.links.title')} | ${t('seo.title')}`}
-        description={t('pages.links.description')}
-        canonical={'https://lins.dev/links'}
-        openGraph={{
-          url: 'https://lins.dev/links',
-        }}
-        additionalLinkTags={[{ rel: 'icon', href: '/favicon.png' }]}
-      />
+      {seo}
       <main className='w-full max-w-[460px] text-left'>
         <h1 className='text-4xl text-neutral-500 mt-2'>
           {t('pages.links.title')}

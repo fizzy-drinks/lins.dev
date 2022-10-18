@@ -5,21 +5,19 @@ import Image from 'next/image';
 import TextLinkStyle from 'components/ui/TextLinkStyle';
 import RangoImage from 'assets/rango.png';
 import MainContent from 'components/ui/MainContent';
+import useSeo from 'hooks/useSeo';
 
 const RangoPage: FC = () => {
   const { t } = useTranslation();
+  const seo = useSeo({
+    uri: '/rango',
+    title: t('pages.rango.title'),
+    description: t('pages.rango.description'),
+  });
 
   return (
     <MainContent>
-      <NextSeo
-        title={`${t('pages.rango.title')} | ${t('seo.title')}`}
-        description={t('pages.rango.description')}
-        canonical={'https://lins.dev/rango'}
-        openGraph={{
-          url: 'https://lins.dev/rango',
-        }}
-        additionalLinkTags={[{ rel: 'icon', href: '/favicon.png' }]}
-      />
+      {seo}
       <main>
         <figure className='text-center'>
           <Image
