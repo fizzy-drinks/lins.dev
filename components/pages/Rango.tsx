@@ -2,16 +2,15 @@ import { useTranslation } from 'next-i18next';
 import { NextSeo } from 'next-seo';
 import { FC } from 'react';
 import Image from 'next/image';
-import PageContainer from 'components/ui/PageContainer';
-import PageHeader from 'components/PageHeader';
 import TextLinkStyle from 'components/ui/TextLinkStyle';
 import RangoImage from 'assets/rango.png';
+import AnimateIn from 'components/ui/AnimateIn';
 
 const RangoPage: FC = () => {
   const { t } = useTranslation();
 
   return (
-    <PageContainer>
+    <AnimateIn className='h-full w-full max-w-[460px] text-left grow flex items-center'>
       <NextSeo
         title={t('seo.title')}
         description={t('seo.description')}
@@ -21,11 +20,8 @@ const RangoPage: FC = () => {
         }}
         additionalLinkTags={[{ rel: 'icon', href: '/favicon.ico' }]}
       />
-      <div className='w-full flex flex-col justify-between items-center grow basis-1'>
-        <div className='w-full'>
-          <PageHeader />
-        </div>
-        <figure>
+      <main>
+        <figure className='text-center'>
           <Image
             src={RangoImage.src}
             width={RangoImage.width}
@@ -34,8 +30,6 @@ const RangoPage: FC = () => {
             className='rounded-md shadow-lg shadow-neutral-500'
           />
         </figure>
-      </div>
-      <main className='w-full max-w-[460px] text-left grow basis-1'>
         <h1 className='text-4xl text-neutral-500 mt-2'>
           {t('pages.rango.title')}
         </h1>
@@ -54,7 +48,7 @@ const RangoPage: FC = () => {
           </a>
         </nav>
       </main>
-    </PageContainer>
+    </AnimateIn>
   );
 };
 

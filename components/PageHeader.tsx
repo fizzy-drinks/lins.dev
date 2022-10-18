@@ -1,4 +1,5 @@
 import { clsx } from 'clsx';
+import { motion } from 'framer-motion';
 import { useTranslation } from 'next-i18next';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -27,27 +28,72 @@ const PageHeader: FC = () => {
 
   return (
     <header className='w-full flex justify-between items-center flex-col my-2 grow'>
-      <LocaleSwitcher />
+      <div className='w-full flex justify-end'>
+        <LocaleSwitcher />
+      </div>
       <div>
         <Link legacyBehavior={false} href='/'>
-          <h1 className='text-4xl'>{t('header')}</h1>
+          <motion.h1
+            layout
+            layoutId='title'
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ ease: 'easeInOut', duration: 1 }}
+            className='text-4xl'
+          >
+            {t('header')}
+          </motion.h1>
         </Link>
         <nav className='w-full'>
           <ul className='w-full flex gap-3 justify-center'>
-            <li>
+            <motion.li
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1, transition: { delay: 0.8 } }}
+              // initial={{
+              //   opacity: 0,
+              //   // transform: 'translateX(-25%)',
+              // }}
+              // animate={{
+              //   opacity: 1,
+              //   // transform: 'translateX(0%)',
+              //   transition: { duration: 1, ease: 'easeOut', delay: 1 },
+              // }}
+              // exit={{
+              //   opacity: 0,
+              //   transition: { duration: 1, ease: 'easeOut' },
+              // }}
+              // layoutId='nav1'
+            >
               <Link href='/rango' legacyBehavior={false}>
                 <NavLinkStyle active={pathname === '/rango'}>
                   {t('navigation.rango')}
                 </NavLinkStyle>
               </Link>
-            </li>
-            <li>
+            </motion.li>
+            <motion.li
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1, transition: { delay: 0.8 } }}
+              // initial={{
+              //   opacity: 0,
+              //   // transform: 'translateX(-25%)',
+              // }}
+              // animate={{
+              //   opacity: 1,
+              //   // transform: 'translateX(0%)',
+              //   transition: { duration: 1, ease: 'easeOut', delay: 0.5 },
+              // }}
+              // exit={{
+              //   opacity: 0,
+              //   transition: { duration: 1, ease: 'easeOut' },
+              // }}
+              // layoutId='nav2'
+            >
               <Link href='/links' legacyBehavior={false}>
                 <NavLinkStyle active={pathname === '/links'}>
                   {t('navigation.links')}
                 </NavLinkStyle>
               </Link>
-            </li>
+            </motion.li>
           </ul>
         </nav>
       </div>
