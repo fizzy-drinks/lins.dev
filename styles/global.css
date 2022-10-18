@@ -8,11 +8,19 @@
   display: inline-block;
 }
 
-@font-face {
-  font-family: 'nasin-nanpa';
-  src: url(./nasin-nanpa-2.5.1.otf);
+html,
+body,
+#__next,
+#twemoji {
+  height: 100%;
 }
 
 * {
-  font-family: ui-sans-serif, system-ui, apple-system, "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", "nasin-nanpa";
+  font-family: 'Merriweather Sans',
+    ui-sans-serif,
+    system-ui,
+    apple-system,
+    "Apple Color Emoji",
+    "Segoe UI Emoji",
+    "Noto Color Emoji";
 }

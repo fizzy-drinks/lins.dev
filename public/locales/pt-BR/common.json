@@ -1,32 +1,29 @@
 {
+  "locales": {
+    "en": "🇬🇧",
+    "pt-BR": "🇧🇷"
+  },
   "seo": {
-    "description": "lins.dev é o cantinho do Gabriel Chiconi Lins na internet."
+    "title": "o site do fizzy",
+    "description": "bem vindo ao site do fizzy. 🌽"
   },
-  "greeting": "Oi!",
-  "maintenance": {
-    "summary": "Este site está passando por uma manuntenção completa.",
-    "explanation": "Se você está procurando por informações de contato ou pelos meus projetos, usa os links abaixo, mas não repara na bagunça!"
-  },
+  "header": "🌽 site do fizzy 🌽",
   "navigation": {
-    "contactInfo": "Contato",
-    "projects": "Projetos",
-    "viewSource": "ver fonte",
-    "viewLive": "ver ao vivo"
+    "rango": "Rango",
+    "links": "Meus links"
   },
-  "projects": {
-    "pastle": {
-      "title": "Pastle",
-      "description": "Um jogo de adivinhar a comida inspirado no Wordle"
+  "cta": {
+    "view": "Ver online",
+    "source": "Código-fonte"
+  },
+  "pages": {
+    "rango": {
+      "title": "Rango",
+      "description": "Inspirado no Wordle e em várias discussões que tive com amigos, criei um jogo onde o objetivo é adivinhar a receita pelos ingredientes."
     },
-    "lins.dev": {
-      "title": "Este site",
-      "description": "Atualmente ele está em manutenção, mas é um projeto extenso de qualquer forma. Eu tenho atualizado ele desde o Next 8, sem localização nem TypeScript, até virar um site moderno, e eu tento fazer com que ele seja um exemplo de um bom site."
-    }
-  },
-  "sections": {
-    "highlightedProjects": {
-      "title": "Alguns dos meus projetos favoritos",
-      "subtitle": "Aqui estão algumas coisas em que eu trabalhei que eu gostaria que as pessoas vissem. Já aviso: elas podem estar incompletas!"
+    "links": {
+      "title": "Meus links",
+      "description": "Esses são os lugares em que você pode me encontrar."
     }
   }
 }
