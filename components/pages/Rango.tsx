@@ -7,7 +7,7 @@ import PageHeader from 'components/PageHeader';
 import TextLinkStyle from 'components/ui/TextLinkStyle';
 import RangoImage from 'assets/rango.png';
 
-const HomePage: FC = () => {
+const RangoPage: FC = () => {
   const { t } = useTranslation();
 
   return (
@@ -21,8 +21,10 @@ const HomePage: FC = () => {
         }}
         additionalLinkTags={[{ rel: 'icon', href: '/favicon.ico' }]}
       />
-      <div className='flex flex-col justify-between grow basis-1'>
-        <PageHeader />
+      <div className='w-full flex flex-col justify-between items-center grow basis-1'>
+        <div className='w-full'>
+          <PageHeader />
+        </div>
         <figure>
           <Image
             src={RangoImage.src}
@@ -56,4 +58,4 @@ const HomePage: FC = () => {
   );
 };
 
-export default HomePage;
+export default RangoPage;

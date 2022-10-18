@@ -15,12 +15,6 @@ declare module 'react-twemoji' {
 const LDApp: FC<AppProps<SSRConfig>> = ({ Component, pageProps }) => {
   return (
     <>
-      <Head>
-        <link
-          href='http://fonts.cdnfonts.com/css/merriweather-sans'
-          rel='stylesheet'
-        />
-      </Head>
       <Twemoji id='twemoji'>
         <Component {...pageProps} />
       </Twemoji>

@@ -10,7 +10,7 @@
   "header": "This is Fizzy 🥃",
   "navigation": {
     "rango": "Rango",
-    "github": "Github"
+    "links": "My links"
   },
   "cta": {
     "view": "See it live",
@@ -19,7 +19,7 @@
   "pages": {
     "rango": {
       "title": "Rango",
-      "description": "Inspired by Wordle and a heated food debates with friends, I made a game whose goal is to guess the food correctly."
+      "description": "Inspired by Wordle and heated food debates with friends, I made a game whose goal is to guess the food correctly."
     }
   }
 }
