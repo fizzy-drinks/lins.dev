@@ -23,10 +23,9 @@ const RangoPage: FC = () => {
       <main>
         <figure className='text-center'>
           <Image
-            src={RangoImage.src}
-            width={RangoImage.width}
-            height={RangoImage.height}
+            src={RangoImage}
             alt={t('pages.rango.title')}
+            placeholder='blur'
             className='rounded-md shadow-lg shadow-neutral-500'
           />
         </figure>
