@@ -12,11 +12,8 @@
     "postbuild": "next-sitemap"
   },
   "dependencies": {
-    "@octokit/rest": "^16.27.0",
     "autoprefixer": "^10.4.8",
-    "axios": "^0.27.2",
-    "classnames": "^2.3.1",
-    "color": "^4.2.3",
+    "clsx": "^1.2.1",
     "framer-motion": "^7.1.0",
     "next": "^12.3.1",
     "next-i18next": "^11.3.0",
@@ -24,11 +21,8 @@
     "next-sitemap": "^3.1.17",
     "postcss": "^8.4.16",
     "react": "^18.2.0",
-    "react-cookie": "^4.1.1",
     "react-dom": "^18.2.0",
-    "react-icons": "^3.7.0",
     "react-twemoji": "^0.5.0",
-    "rss-parser": "^3.7.1",
     "tailwindcss": "^3.1.8"
   },
   "devDependencies": {
