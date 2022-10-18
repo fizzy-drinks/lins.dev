@@ -21,4 +21,4 @@ const withTranslations =
     };
   };
 
-export default withTranslations
+export default withTranslations;

@@ -1,16 +1,15 @@
 import { useTranslation } from 'next-i18next';
-import { NextSeo } from 'next-seo';
 import { FC } from 'react';
 import TextLinkStyle from 'components/ui/TextLinkStyle';
 import MainContent from 'components/ui/MainContent';
 import useSeo from 'hooks/useSeo';
 
-const RangoPage: FC = () => {
+const LinksPage: FC = () => {
   const { t } = useTranslation();
   const seo = useSeo({
     uri: '/links',
     description: t('pages.links.description'),
-    title: t('pages.links.title')
+    title: t('pages.links.title'),
   });
 
   const links = [
@@ -40,4 +39,4 @@ const RangoPage: FC = () => {
   );
 };
 
-export default RangoPage;
+export default LinksPage;

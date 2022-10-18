@@ -1,5 +1,4 @@
 import { useTranslation } from 'next-i18next';
-import { NextSeo } from 'next-seo';
 import { FC } from 'react';
 import Image from 'next/image';
 import TextLinkStyle from 'components/ui/TextLinkStyle';
