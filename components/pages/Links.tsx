@@ -1,10 +1,8 @@
 import { useTranslation } from 'next-i18next';
 import { NextSeo } from 'next-seo';
 import { FC } from 'react';
-import PageContainer from 'components/ui/PageContainer';
-import PageHeader from 'components/PageHeader';
 import TextLinkStyle from 'components/ui/TextLinkStyle';
-import AnimateIn from 'components/ui/AnimateIn';
+import MainContent from 'components/ui/MainContent';
 
 const RangoPage: FC = () => {
   const { t } = useTranslation();
@@ -17,7 +15,7 @@ const RangoPage: FC = () => {
   ];
 
   return (
-    <AnimateIn className='h-full w-full max-w-[460px] text-left grow flex items-center'>
+    <MainContent>
       <NextSeo
         title={t('seo.title')}
         description={t('seo.description')}
@@ -42,7 +40,7 @@ const RangoPage: FC = () => {
           ))}
         </ul>
       </main>
-    </AnimateIn>
+    </MainContent>
   );
 };
 

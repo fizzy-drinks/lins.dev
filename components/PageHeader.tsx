@@ -36,8 +36,8 @@ const PageHeader: FC = () => {
           <motion.h1
             layout
             layoutId='title'
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+            initial={{ opacity: 0, transform: 'translateY(-50%)' }}
+            animate={{ opacity: 1, transform: 'translateY(0%)' }}
             transition={{ ease: 'easeInOut', duration: 1 }}
             className='text-4xl'
           >
@@ -47,22 +47,14 @@ const PageHeader: FC = () => {
         <nav className='w-full'>
           <ul className='w-full flex gap-3 justify-center'>
             <motion.li
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1, transition: { delay: 0.8 } }}
-              // initial={{
-              //   opacity: 0,
-              //   // transform: 'translateX(-25%)',
-              // }}
-              // animate={{
-              //   opacity: 1,
-              //   // transform: 'translateX(0%)',
-              //   transition: { duration: 1, ease: 'easeOut', delay: 1 },
-              // }}
-              // exit={{
-              //   opacity: 0,
-              //   transition: { duration: 1, ease: 'easeOut' },
-              // }}
-              // layoutId='nav1'
+              initial={{ opacity: 0, transform: 'translateX(-40px)' }}
+              animate={{
+                opacity: 1,
+                transform: 'translateX(0%)',
+                transition: { delay: 0.8, duration: 1 },
+              }}
+              exit={{ opacity: 0 }}
+              layoutId='nav1'
             >
               <Link href='/rango' legacyBehavior={false}>
                 <NavLinkStyle active={pathname === '/rango'}>
@@ -71,22 +63,13 @@ const PageHeader: FC = () => {
               </Link>
             </motion.li>
             <motion.li
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1, transition: { delay: 0.8 } }}
-              // initial={{
-              //   opacity: 0,
-              //   // transform: 'translateX(-25%)',
-              // }}
-              // animate={{
-              //   opacity: 1,
-              //   // transform: 'translateX(0%)',
-              //   transition: { duration: 1, ease: 'easeOut', delay: 0.5 },
-              // }}
-              // exit={{
-              //   opacity: 0,
-              //   transition: { duration: 1, ease: 'easeOut' },
-              // }}
-              // layoutId='nav2'
+              initial={{ opacity: 0, transform: 'translateX(-40px)' }}
+              animate={{
+                opacity: 1,
+                transform: 'translateX(0%)',
+                transition: { delay: 0.4, duration: 1 },
+              }}
+              layoutId='nav2'
             >
               <Link href='/links' legacyBehavior={false}>
                 <NavLinkStyle active={pathname === '/links'}>

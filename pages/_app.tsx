@@ -7,7 +7,7 @@ import PageContainer from 'components/ui/PageContainer';
 import PageHeader from 'components/PageHeader';
 
 import 'styles/global.css';
-import AnimateIn from 'components/ui/AnimateIn';
+import MainContent from 'components/ui/MainContent';
 
 declare module 'react-twemoji' {
   interface TwemojiProps {
