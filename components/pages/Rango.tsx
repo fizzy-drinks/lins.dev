@@ -19,7 +19,7 @@ const RangoPage: FC = () => {
           openGraph={{
             url: 'https://lins.dev/rango',
           }}
-          additionalLinkTags={[{ rel: 'icon', href: '/favicon.ico' }]}
+          additionalLinkTags={[{ rel: 'icon', href: '/favicon.png' }]}
         />
         <main>
           <figure className='text-center'>

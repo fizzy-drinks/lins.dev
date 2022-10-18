@@ -14,7 +14,7 @@ const HomePage: FC = () => {
         openGraph={{
           url: 'https://lins.dev',
         }}
-        additionalLinkTags={[{ rel: 'icon', href: '/favicon.ico' }]}
+        additionalLinkTags={[{ rel: 'icon', href: '/favicon.png' }]}
       />
     </>
   );
