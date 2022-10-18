@@ -15,8 +15,8 @@ const RangoPage: FC = () => {
   return (
     <MainContent>
       <NextSeo
-        title={t('seo.title')}
-        description={t('seo.description')}
+        title={`${t('pages.links.title')} | ${t('seo.title')}`}
+        description={t('pages.links.description')}
         canonical={'https://lins.dev/links'}
         openGraph={{
           url: 'https://lins.dev/links',
