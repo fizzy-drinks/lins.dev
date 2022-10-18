@@ -35,7 +35,7 @@ const RangoPage: FC = () => {
           />
         </figure>
       </div>
-      <main className='max-w-[460px] text-left grow basis-1'>
+      <main className='w-full max-w-[460px] text-left grow basis-1'>
         <h1 className='text-4xl text-neutral-500 mt-2'>
           {t('pages.rango.title')}
         </h1>
