@@ -12,13 +12,22 @@ const HomePage: FC = () => {
       <NextSeo
         title={t('seo.title')}
         description={t('seo.description')}
-        canonical={'https://lins.dev'}
+        canonical={'https://lins.dev/rango'}
         openGraph={{
-          url: 'https://lins.dev',
+          url: 'https://lins.dev/rango',
         }}
         additionalLinkTags={[{ rel: 'icon', href: '/favicon.ico' }]}
       />
-      <PageHeader />
+      <div className='flex flex-col justify-between grow basis-1'>
+        <PageHeader />
+        <figure>
+          <img src='/images/rango.png' alt='Rango' />
+        </figure>
+      </div>
+      <main className='w-[500px] text-left grow basis-1'>
+        <h1 className='text-4xl text-neutral-500 mt-2'>{t('pages.rango.title')}</h1>
+        <p className='mt-2'>{t('pages.rango.description')} 🥪</p>
+      </main>
     </PageContainer>
   );
 };
