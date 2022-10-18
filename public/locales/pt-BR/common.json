@@ -3,11 +3,11 @@
     "en": "🇬🇧",
     "pt-BR": "🇧🇷"
   },
-  "header": "Site do Fizzy 🌽",
   "seo": {
-    "title": "Gabriel Chiconi Lins | lins.dev",
-    "description": "lins.dev é o cantinho do Gabriel Chiconi Lins na internet."
+    "title": "o site do fizzy",
+    "description": "bem vindo ao site do fizzy. 🌽"
   },
+  "header": "🌽 site do fizzy 🌽",
   "navigation": {
     "rango": "Rango",
     "links": "Meus links"
@@ -19,7 +19,7 @@
   "pages": {
     "rango": {
       "title": "Rango",
-      "description": "inspirado no wordle e em várias discussões que tive com amigos, criei um jogo onde o objetivo é adivinhar a receita pelos ingredientes."
+      "description": "Inspirado no Wordle e em várias discussões que tive com amigos, criei um jogo onde o objetivo é adivinhar a receita pelos ingredientes."
     },
     "links": {
       "title": "Meus links",
