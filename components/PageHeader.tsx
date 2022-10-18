@@ -1,5 +1,5 @@
 import { clsx } from 'clsx';
-import { motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import { useTranslation } from 'next-i18next';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -13,17 +13,25 @@ const NavLinkStyle: FC<PropsWithChildren<{ active: boolean }>> = ({
   return (
     <span
       className={clsx(
-        'text-neutral-500 lowercase font-medium text-lg',
-        active && 'text-black underline'
+        'text-neutral-500 lowercase font-medium text-lg relative',
+        active && 'text-yellow-600'
       )}
     >
       {children}
+      <AnimatePresence>
+        {active && (
+          <motion.span
+            layoutId='nav-link-active-follow'
+            className='block absolute bottom-0 w-full h-px bg-neutral-500'
+          />
+        )}
+      </AnimatePresence>
     </span>
   );
 };
 
 const AnimatedNavLink: FC<
-  PropsWithChildren<{ layoutId: string, delay: number; href: string }>
+  PropsWithChildren<{ layoutId: string; delay: number; href: string }>
 > = ({ layoutId, delay, href, children }) => {
   const { pathname } = useRouter();
 
