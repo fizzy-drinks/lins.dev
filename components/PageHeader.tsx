@@ -22,9 +22,31 @@ const NavLinkStyle: FC<PropsWithChildren<{ active: boolean }>> = ({
   );
 };
 
+const AnimatedNavLink: FC<
+  PropsWithChildren<{ layoutId: string, delay: number; href: string }>
+> = ({ layoutId, delay, href, children }) => {
+  const { pathname } = useRouter();
+
+  return (
+    <motion.li
+      initial={{ opacity: 0, transform: 'translateX(-40px)' }}
+      animate={{
+        opacity: 1,
+        transform: 'translateX(0%)',
+        transition: { delay, duration: 1 },
+      }}
+      exit={{ opacity: 0 }}
+      layoutId={layoutId}
+    >
+      <Link href={href} legacyBehavior={false}>
+        <NavLinkStyle active={pathname === href}>{children}</NavLinkStyle>
+      </Link>
+    </motion.li>
+  );
+};
+
 const PageHeader: FC = () => {
   const { t } = useTranslation();
-  const { pathname } = useRouter();
 
   return (
     <header className='w-full flex justify-between items-center flex-col my-2 grow'>
@@ -46,37 +68,12 @@ const PageHeader: FC = () => {
         </Link>
         <nav className='w-full'>
           <ul className='w-full flex gap-3 justify-center'>
-            <motion.li
-              initial={{ opacity: 0, transform: 'translateX(-40px)' }}
-              animate={{
-                opacity: 1,
-                transform: 'translateX(0%)',
-                transition: { delay: 0.8, duration: 1 },
-              }}
-              exit={{ opacity: 0 }}
-              layoutId='nav1'
-            >
-              <Link href='/rango' legacyBehavior={false}>
-                <NavLinkStyle active={pathname === '/rango'}>
-                  {t('navigation.rango')}
-                </NavLinkStyle>
-              </Link>
-            </motion.li>
-            <motion.li
-              initial={{ opacity: 0, transform: 'translateX(-40px)' }}
-              animate={{
-                opacity: 1,
-                transform: 'translateX(0%)',
-                transition: { delay: 0.4, duration: 1 },
-              }}
-              layoutId='nav2'
-            >
-              <Link href='/links' legacyBehavior={false}>
-                <NavLinkStyle active={pathname === '/links'}>
-                  {t('navigation.links')}
-                </NavLinkStyle>
-              </Link>
-            </motion.li>
+            <AnimatedNavLink layoutId='nav-rango' delay={0.8} href='/rango'>
+              {t('navigation.rango')}
+            </AnimatedNavLink>
+            <AnimatedNavLink layoutId='nav-links' delay={0.4} href='/links'>
+              {t('navigation.links')}
+            </AnimatedNavLink>
           </ul>
         </nav>
       </div>
