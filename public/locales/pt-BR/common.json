@@ -2,6 +2,10 @@
   "seo": {
     "description": "lins.dev é o cantinho do Gabriel Chiconi Lins na internet."
   },
+  "cta": {
+    "view": "Ver online",
+    "source": "Código-fonte"
+  },
   "pages": {
     "rango": {
       "title": "Rango",

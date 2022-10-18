@@ -12,6 +12,10 @@
     "rango": "Rango",
     "github": "Github"
   },
+  "cta": {
+    "view": "See it live",
+    "source": "Source"
+  },
   "pages": {
     "rango": {
       "title": "Rango",
