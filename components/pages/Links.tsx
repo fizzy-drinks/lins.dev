@@ -10,8 +10,6 @@ const RangoPage: FC = () => {
   const links = [
     { href: 'https://github.com/fizzy-drinks', content: 'Github' },
     { href: 'https://gitlab.com/fizzydrinks', content: 'GitLab' },
-    { href: 'https://linkedin.com/in/gabrielchiconi', content: 'LinkedIn' },
-    { href: 'https://rxresu.me/fizzydrinks/full-stack-web', content: 'CV' },
   ];
 
   return (
