@@ -1,16 +1,15 @@
 # [lins.dev](https://lins.dev)
 
-This is the source code for my personal website. It currently runs on NextJS and TypeScript and
-uses Tailwind for styling.
+<a href="https://codeclimate.com/github/fizzy-drinks/lins.dev/maintainability"><img src="https://api.codeclimate.com/v1/badges/dc60a512226f2ab3a6aa/maintainability" /></a>
+
+This is the source code for my personal website built using my favourite tooling.
 
 It also uses [nasin nanpa](https://github.com/ETBCOR/nasin-nanpa) to render sitelen pona characters
 and [react-twemoji](https://github.com/zxmys/react-twemoji) to render Twemoji from Twitter and some
 other libraries in the old site (now relegated to `/old`).
 
 The new version is currently a work in progress meant to be the home for my portfolio of projects
-and support multiple languages. So far, the maintenance message and a couple project summaries have
-been translated to English, Portuguese and toki pona (if you don't know what that is,
-[check it out!](https://tokipona.org/)).
+and support multiple languages.
 
 ## Recruiters and clients
 
