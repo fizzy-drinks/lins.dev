@@ -31,7 +31,7 @@ const RangoPage: FC = () => {
         </h1>
         <p className='mt-2'>{t('pages.rango.description')} 🥪</p>
         <nav className='text-center text-sm mt-2'>
-          <a href='https://rango.lins.dev'>
+          <a href='https://rango.lins.dev' target='_blank' rel='noreferrer'>
             <TextLinkStyle>{t('cta.view')}</TextLinkStyle>
           </a>{' '}
           |{' '}
