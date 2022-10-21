@@ -14,9 +14,9 @@ const LocaleSwitcher: FC = () => {
     setCookie('NEXT_LOCALE', locale, { path: '/' });
 
   return (
-    <ul className='w-full flex justify-end'>
+    <ul className='w-full flex justify-end gap-2'>
       {i18nextConfig.i18n.locales.map((locale) => (
-        <li key={locale} className='w-10'>
+        <li key={locale}>
           <Link
             legacyBehavior={false}
             href={router.pathname}
@@ -24,7 +24,7 @@ const LocaleSwitcher: FC = () => {
             onClick={() => setPreferredLocale(locale)}
             className='whitespace-nowrap overflow-hidden'
           >
-            {t(`locales.${locale}`)}
+            {t(`ui.locales.${locale}`)}
           </Link>
         </li>
       ))}

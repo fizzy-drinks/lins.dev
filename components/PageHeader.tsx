@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { FC, PropsWithChildren } from 'react';
 import LocaleSwitcher from './LocaleSwitcher';
+import DarkModeToggle from './DarkModeToggle';
 
 const NavLinkStyle: FC<PropsWithChildren<{ active: boolean }>> = ({
   children,
@@ -13,8 +14,10 @@ const NavLinkStyle: FC<PropsWithChildren<{ active: boolean }>> = ({
   return (
     <span
       className={clsx(
-        'text-neutral-500 lowercase font-medium text-lg relative',
-        active && 'text-yellow-600'
+        'lowercase font-medium text-lg relative',
+        active
+          ? 'text-yellow-600 dark:text-yellow-300'
+          : 'text-neutral-500 dark:text-yellow-200'
       )}
     >
       {children}
@@ -22,7 +25,7 @@ const NavLinkStyle: FC<PropsWithChildren<{ active: boolean }>> = ({
         {active && (
           <motion.span
             layoutId='nav-link-active-follow'
-            className='block absolute bottom-0 w-full h-px bg-neutral-500'
+            className='block absolute bottom-0 w-full h-px bg-neutral-500 dark:bg-yellow-200'
           />
         )}
       </AnimatePresence>
@@ -58,10 +61,11 @@ const PageHeader: FC = () => {
 
   return (
     <header className='w-full flex justify-between items-center flex-col my-2 grow'>
-      <div className='w-full flex justify-end'>
+      <div className='w-full flex justify-between'>
+        <DarkModeToggle />
         <LocaleSwitcher />
       </div>
-      <div>
+      <div className='mt-4'>
         <Link legacyBehavior={false} href='/'>
           <motion.h1
             layout

@@ -21,7 +21,7 @@ const LinksPage: FC = () => {
     <MainContent>
       {seo}
       <main className='w-full max-w-[460px] text-left'>
-        <h1 className='text-4xl text-neutral-500 mt-2'>
+        <h1 className='text-4xl text-neutral-500 dark:text-yellow-200 mt-2'>
           {t('pages.links.title')}
         </h1>
         <p className='mt-2'>{t('pages.links.description')}</p>
