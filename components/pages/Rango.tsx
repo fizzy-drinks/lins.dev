@@ -23,10 +23,10 @@ const RangoPage: FC = () => {
             src={RangoImage}
             alt={t('pages.rango.title')}
             placeholder='blur'
-            className='rounded-md shadow-lg shadow-neutral-500'
+            className='rounded-md shadow-lg shadow-neutral-500 dark:shadow-yellow-200'
           />
         </figure>
-        <h1 className='text-4xl text-neutral-500 mt-2'>
+        <h1 className='text-4xl text-neutral-500 dark:text-yellow-200 mt-2'>
           {t('pages.rango.title')}
         </h1>
         <p className='mt-2'>{t('pages.rango.description')} 🥪</p>
