@@ -4,7 +4,7 @@ import { FC } from 'react';
 import Twemoji from 'react-twemoji';
 import PageContainer from 'components/ui/PageContainer';
 import PageHeader from 'components/PageHeader';
-
+import LoaderBar from 'components/ui/LoaderBar';
 import 'styles/global.css';
 
 declare module 'react-twemoji' {
@@ -16,6 +16,7 @@ declare module 'react-twemoji' {
 const LDApp: FC<AppProps<SSRConfig>> = ({ Component, pageProps }) => {
   return (
     <>
+      <LoaderBar />
       <Twemoji id='twemoji'>
         <PageContainer>
           <PageHeader />
