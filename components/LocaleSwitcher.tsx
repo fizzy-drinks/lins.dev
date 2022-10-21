@@ -24,7 +24,7 @@ const LocaleSwitcher: FC = () => {
             onClick={() => setPreferredLocale(locale)}
             className='whitespace-nowrap overflow-hidden'
           >
-            {t(`locales.${locale}`)}
+            {t(`ui.locales.${locale}`)}
           </Link>
         </li>
       ))}

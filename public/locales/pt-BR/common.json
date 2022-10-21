@@ -1,7 +1,10 @@
 {
-  "locales": {
-    "en": "🇬🇧",
-    "pt-BR": "🇧🇷"
+  "ui": {
+    "dark-mode": "Ligar/desligar modo escuro",
+    "locales": {
+      "en": "🇬🇧",
+      "pt-BR": "🇧🇷"
+    }
   },
   "seo": {
     "title": "o site do fizzy",

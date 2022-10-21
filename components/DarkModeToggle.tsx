@@ -1,15 +1,17 @@
 import { clsx } from 'clsx';
 import { motion } from 'framer-motion';
 import { FC } from 'react';
+import { useTranslation } from 'next-i18next';
 import useTheme from 'hooks/useTheme';
 
 const DarkModeToggle: FC = () => {
+  const { t } = useTranslation();
   const { darkMode, toggleDarkMode } = useTheme();
 
   return (
     <button
       type='button'
-      aria-label='Toggle dark mode'
+      aria-label={t('ui.dark-mode')}
       onClick={toggleDarkMode}
     >
       <span

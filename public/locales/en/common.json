@@ -1,4 +1,7 @@
 {
+  "ui": {
+    "dark-mode": "Toggle dark mode"
+  },
   "seo": {
     "title": "fizzy's hub",
     "description": "welcome to fizzy's place. 🌽"
