@@ -4,9 +4,7 @@
 
 This is the source code for my personal website built using my favourite tooling.
 
-It also uses [nasin nanpa](https://github.com/ETBCOR/nasin-nanpa) to render sitelen pona characters
-and [react-twemoji](https://github.com/zxmys/react-twemoji) to render Twemoji from Twitter and some
-other libraries in the old site (now relegated to `/old`).
+It also uses [nasin nanpa](https://github.com/ETBCOR/nasin-nanpa) to render sitelen pona characters.
 
 The new version is currently a work in progress meant to be the home for my portfolio of projects
 and support multiple languages.
