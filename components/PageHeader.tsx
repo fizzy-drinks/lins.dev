@@ -61,7 +61,7 @@ const PageHeader: FC = () => {
       <div className='w-full flex justify-end'>
         <LocaleSwitcher />
       </div>
-      <div>
+      <div className='mt-2'>
         <Link legacyBehavior={false} href='/'>
           <motion.h1
             layout
