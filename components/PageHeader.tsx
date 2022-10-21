@@ -65,7 +65,7 @@ const PageHeader: FC = () => {
         <DarkModeToggle />
         <LocaleSwitcher />
       </div>
-      <div className='mt-2'>
+      <div className='mt-4'>
         <Link legacyBehavior={false} href='/'>
           <motion.h1
             layout
