@@ -5,8 +5,9 @@ import TextLinkStyle from 'components/ui/TextLinkStyle';
 import RangoImage from 'assets/rango.png';
 import MainContent from 'components/ui/MainContent';
 import useSeo from 'hooks/useSeo';
+import withBaseLayout from 'components/ui/withBaseLayout';
 
-const RangoPage: FC = () => {
+const RangoPage: FC = withBaseLayout(() => {
   const { t } = useTranslation();
   const seo = useSeo({
     uri: '/rango',
@@ -46,6 +47,6 @@ const RangoPage: FC = () => {
       </main>
     </MainContent>
   );
-};
+});
 
 export default RangoPage;
