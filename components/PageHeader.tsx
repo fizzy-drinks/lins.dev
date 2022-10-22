@@ -6,6 +6,8 @@ import { useRouter } from 'next/router';
 import { FC, PropsWithChildren } from 'react';
 import LocaleSwitcher from './LocaleSwitcher';
 import DarkModeToggle from './DarkModeToggle';
+import RecentTracksDisplay from './RecentTracksDisplay';
+import { LastfmRecentTracks } from 'types/lastfm';
 
 const NavLinkStyle: FC<PropsWithChildren<{ active: boolean }>> = ({
   children,
@@ -56,14 +58,23 @@ const AnimatedNavLink: FC<
   );
 };
 
-const PageHeader: FC = () => {
+const PageHeader: FC<{ recentTracks: LastfmRecentTracks }> = ({
+  recentTracks,
+}) => {
   const { t } = useTranslation();
 
   return (
     <header className='w-full flex justify-between items-center flex-col my-2 grow'>
-      <div className='w-full flex justify-between'>
-        <DarkModeToggle />
-        <LocaleSwitcher />
+      <div className='w-full flex justify-between items-center'>
+        <div className='grow-1 basis-[33%]'>
+          <DarkModeToggle />
+        </div>
+        <div className='grow-1 basis-[33%] max-w-[50%]'>
+          <RecentTracksDisplay recentTracks={recentTracks} />
+        </div>
+        <div className='grow-1 basis-[33%]'>
+          <LocaleSwitcher />
+        </div>
       </div>
       <div className='mt-4'>
         <Link legacyBehavior={false} href='/'>
