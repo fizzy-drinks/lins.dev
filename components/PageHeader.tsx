@@ -66,9 +66,15 @@ const PageHeader: FC<{ recentTracks: LastfmRecentTracks }> = ({
   return (
     <header className='w-full flex justify-between items-center flex-col my-2 grow'>
       <div className='w-full flex justify-between items-center'>
-        <DarkModeToggle />
-        <RecentTracksDisplay recentTracks={recentTracks} />
-        <LocaleSwitcher />
+        <div className='grow-1 basis-[33%]'>
+          <DarkModeToggle />
+        </div>
+        <div className='grow-1 basis-[33%] max-w-[50%]'>
+          <RecentTracksDisplay recentTracks={recentTracks} />
+        </div>
+        <div className='grow-1 basis-[33%]'>
+          <LocaleSwitcher />
+        </div>
       </div>
       <div className='mt-4'>
         <Link legacyBehavior={false} href='/'>

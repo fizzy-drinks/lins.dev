@@ -27,12 +27,13 @@ const RecentTracksDisplay: FC<{ recentTracks: LastfmRecentTracks }> = ({
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 2, delay: 0.8 }}
-      className='text-xs'
+      className='text-xs text-center whitespace-nowrap text-ellipsis overflow-hidden'
     >
       <a href={track.url} target='_blank' rel='noreferrer'>
         <span>🎧</span>{' '}
         <TextLinkStyle>
-          {track.artist.name} - {track.name}
+          <span className='hidden md:inline'>{track.artist.name} - </span>
+          {track.name}
         </TextLinkStyle>
       </a>
     </motion.aside>
