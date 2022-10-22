@@ -1,5 +1,5 @@
 import { clsx } from 'clsx';
-import { AnimatePresence, motion } from 'framer-motion';
+import { AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'next-i18next';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -25,8 +25,8 @@ const NavLinkStyle: FC<PropsWithChildren<{ active: boolean }>> = ({
       {children}
       <AnimatePresence>
         {active && (
-          <motion.span
-            layoutId='nav-link-active-follow'
+          <span
+            // layoutId='nav-link-active-follow'
             className='block absolute bottom-0 w-full h-px bg-neutral-500 dark:bg-yellow-200'
           />
         )}
@@ -37,24 +37,24 @@ const NavLinkStyle: FC<PropsWithChildren<{ active: boolean }>> = ({
 
 const AnimatedNavLink: FC<
   PropsWithChildren<{ layoutId: string; delay: number; href: string }>
-> = ({ layoutId, delay, href, children }) => {
+> = ({ href, children }) => {
   const { pathname } = useRouter();
 
   return (
-    <motion.li
-      initial={{ opacity: 0, transform: 'translateX(-40px)' }}
-      animate={{
-        opacity: 1,
-        transform: 'translateX(0%)',
-        transition: { delay, duration: 1 },
-      }}
-      exit={{ opacity: 0 }}
-      layoutId={layoutId}
+    <li
+    // initial={{ opacity: 0, transform: 'translateX(-40px)' }}
+    // animate={{
+    //   opacity: 1,
+    //   transform: 'translateX(0%)',
+    //   transition: { delay, duration: 1 },
+    // }}
+    // exit={{ opacity: 0 }}
+    // layoutId={layoutId}
     >
       <Link href={href} legacyBehavior={false}>
         <NavLinkStyle active={pathname === href}>{children}</NavLinkStyle>
       </Link>
-    </motion.li>
+    </li>
   );
 };
 
@@ -78,16 +78,16 @@ const PageHeader: FC<{ recentTracks: LastfmRecentTracks }> = ({
       </div>
       <div className='mt-4'>
         <Link legacyBehavior={false} href='/'>
-          <motion.h1
-            layout
-            layoutId='title'
-            initial={{ opacity: 0, transform: 'translateY(-50%)' }}
-            animate={{ opacity: 1, transform: 'translateY(0%)' }}
-            transition={{ ease: 'easeInOut', duration: 1 }}
+          <h1
+            // layout
+            // layoutId='title'
+            // initial={{ opacity: 0, transform: 'translateY(-50%)' }}
+            // animate={{ opacity: 1, transform: 'translateY(0%)' }}
+            // transition={{ ease: 'easeInOut', duration: 1 }}
             className='text-4xl'
           >
             {t('header')}
-          </motion.h1>
+          </h1>
         </Link>
         <nav className='w-full'>
           <ul className='w-full flex gap-3 justify-center'>
