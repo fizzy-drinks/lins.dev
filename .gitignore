@@ -6,3 +6,4 @@ sitemap*.xml
 robots.txt
 
 *.log
+.env

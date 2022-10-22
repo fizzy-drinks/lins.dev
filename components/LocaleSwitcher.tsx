@@ -14,7 +14,7 @@ const LocaleSwitcher: FC = () => {
     setCookie('NEXT_LOCALE', locale, { path: '/' });
 
   return (
-    <ul className='w-full flex justify-end gap-2'>
+    <ul className='flex justify-end gap-2'>
       {i18nextConfig.i18n.locales.map((locale) => (
         <li key={locale}>
           <Link

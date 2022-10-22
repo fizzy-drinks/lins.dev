@@ -20,6 +20,7 @@
     "next-seo": "^5.5.0",
     "next-sitemap": "^3.1.17",
     "postcss": "^8.4.16",
+    "ramda": "^0.28.0",
     "react": "^18.2.0",
     "react-cookie": "^4.1.1",
     "react-dom": "^18.2.0",
@@ -28,6 +29,7 @@
   },
   "devDependencies": {
     "@types/node": "^18.7.1",
+    "@types/ramda": "^0.28.18",
     "@types/react": "^18.0.21",
     "@types/react-twemoji": "^0.4.0",
     "@typescript-eslint/eslint-plugin": "^5.33.0",
