@@ -3,8 +3,9 @@ import { FC } from 'react';
 import TextLinkStyle from 'components/ui/TextLinkStyle';
 import MainContent from 'components/ui/MainContent';
 import useSeo from 'hooks/useSeo';
+import withBaseLayout from 'components/ui/withBaseLayout';
 
-const LinksPage: FC = () => {
+const LinksPage: FC = withBaseLayout(() => {
   const { t } = useTranslation();
   const seo = useSeo({
     uri: '/links',
@@ -37,6 +38,6 @@ const LinksPage: FC = () => {
       </main>
     </MainContent>
   );
-};
+});
 
 export default LinksPage;
