@@ -5,7 +5,10 @@ import {
 } from 'next';
 
 const enhanceProps =
-  <P = Record<string, unknown>, EnhancedP = Record<string, unknown>>(
+  <
+    P extends Record<string, unknown> = Record<string, unknown>,
+    EnhancedP = Record<string, unknown>
+  >(
     propsEnhancer: (
       ctx: GetServerSidePropsContext
     ) => Promise<GetServerSidePropsResult<EnhancedP>>
