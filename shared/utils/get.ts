@@ -1,4 +1,4 @@
-const get = <T>({
+const get = async <T>({
   url,
   query = {},
 }: {
@@ -12,7 +12,12 @@ const get = <T>({
     urlObject.search = params.toString();
   }
 
-  return fetch(urlObject).then((res) => res.json());
+  const response = await fetch(urlObject)
+  if (!response.ok) {
+    throw new Error('Request failed with status ' + response.status);
+  }
+
+  return response.json();
 };
 
 export default get;

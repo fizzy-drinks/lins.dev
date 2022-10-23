@@ -4,19 +4,18 @@ import {
   GetServerSidePropsResult,
 } from 'next';
 
+type BaseProps = Record<string, unknown>;
+
+type Enhancer<P> = (
+  ctx: GetServerSidePropsContext
+) => Promise<GetServerSidePropsResult<P>>;
+
 const enhanceProps =
-  <
-    P extends Record<string, unknown> = Record<string, unknown>,
-    EnhancedP = Record<string, unknown>
-  >(
-    propsEnhancer: (
-      ctx: GetServerSidePropsContext
-    ) => Promise<GetServerSidePropsResult<EnhancedP>>
+  <P extends BaseProps = BaseProps, EnhancedP = BaseProps>(
+    propsEnhancer: Enhancer<EnhancedP>
   ) =>
-  (fn: GetServerSideProps<P>) =>
-  async (
-    ctx: GetServerSidePropsContext
-  ): Promise<GetServerSidePropsResult<P & EnhancedP>> => {
+  (fn: GetServerSideProps<P>): GetServerSideProps<P & EnhancedP> =>
+  async (ctx) => {
     const enhanced = await propsEnhancer(ctx);
     if ('redirect' in enhanced || 'notFound' in enhanced) return enhanced;
 
