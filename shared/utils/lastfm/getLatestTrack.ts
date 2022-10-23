@@ -5,25 +5,25 @@ import { LastfmRecentTracks } from 'types/lastfm';
 
 const getLatestTrack = async (): Promise<LastfmRecentTracks | null> => {
   const db = await recentTracksDb();
-  const recentTracks = await db.findOne();
+  const cachedRecentTracks = await db.findOne();
 
   if (
-    !recentTracks ||
-    differenceInMinutes(new Date(), recentTracks.timestamp, {
+    !cachedRecentTracks ||
+    differenceInMinutes(new Date(), cachedRecentTracks.timestamp, {
       roundingMethod: 'floor',
     })
   ) {
-    const newRecentTracks = await getRecentTracks(1).catch(() => undefined);
+    const newRecentTracks = await getRecentTracks(1).catch(() => null);
     if (!newRecentTracks) {
-      return recentTracks;
+      return cachedRecentTracks;
     }
 
-    recentTracks && db.deleteOne({ _id: recentTracks._id });
+    cachedRecentTracks && db.deleteOne({ _id: cachedRecentTracks._id });
     db.insertOne({ ...newRecentTracks, timestamp: new Date() });
     return newRecentTracks;
   }
 
-  return { recenttracks: recentTracks.recenttracks };
+  return { recenttracks: cachedRecentTracks.recenttracks };
 };
 
 export default getLatestTrack;

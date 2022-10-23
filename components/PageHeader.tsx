@@ -17,9 +17,7 @@ const NavLinkStyle: FC<PropsWithChildren<{ active: boolean }>> = ({
     <span
       className={clsx(
         'lowercase font-medium text-lg relative',
-        active
-          ? 'text-yellow-600 dark:text-yellow-300'
-          : 'text-neutral-500 dark:text-yellow-200'
+        active ? 'text-accent' : 'text-highlight dark:text-highlight-dark'
       )}
     >
       {children}
@@ -27,7 +25,7 @@ const NavLinkStyle: FC<PropsWithChildren<{ active: boolean }>> = ({
         {active && (
           <span
             // layoutId='nav-link-active-follow'
-            className='block absolute bottom-0 w-full h-px bg-neutral-500 dark:bg-yellow-200'
+            className='block absolute bottom-0 w-full h-px bg-accent'
           />
         )}
       </AnimatePresence>

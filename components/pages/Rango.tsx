@@ -6,6 +6,7 @@ import RangoImage from 'assets/rango.png';
 import MainContent from 'components/ui/MainContent';
 import useSeo from 'hooks/useSeo';
 import withBaseLayout from 'components/ui/withBaseLayout';
+import TextTitleStyle from 'components/ui/TextTitleStyle';
 
 const RangoPage: FC = withBaseLayout(() => {
   const { t } = useTranslation();
@@ -24,12 +25,12 @@ const RangoPage: FC = withBaseLayout(() => {
             src={RangoImage}
             alt={t('pages.rango.title')}
             placeholder='blur'
-            className='rounded-md shadow-lg shadow-neutral-500 dark:shadow-yellow-200'
+            className='rounded-md shadow-lg shadow-highlight dark:shadow-highlight-dark'
           />
         </figure>
-        <h1 className='text-4xl text-neutral-500 dark:text-yellow-200 mt-2'>
-          {t('pages.rango.title')}
-        </h1>
+        <TextTitleStyle>
+          <h1>{t('pages.rango.title')}</h1>
+        </TextTitleStyle>
         <p className='mt-2'>{t('pages.rango.description')} 🥪</p>
         <nav className='text-center text-sm mt-2'>
           <a href='https://rango.lins.dev' target='_blank' rel='noreferrer'>

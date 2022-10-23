@@ -4,6 +4,7 @@ import TextLinkStyle from 'components/ui/TextLinkStyle';
 import MainContent from 'components/ui/MainContent';
 import useSeo from 'hooks/useSeo';
 import withBaseLayout from 'components/ui/withBaseLayout';
+import TextTitleStyle from 'components/ui/TextTitleStyle';
 
 const LinksPage: FC = withBaseLayout(() => {
   const { t } = useTranslation();
@@ -22,9 +23,9 @@ const LinksPage: FC = withBaseLayout(() => {
     <MainContent>
       {seo}
       <main className='w-full max-w-[460px] text-left'>
-        <h1 className='text-4xl text-neutral-500 dark:text-yellow-200 mt-2'>
-          {t('pages.links.title')}
-        </h1>
+        <TextTitleStyle>
+          <h1>{t('pages.links.title')}</h1>
+        </TextTitleStyle>
         <p className='mt-2'>{t('pages.links.description')}</p>
         <ul className='mt-2'>
           {links.map(({ href, content }) => (

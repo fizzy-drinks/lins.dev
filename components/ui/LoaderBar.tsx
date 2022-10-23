@@ -43,7 +43,7 @@ const LoaderBar: FC = () => {
       }}
       initial='start'
       animate={loading ? 'loading' : 'rest'}
-      className='block border-b-2 border-b-yellow-600 fixed top-0 left-0'
+      className='block border-b-2 border-b-accent fixed top-0 left-0'
     />
   );
 };

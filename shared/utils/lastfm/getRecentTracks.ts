@@ -19,7 +19,8 @@ const getRecentTracks = (limit: number): Promise<LastfmRecentTracks> => {
   };
 
   return get<LastfmRecentTracks>({ url: api, query }).then((res) => {
-    if (!Array.isArray(res.recenttracks.track)) { // apparently sometimes Lastfm's API returns a different format
+    // apparently sometimes Lastfm's API returns a different format
+    if (!Array.isArray(res.recenttracks.track)) {
       res.recenttracks.track = [res.recenttracks.track];
     }
 
