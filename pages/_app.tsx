@@ -1,8 +1,8 @@
 import { appWithTranslation, SSRConfig } from 'next-i18next';
 import { AppProps } from 'next/app';
 import { FC } from 'react';
+import ThemeProvider from 'components/providers/ThemeProvider';
 import 'styles/global.css';
-import ThemeProvider from 'components/ThemeProvider';
 import { LastfmRecentTracks } from 'types/lastfm';
 
 const LDApp: FC<

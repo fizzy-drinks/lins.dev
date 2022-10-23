@@ -1,13 +1,23 @@
 import { FC } from 'react';
 import useSeo from 'hooks/useSeo';
-import withBaseLayout from 'components/ui/withBaseLayout';
+import LastfmProvider, {
+  LastfmContextProps,
+} from 'components/providers/LastfmProvider';
+import PageLayout from 'components/ui/PageLayout';
 
-const HomePage: FC = withBaseLayout(() => {
-  const customSeo = useSeo({
+export type HomePageProps = LastfmContextProps;
+
+const HomePage: FC<HomePageProps> = ({ recentTracks }) => {
+  const seo = useSeo({
     uri: '/',
   });
 
-  return customSeo;
-});
+  return (
+    <LastfmProvider recentTracks={recentTracks}>
+      {seo}
+      <PageLayout />
+    </LastfmProvider>
+  );
+};
 
 export default HomePage;

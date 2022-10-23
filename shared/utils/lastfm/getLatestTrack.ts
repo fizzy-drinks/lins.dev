@@ -3,7 +3,7 @@ import getRecentTracks from './getRecentTracks';
 import recentTracksDb from './recentTracksDb';
 import { LastfmRecentTracks } from 'types/lastfm';
 
-const getLatestTrack = async (): Promise<LastfmRecentTracks | null> => {
+const getLatestTrack = async (): Promise<LastfmRecentTracks | undefined> => {
   const db = await recentTracksDb();
   const cachedRecentTracks = await db.findOne();
 
@@ -13,9 +13,9 @@ const getLatestTrack = async (): Promise<LastfmRecentTracks | null> => {
       roundingMethod: 'floor',
     })
   ) {
-    const newRecentTracks = await getRecentTracks(1).catch(() => null);
+    const newRecentTracks = await getRecentTracks(1).catch(() => undefined);
     if (!newRecentTracks) {
-      return cachedRecentTracks;
+      return cachedRecentTracks ?? undefined;
     }
 
     cachedRecentTracks && db.deleteOne({ _id: cachedRecentTracks._id });

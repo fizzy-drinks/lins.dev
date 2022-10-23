@@ -1,5 +1,5 @@
 import { clsx } from 'clsx';
-import { AnimatePresence } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import { useTranslation } from 'next-i18next';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -7,7 +7,6 @@ import { FC, PropsWithChildren } from 'react';
 import LocaleSwitcher from './LocaleSwitcher';
 import DarkModeToggle from './DarkModeToggle';
 import RecentTracksDisplay from './RecentTracksDisplay';
-import { LastfmRecentTracks } from 'types/lastfm';
 
 const NavLinkStyle: FC<PropsWithChildren<{ active: boolean }>> = ({
   children,
@@ -23,8 +22,8 @@ const NavLinkStyle: FC<PropsWithChildren<{ active: boolean }>> = ({
       {children}
       <AnimatePresence>
         {active && (
-          <span
-            // layoutId='nav-link-active-follow'
+          <motion.span
+            layoutId='nav-link-active-follow'
             className='block absolute bottom-0 w-full h-px bg-accent'
           />
         )}
@@ -56,9 +55,7 @@ const AnimatedNavLink: FC<
   );
 };
 
-const PageHeader: FC<{ recentTracks: LastfmRecentTracks }> = ({
-  recentTracks,
-}) => {
+const PageHeader: FC = () => {
   const { t } = useTranslation();
 
   return (
@@ -68,7 +65,7 @@ const PageHeader: FC<{ recentTracks: LastfmRecentTracks }> = ({
           <DarkModeToggle />
         </div>
         <div className='grow-1 basis-[33%] max-w-[50%]'>
-          <RecentTracksDisplay recentTracks={recentTracks} />
+          <RecentTracksDisplay />
         </div>
         <div className='grow-1 basis-[33%]'>
           <LocaleSwitcher />
