@@ -11,7 +11,7 @@ const RecentTracksDisplay: FC<{ recentTracks: LastfmRecentTracks }> = ({
   const [track, setTrack] = useState(recentTracks.recenttracks.track[0]);
   useInterval(() => {
     const url = new URL(window.location.href);
-    url.pathname = '/api/recent-tracks';
+    url.pathname = '/api/now-playing';
 
     get<LastfmRecentTracks>({ url }).then(
       ({
@@ -20,7 +20,7 @@ const RecentTracksDisplay: FC<{ recentTracks: LastfmRecentTracks }> = ({
         },
       }) => setTrack(track)
     );
-  }, 30_000);
+  }, 60_000);
 
   return (
     <motion.aside

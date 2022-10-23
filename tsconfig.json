@@ -18,7 +18,8 @@
     "moduleResolution": "node",
     "isolatedModules": true,
     "jsx": "preserve",
-    "baseUrl": "."
+    "baseUrl": ".",
+    "strictNullChecks": true
   },
   "include": [
     "next-env.d.ts",

@@ -6,7 +6,7 @@ import ThemeProvider from 'components/ThemeProvider';
 import { LastfmRecentTracks } from 'types/lastfm';
 
 const LDApp: FC<
-  AppProps<SSRConfig & { darkMode: boolean; recentTracks: LastfmRecentTracks }>
+  AppProps<SSRConfig & { darkMode: boolean; recentTracks?: LastfmRecentTracks }>
 > = ({ Component, pageProps }) => {
   return (
     <ThemeProvider darkMode={pageProps.darkMode}>

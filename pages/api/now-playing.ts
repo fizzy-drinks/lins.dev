@@ -1,8 +1,8 @@
 import { NextApiHandler } from 'next';
-import getRecentTracks from 'shared/utils/lastfm/getRecentTracks';
+import getLatestTrack from 'shared/utils/lastfm/getLatestTrack';
 
 const handler: NextApiHandler = async (req, res) => {
-  res.send(await getRecentTracks(1));
+  res.send(await getLatestTrack());
 };
 
 export default handler;

@@ -1,8 +1,8 @@
 import enhanceProps from './enhanceProps';
-import getRecentTracks from 'shared/utils/lastfm/getRecentTracks';
+import getLatestTrack from 'shared/utils/lastfm/getLatestTrack';
 
 const withRecentTracks = enhanceProps(async () => ({
-  props: { recentTracks: await getRecentTracks(1) },
+  props: { recentTracks: await getLatestTrack() },
 }));
 
 export default withRecentTracks;
