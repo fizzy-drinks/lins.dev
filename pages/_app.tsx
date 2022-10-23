@@ -1,16 +1,27 @@
 import { appWithTranslation, SSRConfig } from 'next-i18next';
 import { AppProps } from 'next/app';
 import { FC } from 'react';
-import ThemeProvider from 'components/providers/ThemeProvider';
+import ThemeProvider, { Theme } from 'components/providers/ThemeProvider';
 import 'styles/global.css';
-import { LastfmRecentTracks } from 'types/lastfm';
+import LastfmProvider, {
+  LastfmContextProps,
+} from 'components/providers/LastfmProvider';
+import PageLayout from 'components/ui/PageLayout';
 
 const LDApp: FC<
-  AppProps<SSRConfig & { darkMode: boolean; recentTracks?: LastfmRecentTracks }>
+  AppProps<SSRConfig & LastfmContextProps & Theme & { statusCode?: number }>
 > = ({ Component, pageProps }) => {
   return (
     <ThemeProvider darkMode={pageProps.darkMode}>
-      <Component {...pageProps} />
+      <LastfmProvider recentTracks={pageProps.recentTracks}>
+        {pageProps?.statusCode ? (
+          <Component {...pageProps} />
+        ) : (
+          <PageLayout>
+            <Component {...pageProps} />
+          </PageLayout>
+        )}
+      </LastfmProvider>
     </ThemeProvider>
   );
 };

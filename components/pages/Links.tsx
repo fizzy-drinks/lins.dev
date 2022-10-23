@@ -3,14 +3,9 @@ import { FC } from 'react';
 import TextLinkStyle from 'components/ui/TextLinkStyle';
 import useSeo from 'hooks/useSeo';
 import TextTitleStyle from 'components/ui/TextTitleStyle';
-import PageLayout from 'components/ui/PageLayout';
-import LastfmProvider, {
-  LastfmContextProps,
-} from 'components/providers/LastfmProvider';
+import MainContent from 'components/ui/MainContent';
 
-export type LinksPageProps = LastfmContextProps;
-
-const LinksPage: FC<LinksPageProps> = ({ recentTracks }) => {
+const LinksPage: FC = () => {
   const { t } = useTranslation();
   const seo = useSeo({
     uri: '/links',
@@ -24,26 +19,24 @@ const LinksPage: FC<LinksPageProps> = ({ recentTracks }) => {
   ];
 
   return (
-    <LastfmProvider recentTracks={recentTracks}>
-      <PageLayout>
+    <MainContent>
+      <main>
         {seo}
-        <main className='w-full max-w-[460px] text-left'>
-          <TextTitleStyle>
-            <h1>{t('pages.links.title')}</h1>
-          </TextTitleStyle>
-          <p className='mt-2'>{t('pages.links.description')}</p>
-          <ul className='mt-2'>
-            {links.map(({ href, content }) => (
-              <li className='list-item mt-2' key={href}>
-                <a href={href} target='_blank' rel='noreferrer'>
-                  <TextLinkStyle>{content}</TextLinkStyle>
-                </a>
-              </li>
-            ))}
-          </ul>
-        </main>
-      </PageLayout>
-    </LastfmProvider>
+        <TextTitleStyle>
+          <h1>{t('pages.links.title')}</h1>
+        </TextTitleStyle>
+        <p className='mt-2'>{t('pages.links.description')}</p>
+        <ul className='mt-2'>
+          {links.map(({ href, content }) => (
+            <li className='list-item mt-2' key={href}>
+              <a href={href} target='_blank' rel='noreferrer'>
+                <TextLinkStyle>{content}</TextLinkStyle>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </main>
+    </MainContent>
   );
 };
 

@@ -34,24 +34,24 @@ const NavLinkStyle: FC<PropsWithChildren<{ active: boolean }>> = ({
 
 const AnimatedNavLink: FC<
   PropsWithChildren<{ layoutId: string; delay: number; href: string }>
-> = ({ href, children }) => {
+> = ({ href, children, layoutId, delay }) => {
   const { pathname } = useRouter();
 
   return (
-    <li
-    // initial={{ opacity: 0, transform: 'translateX(-40px)' }}
-    // animate={{
-    //   opacity: 1,
-    //   transform: 'translateX(0%)',
-    //   transition: { delay, duration: 1 },
-    // }}
-    // exit={{ opacity: 0 }}
-    // layoutId={layoutId}
+    <motion.li
+      initial={{ opacity: 0, transform: 'translateX(-40px)' }}
+      animate={{
+        opacity: 1,
+        transform: 'translateX(0%)',
+        transition: { delay, duration: 1 },
+      }}
+      exit={{ opacity: 0 }}
+      layoutId={layoutId}
     >
       <Link href={href} legacyBehavior={false}>
         <NavLinkStyle active={pathname === href}>{children}</NavLinkStyle>
       </Link>
-    </li>
+    </motion.li>
   );
 };
 
@@ -73,16 +73,16 @@ const PageHeader: FC = () => {
       </div>
       <div className='mt-4'>
         <Link legacyBehavior={false} href='/'>
-          <h1
-            // layout
-            // layoutId='title'
-            // initial={{ opacity: 0, transform: 'translateY(-50%)' }}
-            // animate={{ opacity: 1, transform: 'translateY(0%)' }}
-            // transition={{ ease: 'easeInOut', duration: 1 }}
+          <motion.h1
+            layout
+            layoutId='title'
+            initial={{ opacity: 0, transform: 'translateY(-50%)' }}
+            animate={{ opacity: 1, transform: 'translateY(0%)' }}
+            transition={{ ease: 'easeInOut', duration: 1 }}
             className='text-4xl'
           >
             {t('header')}
-          </h1>
+          </motion.h1>
         </Link>
         <nav className='w-full'>
           <ul className='w-full flex gap-3 justify-center'>
