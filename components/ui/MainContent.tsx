@@ -1,12 +1,8 @@
-import { clsx } from 'clsx';
-import { motion, MotionProps } from 'framer-motion';
-import { FC, HTMLAttributes } from 'react';
+import { motion } from 'framer-motion';
+import { FC, PropsWithChildren } from 'react';
 import useRouterLoading from 'hooks/useRouterLoading';
 
-const MainContent: FC<MotionProps & HTMLAttributes<HTMLDivElement>> = ({
-  children,
-  ...props
-}) => {
+const MainContent: FC<PropsWithChildren> = ({ children }) => {
   const loading = useRouterLoading();
 
   return (
@@ -18,11 +14,7 @@ const MainContent: FC<MotionProps & HTMLAttributes<HTMLDivElement>> = ({
       }}
       initial='initial'
       animate={loading ? 'out' : 'in'}
-      {...props}
-      className={clsx(
-        props.className,
-        'max-w-[460px] grow h-full flex flex-col justify-around'
-      )}
+      className='max-w-[460px] grow h-full flex flex-col justify-around'
     >
       {children}
       <div />
