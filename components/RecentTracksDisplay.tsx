@@ -1,7 +1,7 @@
 import { FC, useState } from 'react';
 import { useInterval } from 'usehooks-ts';
 import { AnimatePresence, motion } from 'framer-motion';
-import TextLinkStyle from './ui/TextLinkStyle';
+import TextLinkStyle from './TextLinkStyle';
 import { LastfmRecentTracks } from 'types/lastfm';
 import get from 'shared/utils/get';
 import useLastfm from 'hooks/useLastfm';

@@ -6,7 +6,7 @@ import 'styles/global.css';
 import LastfmProvider, {
   LastfmContextProps,
 } from 'components/providers/LastfmProvider';
-import PageLayout from 'components/ui/PageLayout';
+import PageLayout from 'components/PageLayout';
 
 const LDApp: FC<
   AppProps<SSRConfig & LastfmContextProps & Theme & { statusCode?: number }>
