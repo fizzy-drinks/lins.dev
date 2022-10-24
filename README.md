@@ -1,5 +1,6 @@
 # [lins.dev](https://lins.dev)
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/21628b55-c7d1-4d37-89c1-c7d13eab02ef/deploy-status)](https://app.netlify.com/sites/whimsical-genie-56b02d/deploys)
 <a href="https://codeclimate.com/github/fizzy-drinks/lins.dev/maintainability"><img src="https://api.codeclimate.com/v1/badges/dc60a512226f2ab3a6aa/maintainability" /></a>
 
 This is the source code for my personal website built using my favourite tooling.
