@@ -13,7 +13,7 @@ const DarkModeToggle: FC = () => {
       onClick={toggleDarkMode}
       className='text-xs'
     >
-      {darkMode ? '🌙' : '☀'}
+      {darkMode ? '☀' : '🌙'}
     </button>
   );
 };
