@@ -1,18 +1,13 @@
 import { clsx } from 'clsx';
 import { motion, MotionProps } from 'framer-motion';
-import { useRouter } from 'next/router';
-import { FC, HTMLAttributes, useEffect, useState } from 'react';
+import { FC, HTMLAttributes } from 'react';
+import useRouterLoading from 'hooks/useRouterLoading';
 
 const MainContent: FC<MotionProps & HTMLAttributes<HTMLDivElement>> = ({
   children,
   ...props
 }) => {
-  const router = useRouter();
-
-  const [loading, setLoading] = useState(false);
-  useEffect(() => {
-    router.events.on('routeChangeStart', () => setLoading(true));
-  }, [router]);
+  const loading = useRouterLoading();
 
   return (
     <motion.div

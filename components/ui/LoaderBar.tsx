@@ -1,15 +1,9 @@
 import { motion } from 'framer-motion';
-import { useRouter } from 'next/router';
-import { FC, useEffect, useState } from 'react';
+import { FC } from 'react';
+import useRouterLoading from 'hooks/useRouterLoading';
 
 const LoaderBar: FC = () => {
-  const router = useRouter();
-
-  const [loading, setLoading] = useState(false);
-  useEffect(() => {
-    router.events.on('routeChangeStart', () => setLoading(true));
-    router.events.on('routeChangeComplete', () => setLoading(false));
-  }, [router]);
+  const loading = useRouterLoading();
 
   return (
     <motion.aside
