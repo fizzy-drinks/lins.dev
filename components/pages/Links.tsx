@@ -1,9 +1,9 @@
 import { useTranslation } from 'next-i18next';
 import { FC } from 'react';
-import TextLinkStyle from 'components/TextLinkStyle';
-import useSeo from 'hooks/useSeo';
-import TextTitleStyle from 'components/TextTitleStyle';
 import MainContent from 'components/MainContent';
+import TextLinkStyle from 'components/TextLinkStyle';
+import TextTitleStyle from 'components/TextTitleStyle';
+import useSeo from 'hooks/useSeo';
 
 const LinksPage: FC = () => {
   const { t } = useTranslation();

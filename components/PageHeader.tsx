@@ -4,8 +4,8 @@ import { useTranslation } from 'next-i18next';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { FC, PropsWithChildren } from 'react';
-import LocaleSwitcher from './LocaleSwitcher';
 import DarkModeToggle from './DarkModeToggle';
+import LocaleSwitcher from './LocaleSwitcher';
 import RecentTracksDisplay from './RecentTracksDisplay';
 
 const NavLinkStyle: FC<PropsWithChildren<{ active: boolean }>> = ({

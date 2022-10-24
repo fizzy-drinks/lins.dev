@@ -1,6 +1,6 @@
 import { FC, PropsWithChildren } from 'react';
 import LoaderBar from './LoaderBar';
-import PageHeader from 'components/PageHeader';
+import PageHeader from './PageHeader';
 
 const PageLayout: FC<PropsWithChildren> = ({ children }) => {
   return (

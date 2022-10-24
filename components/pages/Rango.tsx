@@ -1,11 +1,11 @@
 import { useTranslation } from 'next-i18next';
-import { FC } from 'react';
 import Image from 'next/image';
-import TextLinkStyle from 'components/TextLinkStyle';
+import { FC } from 'react';
 import RangoImage from 'assets/rango.png';
-import useSeo from 'hooks/useSeo';
-import TextTitleStyle from 'components/TextTitleStyle';
 import MainContent from 'components/MainContent';
+import TextLinkStyle from 'components/TextLinkStyle';
+import TextTitleStyle from 'components/TextTitleStyle';
+import useSeo from 'hooks/useSeo';
 
 const RangoPage: FC = () => {
   const { t } = useTranslation();

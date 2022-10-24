@@ -1,5 +1,5 @@
-import { FC } from 'react';
 import { useTranslation } from 'next-i18next';
+import { FC } from 'react';
 import useTheme from 'hooks/useTheme';
 
 const DarkModeToggle: FC = () => {

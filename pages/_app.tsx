@@ -1,12 +1,12 @@
 import { appWithTranslation, SSRConfig } from 'next-i18next';
 import { AppProps } from 'next/app';
 import { FC } from 'react';
-import ThemeProvider, { Theme } from 'components/providers/ThemeProvider';
-import 'styles/global.css';
+import PageLayout from 'components/PageLayout';
 import LastfmProvider, {
   LastfmContextProps,
 } from 'components/providers/LastfmProvider';
-import PageLayout from 'components/PageLayout';
+import ThemeProvider, { Theme } from 'components/providers/ThemeProvider';
+import 'styles/global.css';
 
 const LDApp: FC<
   AppProps<SSRConfig & LastfmContextProps & Theme & { statusCode?: number }>

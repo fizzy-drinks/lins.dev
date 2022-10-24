@@ -12,7 +12,7 @@ const get = async <T>({
     urlObject.search = params.toString();
   }
 
-  const response = await fetch(urlObject)
+  const response = await fetch(urlObject);
   if (!response.ok) {
     throw new Error('Request failed with status ' + response.status);
   }

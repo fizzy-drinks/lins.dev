@@ -1,10 +1,10 @@
+import { AnimatePresence, motion } from 'framer-motion';
 import { FC, useState } from 'react';
 import { useInterval } from 'usehooks-ts';
-import { AnimatePresence, motion } from 'framer-motion';
 import TextLinkStyle from './TextLinkStyle';
-import { LastfmRecentTracks } from 'types/lastfm';
-import get from 'shared/utils/get';
 import useLastfm from 'hooks/useLastfm';
+import get from 'shared/utils/get';
+import { LastfmRecentTracks } from 'types/lastfm';
 
 const RecentTracksDisplay: FC = () => {
   const { recentTracks } = useLastfm();
