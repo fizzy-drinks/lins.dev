@@ -13,7 +13,8 @@
   "header": "🌽 site do fizzy 🌽",
   "navigation": {
     "rango": "Rango",
-    "links": "Meus links"
+    "links": "Meus links",
+    "wikicord": "Wikicord"
   },
   "cta": {
     "view": "Ver online",
@@ -23,6 +24,10 @@
     "rango": {
       "title": "Rango",
       "description": "Inspirado no Wordle e em várias discussões que tive com amigos, criei um jogo onde o objetivo é adivinhar a receita pelos ingredientes."
+    },
+    "wikicord": {
+      "title": "Wikicord",
+      "description": "Wiki privada para o seu servidor do Discord. Apenas pessoas com acesso ao servidor poderão participar! Artigos suportam Markdown com várias extensões."
     },
     "links": {
       "title": "Meus links",

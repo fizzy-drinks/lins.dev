@@ -85,9 +85,12 @@ const PageHeader: FC = () => {
           </motion.h1>
         </Link>
         <nav className='w-full'>
-          <ul className='w-full flex gap-3 justify-center'>
-            <AnimatedNavLink layoutId='nav-rango' delay={0.8} href='/rango'>
+          <ul className='w-full flex gap-5 justify-center'>
+            <AnimatedNavLink layoutId='nav-rango' delay={1.2} href='/rango'>
               {t('navigation.rango')}
+            </AnimatedNavLink>
+            <AnimatedNavLink layoutId='nav-wiki' delay={0.8} href='/wikicord'>
+              {t('navigation.wikicord')}
             </AnimatedNavLink>
             <AnimatedNavLink layoutId='nav-links' delay={0.4} href='/links'>
               {t('navigation.links')}
