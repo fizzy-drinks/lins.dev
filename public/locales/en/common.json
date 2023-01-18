@@ -18,6 +18,9 @@
     "rango": {
       "description": "Inspired by Wordle and heated food debates with friends, I made a game whose goal is to guess the food correctly."
     },
+    "pokemon-overlay": {
+      "description": "A set of GameHook plugins for streaming Pokémon games with live updating data."
+    },
     "wikicord": {
       "description": "Private wikis for your Discord servers. Only people with server access can participate! Articles support Markdown with several extensions."
     },

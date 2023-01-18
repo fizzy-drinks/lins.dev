@@ -14,8 +14,9 @@
   "navigation": {
     "rango": "Rango",
     "links": "Meus links",
-    "wikicord": "Wikicord"
-  },
+    "wikicord": "Wikicord",
+    "pokemon-overlay": "Pokémon Overlay"
+    },
   "cta": {
     "view": "Ver online",
     "source": "Código-fonte"
@@ -24,6 +25,10 @@
     "rango": {
       "title": "Rango",
       "description": "Inspirado no Wordle e em várias discussões que tive com amigos, criei um jogo onde o objetivo é adivinhar a receita pelos ingredientes."
+    },
+    "pokemon-overlay": {
+      "title": "Pokémon Overlay",
+      "description": "Um conjunto de plugins GameHook para transmitir jogos de Pokémon com dados que atualizam ao vivo."
     },
     "wikicord": {
       "title": "Wikicord",

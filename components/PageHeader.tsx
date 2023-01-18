@@ -79,7 +79,7 @@ const PageHeader: FC = () => {
             initial={{ opacity: 0, transform: 'translateY(-50%)' }}
             animate={{ opacity: 1, transform: 'translateY(0%)' }}
             transition={{ ease: 'easeInOut', duration: 1 }}
-            className='text-4xl'
+            className='text-4xl text-center'
           >
             {t('header')}
           </motion.h1>
@@ -91,6 +91,13 @@ const PageHeader: FC = () => {
             </AnimatedNavLink>
             <AnimatedNavLink layoutId='nav-wiki' delay={0.8} href='/wikicord'>
               {t('navigation.wikicord')}
+            </AnimatedNavLink>
+            <AnimatedNavLink
+              layoutId='nav-poke'
+              delay={0.8}
+              href='/pokemon-overlay'
+            >
+              {t('navigation.pokemon-overlay')}
             </AnimatedNavLink>
             <AnimatedNavLink layoutId='nav-links' delay={0.4} href='/links'>
               {t('navigation.links')}
