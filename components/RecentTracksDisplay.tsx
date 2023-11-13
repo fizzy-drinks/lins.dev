@@ -13,13 +13,15 @@ const RecentTracksDisplay: FC = () => {
     const url = new URL(window.location.href);
     url.pathname = '/api/now-playing';
 
-    get<LastfmRecentTracks>({ url }).then(
-      ({
-        recenttracks: {
-          track: [track],
-        },
-      }) => setTrack(track)
-    );
+    get<LastfmRecentTracks>({ url })
+      .then(
+        ({
+          recenttracks: {
+            track: [track],
+          },
+        }) => setTrack(track)
+      )
+      .catch(console.error);
   }, 60_000);
 
   return (

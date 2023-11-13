@@ -3,7 +3,7 @@ import getRecentTracks from './getRecentTracks';
 import recentTracksDb from './recentTracksDb';
 import { LastfmRecentTracks } from 'types/lastfm';
 
-const getLatestTrack = async (): Promise<LastfmRecentTracks | undefined> => {
+const getLatestTrack = async (): Promise<LastfmRecentTracks | null> => {
   const db = await recentTracksDb();
   const cachedRecentTracks = await db.findOne();
 
@@ -15,7 +15,7 @@ const getLatestTrack = async (): Promise<LastfmRecentTracks | undefined> => {
   ) {
     const newRecentTracks = await getRecentTracks(1).catch(() => undefined);
     if (!newRecentTracks) {
-      return cachedRecentTracks ?? undefined;
+      return cachedRecentTracks ?? null;
     }
 
     cachedRecentTracks && db.deleteOne({ _id: cachedRecentTracks._id });
@@ -23,7 +23,7 @@ const getLatestTrack = async (): Promise<LastfmRecentTracks | undefined> => {
     return newRecentTracks;
   }
 
-  return { recenttracks: cachedRecentTracks.recenttracks };
+  return { recenttracks: cachedRecentTracks?.recenttracks ?? null };
 };
 
 export default getLatestTrack;
