@@ -17,7 +17,9 @@ const PageHeader: FC = () => {
         <div className='grow-1 basis-[33%] max-w-[50%]'>
           <RecentTracksDisplay />
         </div>
-        <div className='grow-1 basis-[33%]'>{/* <LocaleSwitcher /> */}</div>
+        <div className='grow-1 basis-[33%]'>
+          <LocaleSwitcher />
+        </div>
       </div>
       <div className='mt-4'>
         <motion.h1
