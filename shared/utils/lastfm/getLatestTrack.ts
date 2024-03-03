@@ -5,6 +5,8 @@ import { LastfmRecentTracks } from 'types/lastfm';
 
 const getLatestTrack = async (): Promise<LastfmRecentTracks | null> => {
   const db = await recentTracksDb();
+  if (!db) return null;
+
   const cachedRecentTracks = await db.findOne();
 
   if (

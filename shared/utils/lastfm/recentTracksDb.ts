@@ -8,11 +8,14 @@ const {
 
 type RecentTracksObject = LastfmRecentTracks & { timestamp: Date };
 
-const recentTracksDb = async (): Promise<Collection<RecentTracksObject>> => {
-  const client = new MongoClient(mongodb.uri);
-  await client.connect();
+const recentTracksDb =
+  async (): Promise<Collection<RecentTracksObject> | null> => {
+    if (!mongodb.uri) return null;
 
-  return client.db('linsdev').collection<RecentTracksObject>('recent_tracks');
-};
+    const client = new MongoClient(mongodb.uri);
+    await client.connect();
+
+    return client.db('linsdev').collection<RecentTracksObject>('recent_tracks');
+  };
 
 export default recentTracksDb;
